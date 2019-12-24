@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sp-nav-bar
+    <vm-nav-bar
       v-if="title"
       :title="title"
       left-text="返回"
