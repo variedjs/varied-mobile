@@ -16,7 +16,7 @@
           fab
           class="bg-cyan shadow-blur"
         >
-          <vm-icon name="emojifill" />
+          <vm-icon name="opera" />
         </vm-button>
       </vm-row>
     </demo-block>
