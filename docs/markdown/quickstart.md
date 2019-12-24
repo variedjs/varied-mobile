@@ -76,10 +76,10 @@ Vant 支持一次性导入所有组件，引入所有组件会增加代码包体
 
 ```js
 import Vue from 'vue';
-import SimpleMobile from '@varied/mobile';
+import VariedMobile from '@varied/mobile';
 import '@varied/mobile/lib/index.css';
 
-Vue.use(SimpleMobile);
+Vue.use(VariedMobile);
 ```
 
 > 注意：配置 babel-plugin-import 插件后，将不允许以这种方式导入组件
