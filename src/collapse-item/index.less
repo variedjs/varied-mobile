@@ -1,0 +1,49 @@
+@import '../style/var';
+
+.vm-collapse-item {
+  &-title {
+    .vm-cell-right-icon::before {
+      transform: rotate(90deg);
+      transition: @collapse-item-transition-duration;
+    }
+
+    &::after {
+      visibility: hidden;
+    }
+
+    &-expanded {
+      .vm-cell-right-icon::before {
+        transform: rotate(-90deg);
+      }
+
+      &::after {
+        visibility: visible;
+      }
+    }
+
+    &-disabled {
+      &,
+      & .vm-cell-right-icon {
+        color: @collapse-item-title-disabled-color;
+      }
+
+      &:active {
+        background-color: @white;
+      }
+    }
+  }
+
+  &-wrapper {
+    overflow: hidden;
+    will-change: height;
+    transition: height @collapse-item-transition-duration ease-in-out;
+  }
+
+  &-content {
+    color: @collapse-item-content-text-color;
+    padding: @collapse-item-content-padding;
+    font-size: @collapse-item-content-font-size;
+    line-height: @collapse-item-content-line-height;
+    background-color: @collapse-item-content-background-color;
+  }
+}

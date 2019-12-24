@@ -1,0 +1,66 @@
+@import '../style/var';
+
+.vm-nav-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 50px;
+  justify-content: space-between;
+  background-color: @white;
+
+  &-action {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 100%;
+    font-size: 15px;
+    >[class*="icon"] {
+      font-size: 26px;
+      & + & {
+        margin-left: 0.5em;
+      }
+    }
+    &:first-child {
+      margin-left: 15px;
+      font-size: 15px;
+
+      >[class*="icon"] {
+        margin-left: -0.3em;
+        margin-right: 0.3em;
+      }
+     }
+
+     &:last-child {
+       margin-right: 15px;
+     }
+  }
+
+  &-title {
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 170px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    cursor: none;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1024;
+    box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+  }
+}

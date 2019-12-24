@@ -1,0 +1,115 @@
+@import '../style/mixins/hairline.less';
+@import '../style/background-color';
+
+.vm-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  overflow: visible;
+  margin-left: initial;
+  transform: translate(0, 0);
+  margin-right: initial;
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transform: translate(1px, 1px);
+  }
+
+  &.shadow-blur::before {
+    top: 2px;
+    left: 2px;
+    filter: blur(3px);
+    opacity: 0.6;
+  }
+
+  &-loading:active {
+    transform: none;
+  }
+
+  [class*="icon"] {
+    &+span {
+      margin-left: 3px;
+    }
+  }
+
+  &:not([class*="bg-"]) {
+    background-color: #f0f0f0;
+  }
+
+  &[class*="plain"] {
+    background-color: transparent;
+  }
+
+  &[class*="plain"]::after {
+    display: block;
+    .hairline(currentColor);
+    border-width: 1PX;
+    border-radius: inherit;
+  }
+
+  &[class*="plains"]::after {
+    border-width: 3px;
+    border-radius: inherit;
+  }
+
+  &-round {
+    border-radius: 2500px;
+
+    &[class*="plain"]::after {
+      border-radius: 500px;
+    }
+  }
+
+  &&-fab {
+    width: 32px;
+    line-height: 32px;
+    border-radius: 250px;
+    padding: 0;
+
+    &.vm-button-lg {
+      width: 40px;
+      line-height: 40px;
+    }
+
+    &.vm-button-sm {
+      width: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &-sm {
+    padding: 0 10px;
+    font-size: 10px;
+    line-height: 24px;
+  }
+
+  &-md {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  &-lg {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &-block {
+    width: 100%;
+    display: block;
+  }
+
+  &&-disabled {
+    opacity: 0.6;
+
+    &:active {
+      transform: none;
+    }
+  }
+}

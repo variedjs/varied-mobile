@@ -1,0 +1,75 @@
+.vm-address-picker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  &-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+
+    &-title {
+      padding: 10px 20px;
+      color: #999;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &-close {
+      float: right;
+    }
+
+    &-tab {
+      border-bottom: 1px solid #999;
+
+      li {
+        padding: 10px 0 10px 20px;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+      }
+
+      .selected {
+        color: #108ee9 !important;
+      }
+    }
+
+    &-tab-landscape {
+      li {
+        float: left;
+      }
+    }
+
+    &-data {
+      clear: both;
+      width: 100%;
+      max-height: ~'calc(100vh - 250px)';
+      overflow-y: scroll;
+
+      li {
+        height: 50px;
+        padding: 0 15px;
+        line-height: 50px;
+
+        span {
+          padding: 5px;
+        }
+      }
+
+      .two {
+        background: rgba(251, 251, 251, 1);
+      }
+
+      &-selected {
+        color: #108ee9 !important;
+        border-bottom: 1px solid #108ee9;
+      }
+    }
+  }
+}

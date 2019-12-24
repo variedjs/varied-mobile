@@ -1,0 +1,11 @@
+.vm-col {
+  float: left;
+  box-sizing: border-box;
+}
+
+.generate-col(24);
+.generate-col(@n, @i: 1) when (@i =< @n) {
+  .vm-col-@{i} { width: @i * 100% / 24; }
+  .vm-col-offset-@{i} { margin-left: @i * 100% / 24; }
+  .generate-col(@n, (@i + 1));
+}
