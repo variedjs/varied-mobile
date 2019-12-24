@@ -1,6 +1,7 @@
 <!--/* eslint-disable */-->
 <template>
   <div
+    @touchmove.prevent
     :class="b()">
     <ul
       :id="b('ul')">
