@@ -4,7 +4,7 @@
   "description": "一款轻量、可靠的移动端 Vue 组件库",
   "author": "Heath",
   "private": false,
-  "homepage": "https://github.com/HeathHwn/varied-mobile",
+  "homepage": "https://github.com/variedjs/varied-mobile",
   "main": "lib/index.js",
   "module": "es/index.js",
   "style": "lib/index.css",

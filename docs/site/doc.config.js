@@ -4,7 +4,7 @@ const { version } = pkgJson;
 
 export const versions = [version];
 
-export const github = 'https://github.com/HeathHwn/varied-mobile';
+export const github = 'https://github.com/variedjs/varied-mobile';
 
 export default {
   header: {
