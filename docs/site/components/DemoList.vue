@@ -4,7 +4,7 @@
       <img src="http://huangwanneng.cn/static/favicon.png">
       <span>Varied</span>
     </h1>
-    <h2 class="vant-desc">轻量、可靠的移动端 Vue 组件库</h2>
+    <h2 class="vant-desc">轻量、可靠的移动端Vue组件库</h2>
     <template v-for="item in navList">
       <mobile-nav
         v-for="(group, index) in item.groups"
