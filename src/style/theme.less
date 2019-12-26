@@ -1,0 +1,340 @@
+// 颜色主题
+@black: #333;
+@black-shadow: rgba(26, 26, 26, 0.2);
+@blue: #2196f3;
+@blue-light: #cce6ff;
+@blue-shadow: rgba(0, 102, 204, 0.2);
+@brown: #795548;
+@brown-light: #ede1d9;
+@brown-shadow: rgba(140, 88, 53, 0.2);
+@cyan: #00bcd4;
+@cyan-light: #d2f1f0;
+@cyan-shadow: rgba(28, 187, 180, 0.2);
+@gray: #c8c9cc;
+@gray-shadow: rgba(114, 130, 138, 0.2);
+@gray-1: #f7f8fa;
+@gray-2: #f2f3f5;
+@gray-3: #ebedf0;
+@gray-4: #dcdee0;
+@gray-5: #c8c9cc;
+@gray-6: #969799;
+@gray-7: #646566;
+@gray-8: #323233;
+@grey: #9e9e9e;
+@grey-shadow: rgba(114, 130, 138, 0.2);
+@green: #39b54a;
+@green-light: #d7f0db;
+@green-shadow: rgba(48, 156, 63, 0.2);
+@mauve: #9c26b0;
+@mauve-light: #ebd4ef;
+@mauve-shadow: rgba(133, 33, 150, 0.2);
+@olive: #4caf50;
+@olive-light: #e8f4d9;
+@olive-shadow: rgba(124, 173, 55, 0.2);
+@orange: #ff9800;
+@orange-dark: #ed6a0c;
+@orange-light: #fffbe8;
+@orange-shadow: rgba(217, 109, 26, 0.2);
+@pink: #e03997;
+@pink-light: #f9d7ea;
+@pink-shadow: rgba(199, 50, 134, 0.2);
+@purple: #6739b6;
+@purple-light: #e1d7f0;
+@purple-shadow: rgba(88, 48, 156, 0.2);
+@red: #f44336;
+@red-light: #fadbd9;
+@red-shadow: rgba(204, 69, 59, 0.2);
+@yellow: #fbbd08;
+@yellow-light: #fef2ce;
+@yellow-shadow: rgba(224, 170, 7, 0.2);
+@white: #fff;
+
+
+// 背景颜色
+.background-color(@background-color, @text-color) {
+  background-color: @background-color;
+  color: @text-color;
+}
+
+.bg-red {
+  .background-color(@red, @white);
+}
+
+.bg-orange {
+  .background-color(@orange, @white);
+}
+
+.bg-yellow {
+  .background-color(@yellow, @black);
+}
+
+.bg-olive {
+  .background-color(@olive, @white);
+}
+
+.bg-green {
+  .background-color(@green, @white);
+}
+
+.bg-cyan {
+  .background-color(@cyan, @white);
+}
+
+.bg-blue {
+  .background-color(@blue, @white);
+}
+
+.bg-purple {
+  .background-color(@purple, @white);
+}
+
+.bg-mauve {
+  .background-color(@mauve, @white);
+}
+
+.bg-pink {
+  .background-color(@pink, @white);
+}
+
+.bg-brown {
+  .background-color(@brown, @white);
+}
+
+.bg-grey {
+  .background-color(@grey, @white);
+}
+
+.bg-gray {
+  .background-color(@gray, @gray-7);
+}
+
+.bg-black {
+  .background-color(@black, @white);
+}
+
+.bg-white {
+  .background-color(@white, @gray-7);
+}
+
+.bg-red.light {
+  .background-color(@red-light, @red);
+}
+
+.bg-orange.light {
+  .background-color(@orange-light, @orange);
+}
+
+.bg-yellow.light {
+  .background-color(@yellow-light, @yellow);
+}
+
+.bg-olive.light {
+  .background-color(@olive-light, @olive);
+}
+
+.bg-green.light {
+  .background-color(@green-light, @green);
+}
+
+.bg-cyan.light {
+  .background-color(@cyan-light, @cyan);
+}
+
+.bg-blue.light {
+  .background-color(@blue-light, @blue);
+}
+
+.bg-purple.light {
+  .background-color(@purple-light, @purple);
+}
+
+.bg-mauve.light {
+  .background-color(@mauve-light, @mauve);
+}
+
+.bg-pink.light {
+  .background-color(@pink-light, @pink);
+}
+
+.bg-brown.light {
+  .background-color(@brown-light, @brown);
+}
+
+.bg-grey.light {
+  .background-color(@gray-1, @grey);
+}
+
+.bg-gray.light {
+  .background-color(@gray-1, @gray-7);
+}
+
+.bg-gradual-red {
+  background-image: linear-gradient(45deg, @red, @yellow);
+  color: @white;
+}
+
+.bg-gradual-orange {
+  background-image: linear-gradient(45deg, @orange, @red);
+  color: @white;
+}
+
+.bg-gradual-green {
+  background-image: linear-gradient(45deg, @green, @olive);
+  color: @white;
+}
+
+.bg-gradual-purple {
+  background-image: linear-gradient(45deg, @purple, @mauve);
+  color: @white;
+}
+
+.bg-gradual-pink {
+  background-image: linear-gradient(45deg, @pink, @purple);
+  color: @white;
+}
+
+.bg-gradual-blue {
+  background-image: linear-gradient(45deg, @blue, @cyan);
+  color: @white;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// 阴影
+.box-shadow(@box-shadow-color) {
+  box-shadow: 6px 6px 8px @box-shadow-color;
+}
+
+.shadow[class*="-red"] {
+  .box-shadow(@red-shadow);
+}
+
+.shadow[class*="-orange"] {
+  .box-shadow(@orange-shadow);
+}
+
+.shadow[class*="-yellow"] {
+  .box-shadow(@yellow-shadow);
+}
+
+.shadow[class*="-olive"] {
+  .box-shadow(@olive-shadow);
+}
+
+.shadow[class*="-green"] {
+  .box-shadow(@green-shadow);
+}
+
+.shadow[class*="-cyan"] {
+  .box-shadow(@cyan-shadow);
+}
+
+.shadow[class*="-blue"] {
+  .box-shadow(@blue-shadow);
+}
+
+.shadow[class*="-purple"] {
+  .box-shadow(@purple-shadow);
+}
+
+.shadow[class*="-mauve"] {
+  .box-shadow(@mauve-shadow);
+}
+
+.shadow[class*="-pink"] {
+  .box-shadow(@pink-shadow);
+}
+
+.shadow[class*="-brown"] {
+  .box-shadow(@brown-shadow);
+}
+
+.shadow[class*="-grey"] {
+  .box-shadow(@grey-shadow);
+}
+
+.shadow[class*="-gray"] {
+  .box-shadow(@gray-shadow);
+}
+
+.shadow[class*="-black"] {
+  .box-shadow(@black-shadow);
+}
+
+// 边框颜色
+.border(@border-color) {
+  color: @border-color;
+  border-color: @border-color;
+}
+
+.border-red {
+  .border(@red);
+}
+
+.border-orange {
+  .border(@orange);
+}
+
+.border-yellow {
+  .border(@yellow);
+}
+
+.border-olive {
+  .border(@olive);
+}
+
+.border-green {
+  .border(@green);
+}
+
+.border-cyan {
+  .border(@cyan);
+}
+
+.border-blue {
+  .border(@blue);
+}
+
+.border-purple {
+  .border(@purple);
+}
+
+.border-mauve {
+  .border(@mauve);
+}
+
+.border-pink {
+  .border(@pink);
+}
+
+.border-brown {
+  .border(@brown);
+}
+
+.border-grey {
+  .border(@grey);
+}
+
+.border-gray {
+  .border(@gray-7);
+}
+
+.border-black {
+  .border(@black);
+}
+
+.border-white {
+  .border(@white);
+}
+
+// 边框
+@border-width: 1px;
+
+// 按钮
+@button-margin-left: 3px;
+
+//

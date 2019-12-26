@@ -5,32 +5,62 @@
         type="flex"
         align="center"
       >
-        <vm-button class="bg-cyan">默认</vm-button>
+        <vm-button tag="span" class="bg-cyan">默认</vm-button>
         <vm-button
-          round
+          radius="mc"
           class="bg-cyan"
         >
-          圆角
+          小圆角
         </vm-button>
         <vm-button
-          fab
-          class="bg-cyan shadow-blur"
+          radius="sc"
+          class="bg-cyan"
         >
-          <vm-icon name="opera" />
+          半圆角
+        </vm-button>
+        <vm-button
+          radius="fc"
+          class="bg-cyan shadow-blue"
+        >
+          <vm-icon name="opera"/>
         </vm-button>
       </vm-row>
     </demo-block>
     <demo-block title="朴素按钮">
-      <vm-button class="plain-blue">海蓝</vm-button>
-      <vm-button class="plain-red">嫣红</vm-button>
-      <vm-button class="plain-orange">桔橙</vm-button>
-      <vm-button class="plain-yellow">明黄</vm-button>
+      <vm-button
+        class="border-blue">
+        海蓝
+      </vm-button>
+      <vm-button
+        class="border-red">
+        嫣红
+      </vm-button>
+      <vm-button
+        class="border-orange">
+        桔橙
+      </vm-button>
+      <vm-button
+        class="border-yellow">
+        明黄
+      </vm-button>
     </demo-block>
     <demo-block title="阴影">
-      <vm-button class="bg-purple shadow-blur">姹紫</vm-button>
-      <vm-button class="bg-mauve shadow-blur">木槿</vm-button>
-      <vm-button class="bg-pink shadow-blur">桃粉</vm-button>
-      <vm-button class="bg-brown shadow-blur">棕褐</vm-button>
+      <vm-button
+        class="bg-purple shadow">
+        姹紫
+      </vm-button>
+      <vm-button
+        class="bg-mauve shadow">
+        木槿
+      </vm-button>
+      <vm-button
+        class="bg-pink shadow">
+        桃粉
+      </vm-button>
+      <vm-button
+        class="bg-brown shadow">
+        棕褐
+      </vm-button>
     </demo-block>
     <demo-block title="大小">
       <vm-button
@@ -77,25 +107,25 @@
     </demo-block>
     <demo-block title="高级">
       <vm-button class="bg-green">
-        <vm-icon name="search" />
+        <vm-icon name="search"/>
         <span>按钮</span>
       </vm-button>
     </demo-block>
   </demo-section>
 </template>
 <style lang="less">
-.demo-button {
-  .vm-button {
-    user-select: none;
-    margin-right: 10px;
-  }
+  .demo-button {
+    .vm-button {
+      user-select: none;
+      margin-right: 10px;
+    }
 
-  .van-doc-demo-block {
-    padding: 0 15px;
-  }
+    .van-doc-demo-block {
+      padding: 0 15px;
+    }
 
-  .van-doc-demo-block__title {
-    padding-left: 0;
+    .van-doc-demo-block__title {
+      padding-left: 0;
+    }
   }
-}
 </style>

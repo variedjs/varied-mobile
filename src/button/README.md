@@ -13,40 +13,73 @@ Vue.use(Button);
 支持`round`、`fab`
 
 ```html
-<vm-button class="bg-cyan">默认</vm-button>
-<vm-button round class="bg-cyan">圆角</vm-button>
-<vm-button fab class="bg-cyan"><vm-icon name="emojifill" /></vm-button>
+<vm-button
+  class="bg-cyan">
+  默认
+</vm-button>
+
+<vm-button
+  round
+  class="bg-cyan">
+  小圆角
+</vm-button>
+
+<vm-button
+  radius="sc"
+  class="bg-cyan">
+  半圆角
+</vm-button>
+
+<vm-button
+  radius="fc"
+  class="bg-cyan shadow-blue">
+  <vm-icon name="opera" />
+</vm-button>
 ```
 
 #### 朴素按钮
-只需要加入我们提供的全局样式`plain-`或者`plains-`即可变为朴素按钮
+只需要加入我们提供的全局样式`plain-`即可变为朴素按钮
 ```html
-<vm-button class="plain-blue">海蓝</vm-button>
-<vm-button class="plain-red">嫣红</vm-button>
-<vm-button class="plain-orange">桔橙</vm-button>
-<vm-button class="plain-yellow">明黄</vm-button>
+<vm-button
+  class="border-blue">
+  海蓝
+</vm-button>
+
+<vm-button
+  class="border-red">
+  嫣红
+</vm-button>
+
+<vm-button
+  class="border-orange">
+  桔橙
+</vm-button>
+
+<vm-button
+  class="border-yellow">
+  明黄
+</vm-button>
 ```
 #### 按钮阴影
-只需要加入我们提供的全局样式`shadow-blur`
+只需要加入我们提供的全局样式`shadow`
 ```html
-<vm-button
-  class="bg-purple shadow-blur"
->
+<vm-button 
+  class="bg-purple shadow">
   姹紫
 </vm-button>
-<vm-button
-  class="bg-mauve shadow-blur"
->
+
+<vm-button 
+  class="bg-mauve shadow">
   木槿
 </vm-button>
-<vm-button
-  class="bg-pink shadow-blur"
->
+
+<vm-button 
+  class="bg-pink shadow">
   桃粉
 </vm-button>
-<vm-button
-  class="bg-brown shadow-blur"
->
+
+<vm-button 
+  class="bg-brown shadow">
   棕褐
 </vm-button>
 ```
@@ -57,33 +90,70 @@ Vue.use(Button);
 通过设置size属性控制按钮大小, 可选值`sm`,`md`,`lg`, 默认`md`
 
 ```html
-<vm-button class="bg-green" size="sm">小尺寸</vm-button>
-<vm-button class="bg-green">默认</vm-button>
-<vm-button class="bg-green" size="lg">大尺寸</vm-button>
+<vm-button
+  class="bg-green"
+  size="sm"
+>
+  小尺寸
+</vm-button>
+
+<vm-button
+  class="bg-green">
+  默认
+</vm-button>
+
+<vm-button
+  class="bg-green"
+  size="lg"
+>
+  大尺寸
+</vm-button>
 ```
 
 #### 块状按钮
 
 ```html 
-<vm-button block size="lg" class="bg-blue">块状</vm-button>
+<vm-button
+  block
+  size="lg"
+  class="bg-blue"
+>
+  块状
+</vm-button>
 ```
 
 
 #### 加载
 ```html
-<vm-button class="bg-green" loading />
-<vm-button class="bg-red" loading loading-text="加载中..." />
+<vm-button
+  class="bg-green"
+  loading
+/>
+
+<vm-button
+  class="bg-red"
+  loading
+  loading-text="加载中..."
+/>
 ```
 
 ### 禁用
 
 ```html
-<vm-button class="bg-green" disabled>禁用状态</vm-button>
+<vm-button
+  class="bg-green"
+  disabled
+>
+  禁用状态
+</vm-button>
 ```
 
 ### 高级
 ```html
-<vm-button class="bg-green"><vm-icon name="search" /><span>按钮</span></vm-button>
+<vm-button class="bg-green">
+  <vm-icon name="search"/>
+  <span>按钮</span>
+</vm-button>
 ```
 
 ### API
@@ -96,8 +166,7 @@ Vue.use(Button);
 | loading | 是否显示为加载状态 | `Boolean` | `false` | - |
 | loading-text | 加载文字 | `String` | | - |
 | block | 是否为块级元素 | `Boolean` | `false` | - |
-| round | 是否为圆角按钮 | `Boolean` | `false` | - |
-| fab | 是否为浮动操作按钮 | `Boolean` | `false` | - |
+| radius | 圆角，可选值为 `mc` `sc` `fc` | `String` | `nc` | - |
 
 ### Event
 

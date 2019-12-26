@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    :class="b([{round,loading,fab,block,disabled}, size])"
+    :class="b([{loading,block,disabled}, size, radius])"
     :disabled="disabled"
     @click="onClick"
   >
@@ -16,35 +16,37 @@
   </component>
 </template>
 <script>
-import create from '../utils/create';
+  import create from '../utils/create';
 
-export default create({
-  name: 'button',
-  props: {
-    tag: {
-      type: String,
-      default: 'button'
+  export default create({
+    name: 'button',
+    props: {
+      tag: {
+        type: String,
+        default: 'button'
+      },
+      radius: {
+        type: String,
+        default: 'nc'
+      },
+      size: {
+        type: String,
+        default: 'md'
+      },
+      icon: String,
+      block: Boolean,
+      plain: Boolean,
+      loading: Boolean,
+      loadingText: String,
+      text: String,
+      disabled: Boolean
     },
-    round: Boolean,
-    fab: Boolean,
-    size: {
-      type: String,
-      default: 'md'
-    },
-    icon: String,
-    block: Boolean,
-    plain: Boolean,
-    loading: Boolean,
-    loadingText: String,
-    text: String,
-    disabled: Boolean
-  },
-  methods: {
-    onClick(event) {
-      if (!this.loading && !this.disabled) {
-        this.$emit('click', event);
+    methods: {
+      onClick(event) {
+        if (!this.loading && !this.disabled) {
+          this.$emit('click', event);
+        }
       }
     }
-  }
-});
+  });
 </script>

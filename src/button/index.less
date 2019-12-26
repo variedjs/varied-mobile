@@ -1,5 +1,5 @@
 @import '../style/mixins/hairline.less';
-@import '../style/background-color';
+@import '../style/theme';
 
 .vm-button {
   position: relative;
@@ -20,55 +20,43 @@
     transform: translate(1px, 1px);
   }
 
-  &.shadow-blur::before {
-    top: 2px;
-    left: 2px;
-    filter: blur(3px);
-    opacity: 0.6;
-  }
-
   &-loading:active {
     transform: none;
   }
 
   [class*="icon"] {
-    &+span {
-      margin-left: 3px;
+    & + span {
+      margin-left: @button-margin-left;
     }
   }
 
   &:not([class*="bg-"]) {
-    background-color: #f0f0f0;
+    background-color: @gray-4;
   }
 
-  &[class*="plain"] {
+  &[class*="border"] {
     background-color: transparent;
   }
 
-  &[class*="plain"]::after {
+  &[class*="border"]::after {
     display: block;
     .hairline(currentColor);
-    border-width: 1PX;
+    border-width: @border-width;
     border-radius: inherit;
   }
 
-  &[class*="plains"]::after {
-    border-width: 3px;
-    border-radius: inherit;
+  &-mc {
+    border-radius: 4px;
   }
 
-  &-round {
+  &-sc {
     border-radius: 2500px;
-
-    &[class*="plain"]::after {
-      border-radius: 500px;
-    }
   }
 
-  &&-fab {
+  &&-fc {
     width: 32px;
     line-height: 32px;
-    border-radius: 250px;
+    border-radius: 2500px;
     padding: 0;
 
     &.vm-button-lg {
