@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../style/var';
+@import '../../style/theme';
 
 .demo-popup {
   .vm-button {
@@ -99,7 +99,7 @@ export default {
     .vm-tab-pane:not(:first-child) {
       padding: 10px;
       line-height: 1.4;
-      color: @gray-darker;
+      color: @gray-6;
     }
 
     &-top {

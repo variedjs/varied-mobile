@@ -80,7 +80,7 @@
 </script>
 
 <style lang="less">
-  @import "../../style/var";
+  @import "../../style/theme";
 
   .demo-collapse {
     .vm-icon-question-o {

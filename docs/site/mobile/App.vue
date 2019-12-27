@@ -9,7 +9,7 @@
       @click-left="onBack"
     />
     <keep-alive>
-      <router-view :weapp="weapp"/>
+      <router-view style="position: relative;top: 50px;" :weapp="weapp"/>
     </keep-alive>
   </div>
 </template>
@@ -50,11 +50,11 @@
 </script>
 
 <style lang="less">
-  @import '../../../src/style/var';
+  @import '../../../src/style/theme';
 
   body {
     min-width: 100vw;
-    color: @text-color;
+    color: @black;
     font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
     line-height: 1;
     background-color: #f7f8fa;

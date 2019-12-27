@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../../src/style/var';
+@import '../../../src/style/theme';
 
 .side-nav {
   box-sizing: border-box;

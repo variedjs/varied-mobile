@@ -85,7 +85,7 @@
 </script>
 
 <style lang="less">
-@import '../../style/var';
+@import '../../style/theme';
 
 .demo-col {
   .van-doc-demo-block {

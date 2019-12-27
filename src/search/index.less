@@ -1,19 +1,19 @@
-@import '../style/var';
+@import '../style/theme';
 
 .vm-search {
   display: flex;
-  padding: 7px 15px;
+  padding: @search-padding;
   align-items: center;
   box-sizing: border-box;
 
   .vm-cell {
     flex: 1;
-    padding: 3px 10px;
-    border-radius: 4px;
+    padding: @search-cell-padding;
+    border-radius: @search-cell-border-radius;
 
     &-left-icon {
-      color: @gray-dark;
-      font-size: 18px;
+      color: @search-cell-icon-color;
+      font-size: @search-cell-icon-size;
     }
   }
 
@@ -31,13 +31,13 @@
   }
 
   &-action {
-    padding: 0 10px;
-    font-size: 14px;
-    line-height: 30px;
-    color: @gray-darker;
+    padding: @search-action-padding;
+    font-size: @font-size-md;
+    line-height: @search-action-height;
+    color: @search-action-color;
 
     &:active {
-      background-color: @active-color;
+      background-color: @search-active-background;
     }
   }
 }

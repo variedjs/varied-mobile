@@ -113,7 +113,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../style/var';
+@import '../../style/theme';
 
 .demo-field {
   padding-bottom: 30px;

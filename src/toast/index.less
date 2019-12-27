@@ -1,4 +1,4 @@
-@import '../style/var';
+@import '../style/theme';
 
 .vm-toast {
   position: fixed;
@@ -44,11 +44,11 @@
     }
 
     .vm-loading {
-      margin: 10px 0;
+      margin: @toast-loading-margin;
     }
 
     .vm-toast-icon-text {
-      padding-top: 5px;
+      padding-top: @toast-toast-icon-text-padding-top;
     }
   }
 
