@@ -30,7 +30,7 @@
       <ul
         :class="b('content-data')">
         <li
-          :class="index%2 === 1?'two':''"
+          :class="index%2 === 0?'two':''"
           v-for="(item,index) in showData"
           :key="index"
           @click.stop="select(item)">
@@ -63,10 +63,22 @@
         type: Boolean,
         default: false
       },
+      level: {
+        type: Number,
+        default: 3
+      },
     },
     watch: {
       address() {
-        this.$emit('getAddress', this.address, this.addressList);
+        this.$emit('changeAddress', this.address, this.addressList);
+        if (this.level === this.addressList.length) {
+          this.$emit('getAddress', this.address, this.addressList);
+        } else {
+          if (this.isEnd) {
+            this.isEnd = false;
+            this.$emit('getAddress', this.address, this.addressList);
+          }
+        }
       },
       value() {
         this.isShow = this.value;
@@ -82,8 +94,8 @@
         address: '',
         addressList: [],
         tabIndex: 0,
-        sIndex: 0,
         isShow: false,
+        isEnd: false,
       }
     },
     methods: {//方法
@@ -112,12 +124,20 @@
           case 0:
             this.tabList[0].name = item.name;
             this.tabList[0].id = item.id;
-            this.get(1, item.id, true);
+            if (this.level === 1) {
+              this.hide();
+            } else {
+              this.get(1, item.id, true);
+            }
             break;
           case 1:
             this.tabList[1].name = item.name;
             this.tabList[1].id = item.id;
-            this.get(2, item.id, true);
+            if (this.level === 2) {
+              this.hide();
+            } else {
+              this.get(2, item.id, true);
+            }
             break;
           case 2:
             this.tabList[2].name = item.name;
@@ -193,6 +213,7 @@
           });
           self.address = address;
           self.addressList = addressList;
+          self.isEnd = true;
         }
       },
       init() {

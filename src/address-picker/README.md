@@ -50,6 +50,48 @@ export default {
   },
 }
 ```
+#### 选择省级
+```javascript
+<vm-address-picker
+    v-model="isShow"
+    :level='1'
+    @getAddress="getAddress"/>
+</demo-block>
+```
+```javascript
+export default {
+  data() {
+    return {
+      isShow: true,
+    }
+  },
+  methods: {//方法
+    getAddress(val, list) {
+    },
+  },
+}
+```
+#### 选择市级
+```javascript
+<vm-address-picker
+    v-model="isShow"
+    :level='2'
+    @getAddress="getAddress"/>
+</demo-block>
+```
+```javascript
+export default {
+  data() {
+    return {
+      isShow: true,
+    }
+  },
+  methods: {//方法
+    getAddress(val, list) {
+    },
+  },
+}
+```
 #### 限制省份
 ```javascript
 <vm-address-picker
@@ -78,10 +120,12 @@ export default {
 |------|------|------|------|
 | landscape | 是否横向展示tab | `Boolean` | false |
 | provinceName | 限制省份 | `String` | -- |
+| level | 省市区选择,可选择项：省：1；市：2；区县：3 | `Number` | 3 |
 | isShow | 是否显示 | `Boolean` | false |
 
 ### Event
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|
-| getAddress | 实时传输选择的地址 | address 详细地址,addressList array类型，省，市，区县  |
+| getAddress | 获取地址 | address 详细地址,addressList array类型，省，市，区县  |
+| changeAddress | 实时传输选择的地址 | address 详细地址,addressList array类型，省，市，区县  |
