@@ -36,6 +36,10 @@ export default {
               title: '介绍'
             },
             {
+              path: '/cli',
+              title: '脚手架'
+            },
+            {
               path: '/quickstart',
               title: '快速上手'
             },

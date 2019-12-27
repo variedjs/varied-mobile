@@ -51,7 +51,6 @@ export default {
 
     onSwitchVersion(version) {
       if (version !== pkgJson.version) {
-        location.href = `https://youzan.github.io/vant/${version}`;
       }
     }
   }
