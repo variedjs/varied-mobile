@@ -12,42 +12,45 @@
     ]"
     @click="onClick"
   >
-    <slot name="icon">
-      <icon
-        v-if="icon"
-        :class="b('left-icon')"
-        :name="icon"
-      />
-    </slot>
     <div
-      v-if="isDef(title) || $slots.title"
-      :class="[b('title'), titleClass]"
-    >
-      <slot name="title">
-        <span v-text="title" />
-        <div
-          v-if="label"
-          v-text="label"
-          :class="[b('label'), labelClass]"
+    :class="b('content')">
+      <slot name="icon">
+        <icon
+          v-if="icon"
+          :class="b('left-icon')"
+          :name="icon"
         />
       </slot>
+      <div
+        v-if="isDef(title) || $slots.title"
+        :class="[b('title'), titleClass]"
+      >
+        <slot name="title">
+          <span v-text="title" />
+        </slot>
+      </div>
+      <div
+        v-if="isDef(value) || $slots.default"
+        :class="[b('value', { alone: !$slots.title && !title }), valueClass]"
+      >
+        <slot>
+          <span v-text="value" />
+        </slot>
+      </div>
+      <slot name="right-icon">
+        <icon
+          v-if="isLink"
+          :class="b('right-icon')"
+          name="chevron-right"
+        />
+      </slot>
+      <slot name="extra" />
     </div>
     <div
-      v-if="isDef(value) || $slots.default"
-      :class="[b('value', { alone: !$slots.title && !title }), valueClass]"
-    >
-      <slot>
-        <span v-text="value" />
-      </slot>
-    </div>
-    <slot name="right-icon">
-      <icon
-        v-if="isLink"
-        :class="b('right-icon')"
-        name="chevron-right"
-      />
-    </slot>
-    <slot name="extra" />
+      v-if="label"
+      v-text="label"
+      :class="[b('label'), labelClass]"
+    />
   </div>
 </template>
 

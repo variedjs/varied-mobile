@@ -1,4 +1,4 @@
-## Cell 单元格
+## Cell 标题
 
 ### 使用指南
 ``` javascript
@@ -15,25 +15,50 @@ Vue.use(Cell).use(CellGroup);
 
 ```html
 <vm-cell-group>
-  <vm-cell title="单元格" value="内容" />
-  <vm-cell title="单元格" value="内容" label="描述信息" />
+  <vm-cell
+    title="标题"
+    value="内容"
+  />
+  <vm-cell
+    title="标题"
+    value="内容"
+    label="描述"
+  />
 </vm-cell-group>
 ```
 #### 短边框
 ```html
 <vm-cell-group>
-  <vm-cell short-border title="单元格" value="内容" />
-  <vm-cell short-border title="单元格" value="内容" label="描述信息" />
+  <vm-cell
+    title="标题"
+    value="内容"
+    short-border
+  />
+  <vm-cell
+    title="标题"
+    value="内容"
+    label="描述"
+    short-border
+  />
 </vm-cell-group>
 ```
 
-#### 单元格大小
+#### 标题大小
 
-通过`size`属性可以控制单元格的大小
+通过`size`属性可以控制标题的大小
 
 ```html
-<vm-cell title="单元格" value="内容" size="large" />
-<vm-cell title="单元格" value="内容" size="large" label="描述信息" />
+<vm-cell
+  title="标题"
+  value="内容"
+  size="large"
+/>
+<vm-cell
+  title="标题"
+  value="内容"
+  size="large"
+  label="描述"
+/>
 ```
 
 #### 展示图标
@@ -41,7 +66,11 @@ Vue.use(Cell).use(CellGroup);
 通过`icon`属性在标题左侧展示图标
 
 ```html
-<vm-cell title="单元格" icon="location" />
+<vm-cell
+  title="标题"
+  value="内容"
+  icon="address-book"
+/>
 ```
 
 #### 只设置 value
@@ -57,9 +86,21 @@ Vue.use(Cell).use(CellGroup);
 传入`is-link`属性则会在右侧显示箭头，并且可以通过传入`arrow-direction`属性控制箭头方向
 
 ```html
-<vm-cell title="单元格" is-link />
-<vm-cell title="单元格" is-link value="内容" />
-<vm-cell title="单元格" is-link arrow-direction="down" value="内容" />
+<vm-cell
+  title="标题"
+  is-link
+/>
+<vm-cell
+  title="标题"
+  is-link
+  value="内容"
+/>
+<vm-cell
+  title="标题"
+  is-link
+  arrow-direction="down"
+  value="内容"
+/>
 ```
 
 #### 页面跳转
@@ -67,7 +108,11 @@ Vue.use(Cell).use(CellGroup);
 可以通过`url`属性进行页面跳转，或通过`to`属性进行 vue-router 跳转
 
 ```html
-<vm-cell title="单元格" is-link url="//github.com" />
+<vm-cell
+  title="标题"
+  is-link
+  url="https://github.com/variedjs/varied-mobile"
+/>
 ```
 
 #### 高级用法
@@ -75,9 +120,17 @@ Vue.use(Cell).use(CellGroup);
 如以上用法不能满足你的需求，可以使用对应的`slot`来自定义显示的内容
 
 ```html
-<vm-cell title="单元格" icon="location" is-link />
-<vm-cell title="单元格">
-  <vm-icon v-slot:right-icon name="search" class="custom-icon" />
+<vm-cell
+  title="标题"
+  icon="bank"
+  is-link
+/>
+<vm-cell title="标题">
+  <vm-icon
+    v-slot:right-icon
+    name="search"
+    class="custom-icon"
+  />
 </vm-cell>
 ```
 
@@ -94,8 +147,9 @@ Vue.use(Cell).use(CellGroup);
 | icon | 左侧图标名称或图片链接，可选值见 Icon 组件 | `String` | - | - |
 | title | 左侧标题 | `String | Number` | - | - |
 | value | 右侧内容 | `String | Number` | - | - |
-| label | 标题下方的描述信息 | `String` | - | - |
-| size | 单元格大小，可选值为 `large` | `String` | - | - |
+| label | 描述信息 | `String` | - | - |
+| size | 标题大小，可选值为 `large` | `String` | - | - |
+| target | 跳转链接，打开新窗口 | `String` | - | - |
 | url | 跳转链接 | `String` | - | - |
 | to | 路由跳转对象，同 `vue-router` 的 to | `String | Object` | - | - |
 | border | 是否显示内边框 | `Boolean` | `true` | - |
@@ -114,7 +168,7 @@ Vue.use(Cell).use(CellGroup);
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|
-| click | 点击单元格时触发 | - |
+| click | 点击标题时触发 | - |
 
 ### Cell Slot
 

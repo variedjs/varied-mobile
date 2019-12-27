@@ -96,10 +96,10 @@ export default {
               path: '/address-picker',
               title: 'AddressPicker 地址选择器'
             },
-            {
-              path: '/carousel-map',
-              title: 'CarouselMap 图片切换'
-            },
+            // {
+            //   path: '/carousel-map',
+            //   title: 'CarouselMap 图片切换'
+            // },
             {
               path: '/date-picker',
               title: 'DatePicker 日期选择器'

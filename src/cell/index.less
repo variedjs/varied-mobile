@@ -1,17 +1,18 @@
-@import '../style/var';
+@import "../style/theme";
 @import '../style/mixins/hairline';
 
 .vm-cell {
   width: 100%;
   display: flex;
-  padding: 10px 15px;
+  padding: @content-padding;
   box-sizing: border-box;
-  line-height: 24px;
+  line-height: @content-line-height;
   position: relative;
   background-color: @white;
-  color: @text-color;
-  font-size: 14px;
+  color: @black;
+  font-size: @font-size-md;
   overflow: hidden;
+  flex-wrap: wrap;
 
   &:not(:last-child)::after {
     .hairline-bottom();
@@ -19,7 +20,7 @@
 
   &-shortBorder {
     &:not(:last-child)::after {
-      .hairline-bottom(@border-color, 15px, 15px);
+      .hairline-bottom(@gray-4, @border-padding, @border-padding);
     }
   }
 
@@ -28,10 +29,15 @@
   }
 
   &-label {
-    color: @gray-dark;
-    font-size: 12px;
-    margin-top: 3px;
-    line-height: 18px;
+    color: @grey;
+    font-size: @font-size-ml;
+    margin-top: 5px;
+    line-height: @content-line-height-md;
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
   }
 
   &-title,
@@ -40,24 +46,24 @@
   }
 
   &-value {
-    color: @gray-dark;
+    color: @grey;
     overflow: hidden;
     text-align: right;
     position: relative;
     vertical-align: middle;
 
     &-alone {
-      color: @text-color;
+      color: @black;
       text-align: left;
     }
   }
 
   &-left-icon,
   &-right-icon {
-    height: 24px;
+    height: @content-line-height;
     min-width: 1em;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: @font-size-lg;
+    line-height: @content-line-height;
   }
 
   &-left-icon {
@@ -65,13 +71,13 @@
   }
 
   &-right-icon {
-    color: @gray-dark;
+    color: @grey;
     margin-left: 5px;
   }
 
   &-clickable {
     &:active {
-      background-color: @active-color;
+      background-color: @gray-4;
     }
   }
 
@@ -82,7 +88,7 @@
       content: '*';
       position: absolute;
       left: 7px;
-      font-size: 14px;
+      font-size: @font-size-md;
       color: @red;
     }
   }
@@ -92,15 +98,14 @@
   }
 
   &-large {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: @content-padding-lg;
 
     .vm-cell-title {
-      font-size: 16px;
+      font-size: @font-size-lg;
     }
 
     .vm-cell-label {
-      font-size: 14px;
+      font-size: @font-size-md;
     }
   }
 }
