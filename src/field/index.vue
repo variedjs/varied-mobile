@@ -65,6 +65,7 @@
       </div>
     </div>
     <div
+      slot="label"
       v-if="errorMessage"
       v-text="errorMessage"
       :class="b('error-message')"

@@ -56,7 +56,7 @@
           v-model="phone"
           label="手机号"
           placeholder="请输入手机号"
-          error-message="手机号错误"
+          errorMessage="手机号错误"
         />
       </vm-cell-group>
     </demo-block>

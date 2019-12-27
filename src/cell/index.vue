@@ -13,7 +13,7 @@
     @click="onClick"
   >
     <div
-    :class="b('content')">
+      :class="b('content')">
       <slot name="icon">
         <icon
           v-if="icon"
@@ -26,7 +26,7 @@
         :class="[b('title'), titleClass]"
       >
         <slot name="title">
-          <span v-text="title" />
+          <span v-text="title"/>
         </slot>
       </div>
       <div
@@ -34,7 +34,7 @@
         :class="[b('value', { alone: !$slots.title && !title }), valueClass]"
       >
         <slot>
-          <span v-text="value" />
+          <span v-text="value"/>
         </slot>
       </div>
       <slot name="right-icon">
@@ -44,44 +44,45 @@
           name="chevron-right"
         />
       </slot>
-      <slot name="extra" />
+      <slot name="extra"/>
     </div>
-    <div
-      v-if="label"
-      v-text="label"
-      :class="[b('label'), labelClass]"
-    />
+    <slot name="label">
+      <div
+        v-if="label"
+        v-text="label"
+        :class="[b('label'), labelClass]"
+      />
+    </slot>
   </div>
 </template>
 
 <script>
-import Icon from '../icon';
-import CellMixin from '../mixins/cell';
-import RouterLink from '../mixins/router-link';
-import create from '../utils/create-basic';
+  import Icon from '../icon';
+  import CellMixin from '../mixins/cell';
+  import RouterLink from '../mixins/router-link';
+  import create from '../utils/create-basic';
 
-export default create({
-  name: 'cell',
+  export default create({
+    name: 'cell',
 
-  components: {
-    Icon
-  },
+    components: {
+      Icon
+    },
 
-  mixins: [CellMixin, RouterLink],
+    mixins: [CellMixin, RouterLink],
 
-  props: {
-    size: String,
-    clickable: Boolean,
-  },
+    props: {
+      size: String,
+      clickable: Boolean,
+    },
 
-  computed: {
-  },
+    computed: {},
 
-  methods: {
-    onClick() {
-      this.$emit('click');
-      this.routerLink();
+    methods: {
+      onClick() {
+        this.$emit('click');
+        this.routerLink();
+      }
     }
-  }
-});
+  });
 </script>

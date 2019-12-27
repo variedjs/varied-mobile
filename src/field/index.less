@@ -1,8 +1,8 @@
-@import '../style/var';
+@import '../style/theme';
 
 .vm-field {
   .vm-cell-title {
-    max-width: 90px;
+    max-width: @field-title-max-width;
   }
 
   &-body {
@@ -18,17 +18,18 @@
     width: 100%;
     resize: none;
     display: block;
-    color: @text-color;
+    color: @field-text-color;
     box-sizing: border-box;
     background-color: transparent;
+    outline: none;
 
     &::placeholder {
-      color: @gray-dark;
+      color: @field-placeholder-color;
     }
 
     &:disabled {
       opacity: 1;
-      color: @gray-dark;
+      color: @field-disabled-color;
       background-color: transparent;
     }
 
@@ -41,9 +42,10 @@
     }
 
     /* for ios wechat */
+
     &[type="date"],
     &[type="time"] {
-      min-height: 24px;
+      min-height: @field-date-min-height;
     }
   }
 
@@ -55,36 +57,37 @@
 
   &-clear,
   &-icon {
-    padding: 0 10px;
+    padding: 0 @field-icon-padding;
     line-height: inherit;
-    margin-right: -10px;
+    margin-right: -@field-icon-padding;
   }
 
   &-clear {
-    color: @gray;
-    font-size: 16px;
+    color: @field-icon-clear-color;
+    font-size: @font-size-lg;
   }
 
   &-icon .vm-icon {
     display: block;
-    font-size: 16px;
-    color: @gray-dark;
+    font-size: @font-size-lg;
+    color: @field-icon-color;
     line-height: inherit;
   }
 
   &-button {
-    padding-left: 10px;
+    padding-left: @field-button-padding;
   }
 
   &-error-message {
-    color: @red;
-    font-size: 12px;
+    color: @field-error-message-color;
+    font-size: @font-size-ml;
     text-align: left;
+    margin-top: @field-error-message-margin-top;
   }
 
   &-disabled {
     .vm-field-control {
-      color: @gray-dark;
+      color: @field-disabled-color;
     }
   }
 
@@ -92,14 +95,14 @@
     .vm-field-control {
       &,
       &::placeholder {
-        color: @red;
+        color: @field-error-message-color;
       }
     }
   }
 
   &-min-height {
     .vm-field-control {
-      min-height: 60px;
+      min-height: @field-control-min-height;
     }
   }
 
