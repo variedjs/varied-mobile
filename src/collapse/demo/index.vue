@@ -1,9 +1,16 @@
 <template>
   <demo-section>
     <demo-block title="基础用法">
-      <vm-collapse v-model="active1">
-        <vm-collapse-item title="标题">内容</vm-collapse-item>
-        <vm-collapse-item title="标题">内容</vm-collapse-item>
+      <vm-collapse
+        v-model="active1">
+        <vm-collapse-item
+          title="标题">
+          内容
+        </vm-collapse-item>
+        <vm-collapse-item
+          title="标题">
+          内容
+        </vm-collapse-item>
         <vm-collapse-item
           title="标题"
           disabled
@@ -44,14 +51,14 @@
         <vm-collapse-item>
           <template v-slot:title>
             标题
-            <vm-icon name="question"/>
+            <vm-icon name="map"/>
           </template>
           内容
         </vm-collapse-item>
         <vm-collapse-item
           title="标题"
           value="内容"
-          icon="shop"
+          icon="map"
         >
           内容
         </vm-collapse-item>

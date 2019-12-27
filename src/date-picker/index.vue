@@ -199,16 +199,22 @@
         </div>
         <div
           :class="b('content-time-button')">
-          <div
-            class="cancel"
+          <vm-button
+            size="lg"
+            class="bg-gray light shadow"
+            tag="div"
+            block
             @click="hide">
             取消
-          </div>
-          <div
-            class="submit"
+          </vm-button>
+          <vm-button
+            size="lg"
+            class="submit bg-gradual-blue shadow"
+            tag="div"
+            block
             @click="submit">
             确定
-          </div>
+          </vm-button>
         </div>
       </div>
     </div>
