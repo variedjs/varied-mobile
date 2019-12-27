@@ -5,11 +5,10 @@
       :title="title"
       left-text="返回"
       left-arrow
-      fixed
       @click-left="onBack"
     />
     <keep-alive>
-      <router-view style="position: relative;top: 50px;" :weapp="weapp"/>
+      <router-view :weapp="weapp"/>
     </keep-alive>
   </div>
 </template>
@@ -54,7 +53,7 @@
 
   body {
     min-width: 100vw;
-    color: @black;
+    color: @text-color;
     font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
     line-height: 1;
     background-color: #f7f8fa;
