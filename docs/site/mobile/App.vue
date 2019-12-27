@@ -5,6 +5,7 @@
       :title="title"
       left-text="返回"
       left-arrow
+      fixed
       @click-left="onBack"
     />
     <keep-alive>

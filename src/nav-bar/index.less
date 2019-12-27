@@ -1,10 +1,10 @@
-@import '../style/var';
+@import '../style/theme';
 
 .vm-nav-bar {
   display: flex;
   position: relative;
   align-items: center;
-  min-height: 50px;
+  min-height: @nav-bar-min-height;
   justify-content: space-between;
   background-color: @white;
 
@@ -14,7 +14,7 @@
     height: 100%;
     justify-content: center;
     max-width: 100%;
-    font-size: 15px;
+    font-size: @font-size-lg;
     >[class*="icon"] {
       font-size: 26px;
       & + & {
@@ -22,8 +22,8 @@
       }
     }
     &:first-child {
-      margin-left: 15px;
-      font-size: 15px;
+      margin-left: @nav-bar-title-margin;
+      font-size: @font-size-lg;
 
       >[class*="icon"] {
         margin-left: -0.3em;
@@ -32,7 +32,7 @@
      }
 
      &:last-child {
-       margin-right: 15px;
+       margin-right: @nav-bar-title-margin;
      }
   }
 
@@ -45,10 +45,10 @@
     bottom: 0;
     top: 0;
     margin: auto;
-    height: 30px;
-    font-size: 16px;
+    height: @nav-bar-title-height;
+    font-size: @font-size-lg;
     font-weight: bold;
-    line-height: 30px;
+    line-height: @nav-bar-title-height;
     cursor: none;
     pointer-events: none;
     text-overflow: ellipsis;
@@ -61,6 +61,6 @@
     width: 100%;
     top: 0;
     z-index: 1024;
-    box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   }
 }

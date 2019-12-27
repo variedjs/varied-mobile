@@ -39,12 +39,21 @@ export default {
 通过插槽定制内容
 
 ```html
-<vm-nav-bar class="bg-gradual-blue" title="标题">
+<vm-nav-bar
+  class="bg-gradual-blue"
+  title="标题"
+>
   <template v-slot:left>
-    <vm-icon name="home" v-slot:left/>
+    <vm-icon
+      name="home"
+      v-slot:left
+    />
     <span>首页</span>
   </template>
-  <vm-icon name="search" v-slot:right />
+  <vm-icon
+    name="search"
+    v-slot:right
+  />
 </vm-nav-bar>
 ```
 

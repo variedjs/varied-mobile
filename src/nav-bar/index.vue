@@ -40,33 +40,33 @@
 </template>
 
 <script>
-import create from '../utils/create';
+  import create from '../utils/create';
 
-export default create({
-  name: 'nav-bar',
+  export default create({
+    name: 'nav-bar',
 
-  props: {
-    title: String,
-    fixed: Boolean,
-    leftText: String,
-    rightText: String,
-    leftArrow: Boolean,
-    border: {
-      type: Boolean,
-      default: true
+    props: {
+      title: String,
+      fixed: Boolean,
+      leftText: String,
+      rightText: String,
+      leftArrow: Boolean,
+      border: {
+        type: Boolean,
+        default: true
+      },
+      zIndex: {
+        type: Number,
+        default: 1
+      }
     },
-    zIndex: {
-      type: Number,
-      default: 1
-    }
-  },
 
-  computed: {
-    style() {
-      return {
-        zIndex: this.zIndex
-      };
+    computed: {
+      style() {
+        return {
+          zIndex: this.zIndex
+        };
+      }
     }
-  }
-});
+  });
 </script>
