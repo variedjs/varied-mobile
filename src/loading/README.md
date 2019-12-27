@@ -12,15 +12,22 @@ Vue.use(Loading);
 #### Circular
 
 ```html
-<vm-loading />
-<vm-loading color="white" />
+<vm-loading/>
+<vm-loading
+  color="white"
+  background="rgba(0,0,0,.6)"/>
 ```
 
 #### Spinner
 
 ```html
-<vm-loading type="spinner" />
-<vm-loading type="spinner" color="white" />
+<vm-loading
+  type="spinner"/>
+<vm-loading
+  type="spinner"
+  color="white"
+  background="rgba(0,0,0,.6)"
+  backgroundSize="20px"/>
 ```
 
 ### API
@@ -30,3 +37,5 @@ Vue.use(Loading);
 | color | 颜色 | `String` | `#c9c9c9` | - |
 | type | 类型，可选值为 `spinner` | `String` | `circular` | - |
 | size | 大小 | `String` | `30px` | - |
+| background | 背景色 | `String` | - | - |
+| backgroundSize | 背景大小 | `String` | `10px` | - |

@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="b([type, colorType])"
+    :class="b([type])"
     :style="style"
   >
     <span :class="b('container', type)">
@@ -25,38 +25,39 @@
 </template>
 
 <script>
-import create from '../utils/create-basic';
+  import create from '../utils/create-basic';
 
-const DEFAULT_COLOR = '#c9c9c9';
+  export default create({
+    name: 'loading',
 
-export default create({
-  name: 'loading',
-
-  props: {
-    size: String,
-    type: {
-      type: String,
-      default: 'circular'
-    },
-    color: {
-      type: String,
-      default: DEFAULT_COLOR
-    }
-  },
-
-  computed: {
-    colorType() {
-      const { color } = this;
-      return color === 'white' || color === 'black' ? color : '';
+    props: {
+      size: String,
+      type: {
+        type: String,
+        default: 'circular'
+      },
+      color: {
+        type: String,
+        default: '#c9c9c9'
+      },
+      background: String,
+      backgroundSize: {
+        type: String,
+        default: '10px'
+      },
     },
 
-    style() {
-      return {
-        color: this.color === 'black' ? DEFAULT_COLOR : this.color,
-        width: this.size,
-        height: this.size
-      };
+    computed: {
+      style() {
+        return {
+          color: this.color,
+          background: this.background,
+          padding: this.background ? this.backgroundSize : '',
+          borderRadius: this.background ? '4px' : '',
+          width: this.size,
+          height: this.size
+        };
+      }
     }
-  }
-});
+  });
 </script>

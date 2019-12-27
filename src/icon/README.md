@@ -8,7 +8,10 @@ Vue.use(Icon);
 ```
 ### 代码演示
 ```html
-<vm-icon name="check" size="14px" color="#333" />
+<vm-icon
+  name="check"
+  size="14px"
+  color="#333" />
 ```
 
 ### API
