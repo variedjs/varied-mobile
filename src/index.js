@@ -20,7 +20,7 @@ import Row from './row';
 import Search from './search';
 import Toast from './toast';
 
-const version = '0.0.15';
+const version = '0.0.16';
 const components = [
   AddressPicker,
   Button,

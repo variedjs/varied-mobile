@@ -41,6 +41,36 @@
         label="描述"
       />
     </demo-block>
+    <demo-block title="分组">
+      <vm-cell-group
+        title="分组1">
+        <vm-cell
+          title="标题"
+          value="内容"
+          size="large"
+        />
+        <vm-cell
+          title="标题"
+          value="内容"
+          size="large"
+          label="描述"
+        />
+      </vm-cell-group>
+      <vm-cell-group
+        title="分组2">
+        <vm-cell
+          title="标题"
+          value="内容"
+          size="large"
+        />
+        <vm-cell
+          title="标题"
+          value="内容"
+          size="large"
+          label="描述"
+        />
+      </vm-cell-group>
+    </demo-block>
     <demo-block title="展示图标">
       <vm-cell
         title="标题"
@@ -49,7 +79,7 @@
       />
     </demo-block>
     <demo-block title="只有内容">
-      <vm-cell value="内容" />
+      <vm-cell value="内容"/>
     </demo-block>
 
     <demo-block title="显示箭头">
@@ -95,14 +125,14 @@
   </demo-section>
 </template>
 <style lang="less">
-.demo-cell {
-  .custom-text {
-    margin-right: 5px;
-    vertical-align: middle;
-  }
+  .demo-cell {
+    .custom-text {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
 
-  .custom-icon {
-    line-height: 24px;
+    .custom-icon {
+      line-height: 24px;
+    }
   }
-}
 </style>

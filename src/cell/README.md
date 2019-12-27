@@ -60,6 +60,40 @@ Vue.use(Cell).use(CellGroup);
   label="描述"
 />
 ```
+#### 分组
+
+通过CellGroup `title`属性可以添加分组标题
+
+```html
+<vm-cell-group
+  title="分组1">
+  <vm-cell
+    title="标题"
+    value="内容"
+    size="large"
+  />
+  <vm-cell
+    title="标题"
+    value="内容"
+    size="large"
+    label="描述"
+  />
+</vm-cell-group>
+<vm-cell-group
+  title="分组2">
+  <vm-cell
+    title="标题"
+    value="内容"
+    size="large"
+  />
+  <vm-cell
+    title="标题"
+    value="内容"
+    size="large"
+    label="描述"
+  />
+</vm-cell-group>
+```
 
 #### 展示图标
 
@@ -139,6 +173,7 @@ Vue.use(Cell).use(CellGroup);
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 |------|------|------|------|------|
 | border | 是否显示外边框 | `Boolean` | `true` | - |
+| title | 分组标题 | `String` | - | - |
 
 ### Cell API
 

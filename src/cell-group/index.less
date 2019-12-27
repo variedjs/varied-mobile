@@ -1,5 +1,13 @@
-@import '../style/var';
+@import '../style/theme';
 
 .vm-cell-group {
-  background-color: @white;
+  &-title {
+    color: @gray-6;
+    font-size: @font-size-md;
+    padding: @content-padding;
+  }
+
+  &-content {
+    background-color: @white;
+  }
 }
