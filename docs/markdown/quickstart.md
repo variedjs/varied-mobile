@@ -63,7 +63,7 @@ module.exports = {
 ```
 
 ```js
-// 接着你可以在代码中直接引入 Simple 组件
+// 接着你可以在代码中直接引入 Varied 组件
 // 插件会自动将代码转化为方式二中的按需引入形式
 import { Button } from '@varied/mobile';
 ```

@@ -10,7 +10,7 @@ export default {
   header: {
     logo: {
       image: 'http://huangwanneng.cn/static/logo.png',
-      title: 'Simple',
+      title: 'Varied',
       href: '#/'
     },
     nav: {
@@ -42,6 +42,14 @@ export default {
             {
               path: '/quickstart',
               title: '快速上手'
+            },
+            {
+              path: '/theme',
+              title: '自定义主题'
+            },
+            {
+              path: '/onlineConfig',
+              title: '在线配置主题'
             },
             {
               path: '/changelog',
