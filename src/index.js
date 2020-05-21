@@ -18,9 +18,11 @@ import Picker from './picker';
 import Popup from './popup';
 import Row from './row';
 import Search from './search';
+import Tabbar from './tabbar';
+import TabbarItem from './tabbar-item';
 import Toast from './toast';
 
-const version = '0.0.21';
+const version = '0.0.3';
 const components = [
   AddressPicker,
   Button,
@@ -41,6 +43,8 @@ const components = [
   Popup,
   Row,
   Search,
+  Tabbar,
+  TabbarItem,
   Toast
 ];
 
@@ -77,6 +81,8 @@ export {
   Popup,
   Row,
   Search,
+  Tabbar,
+  TabbarItem,
   Toast
 };
 

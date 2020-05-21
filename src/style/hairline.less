@@ -1,0 +1,35 @@
+@import './mixins/hairline';
+
+[class*='vm-hairline'] {
+  position: relative;
+
+  &::after {
+    .hairline();
+  }
+}
+
+.vm-hairline {
+  &-top::after {
+    border-top-width: 1PX;
+  }
+
+  &-left::after {
+    border-left-width: 1PX;
+  }
+
+  &-right::after {
+    border-right-width: 1PX;
+  }
+
+  &-bottom::after {
+    border-bottom-width: 1PX;
+  }
+
+  &-top-bottom::after {
+    border-width: 1PX 0;
+  }
+
+  &-surround::after {
+    border-width: 1PX;
+  }
+}

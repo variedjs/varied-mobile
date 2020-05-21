@@ -35,22 +35,6 @@ export default {
 </vm-popup>
 ```
 
-#### 弹出对话框
-
-```html
-<vm-popup
-  v-model="show2"
-  position="bottom"
->
-  <vm-picker
-    show-toolbar
-    :columns="['杭州', '宁波', '温州', '嘉兴', '湖州']"
-    @confirm="show2 = false"
-    @cancel="show2 = false"
-  />
-</vm-popup>
-
-```
 ### API
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |

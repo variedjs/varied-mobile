@@ -11,7 +11,7 @@ module.exports = merge(config, {
     devServer: {
         open: true,
         progress: true,
-        host: '192.168.1.133',
+        host: 'localhost',
         port: '8888',
         stats: 'errors-only',
         disableHostCheck: true,

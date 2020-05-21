@@ -69,6 +69,8 @@ export default {
 | fixed | 是否固定在顶部 | `Boolean` | `false` |
 | z-index | 元素 z-index | `Number` | `1` |
 | border| 是否显示下边框 | `Boolean`| true |
+| backgroundColor| 背景颜色 | `String`| `#FFFFFF` |
+| color| 字体颜色 | `String`| `#000000` |
 
 
 ### Slot

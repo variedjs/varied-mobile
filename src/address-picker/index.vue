@@ -3,6 +3,7 @@
   <div
     v-if="isShow"
     :class="b()"
+    @touchmove.prevent
     @click="hide">
     <div
       :class="b('content')"

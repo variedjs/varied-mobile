@@ -82,6 +82,10 @@ export default {
               path: '/icon',
               title: 'Icon 图标'
             },
+            {
+              path: '/popup',
+              title: 'Popup 弹出层'
+            },
           ]
         },
         {
@@ -146,6 +150,10 @@ export default {
             {
               path: '/nav-bar',
               title: 'NavBar 导航栏'
+            },
+            {
+              path: '/tabbar',
+              title: 'Tabbar 标签栏'
             },
           ]
         },

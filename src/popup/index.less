@@ -1,6 +1,6 @@
 @import '../style/theme';
 
-.sp {
+.vm {
   &-overflow-hidden {
     overflow: hidden !important;
   }
@@ -11,8 +11,8 @@
     left: 50%;
     max-height: 100%;
     overflow-y: auto;
-    background-color: @white;
-    transition: .3s ease-out;
+    background-color: @popup-background-color;
+    transition: @popup-transition;
     -webkit-overflow-scrolling: touch;
     transform: translate3d(-50%, -50%, 0);
 
