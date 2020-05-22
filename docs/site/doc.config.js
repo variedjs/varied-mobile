@@ -133,6 +133,10 @@ export default {
               path: '/search',
               title: 'Search 搜索框'
             },
+            {
+              path: '/safe-keyboard',
+              title: 'SafeKeyboard 安全键盘'
+            },
           ]
         },
         {

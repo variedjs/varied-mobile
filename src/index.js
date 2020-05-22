@@ -17,12 +17,13 @@ import Overlay from './overlay';
 import Picker from './picker';
 import Popup from './popup';
 import Row from './row';
+import SafeKeyboard from './safe-keyboard';
 import Search from './search';
 import Tabbar from './tabbar';
 import TabbarItem from './tabbar-item';
 import Toast from './toast';
 
-const version = '0.0.3';
+const version = '0.0.4';
 const components = [
   AddressPicker,
   Button,
@@ -42,6 +43,7 @@ const components = [
   Picker,
   Popup,
   Row,
+  SafeKeyboard,
   Search,
   Tabbar,
   TabbarItem,
@@ -80,6 +82,7 @@ export {
   Picker,
   Popup,
   Row,
+  SafeKeyboard,
   Search,
   Tabbar,
   TabbarItem,

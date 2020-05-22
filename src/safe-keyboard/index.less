@@ -1,0 +1,177 @@
+@import '../style/theme';
+@import "../style/animation";
+
+.vm-safe-keyboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: @safe-keyboard-z-index;
+  width: 100%;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: @safe-keyboard-background-color;
+  user-select: none;
+
+  &-with-title {
+    border-radius: 20px 20px 0 0;
+  }
+
+  &-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    height: @safe-keyboard-title-height;
+    padding-top: 6px;
+    color: @safe-keyboard-title-color;
+    font-size: @safe-keyboard-title-font-size;
+  }
+
+  &-title {
+    display: inline-block;
+    font-weight: normal;
+
+    &-left {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &-body {
+    display: flex;
+    padding: 6px 0 0 6px;
+    flex-wrap: wrap;
+  }
+
+  &-keys {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+
+    &-letter, &-letter1, &-letter2 {
+      flex: none;
+      width: 100%;
+
+      .vm-key-delete-icon, .vm-key-capital-icon {
+        width: 22px;
+        height: 16px;
+      }
+    }
+
+    &-letter1 {
+      width: 90%;
+      margin-left: 5%;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: @safe-keyboard-close-padding;
+    color: @safe-keyboard-close-color;
+    font-size: @safe-keyboard-close-font-size;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &:active {
+      opacity: @active-opacity;
+    }
+  }
+
+  &-sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &-unfit {
+    padding-bottom: 0;
+  }
+}
+
+.vm-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: @safe-keyboard-key-height;
+  padding: 0;
+  font-size: @safe-keyboard-key-font-size;
+  line-height: 1.5;
+  background-color: @white;
+  border: none;
+  border-radius: @border-radius-lg;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &-large {
+    height: 100%;
+  }
+
+  &-blue,
+  &-delete {
+    font-size: @safe-keyboard-delete-font-size;
+  }
+
+  &-active {
+    background-color: @safe-keyboard-key-active-color;
+  }
+
+  &-blue {
+    color: @safe-keyboard-button-text-color;
+    background-color: @safe-keyboard-button-background-color;
+
+    &.vm-key-active {
+      background-color: darken(@safe-keyboard-button-background-color, 10%);
+    }
+  }
+
+  &-wrapper {
+    flex: 1;
+    flex-basis: 33%;
+    box-sizing: border-box;
+    padding: 0 6px 6px 0;
+
+    &-letter {
+      flex-basis: 10%;
+
+      .vm-key {
+        height: @safe-keyboard-letter-key-height;
+        font-size: @safe-keyboard-letter-key-font-size;
+      }
+    }
+
+    &-wider {
+      flex-basis: 66%;
+    }
+
+    &-space {
+      flex-basis: 50%;
+    }
+  }
+
+  &-delete-icon {
+    width: 32px;
+    height: 22px;
+  }
+
+  &-collapse-icon {
+    width: 30px;
+    height: 24px;
+  }
+
+  &-space-icon {
+    width: 50px;
+    height: 24px;
+  }
+
+  &-loading-icon {
+    color: @safe-keyboard-button-text-color;
+  }
+}
