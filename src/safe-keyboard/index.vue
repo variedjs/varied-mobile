@@ -56,7 +56,11 @@
           </Key>
         </div>
         <div
-          v-if="theme === 'custom' || (theme === 'number' && themeTemp === 'number') || (theme === 'number' && themeTemp === '')"
+          v-if="theme === 'custom' ||
+          (theme === 'number' && themeTemp === '') ||
+          (theme === 'number' && themeTemp === 'number') ||
+          (theme === 'letter' && themeTemp === 'number') ||
+          (theme === 'letter-number' && themeTemp === 'number')"
           :class="b('sidebar')">
           <Key
             v-if="showDeleteKey"
