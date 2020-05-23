@@ -1,5 +1,9 @@
 <template>
   <demo-section>
+    <vm-picker
+      :columns="['杭州', '宁波', '温州', '嘉兴', '湖州']"
+      @change="onChange1"
+    />
     <demo-block title="基础用法">
       <vm-picker
         :columns="['杭州', '宁波', '温州', '嘉兴', '湖州']"
@@ -63,8 +67,8 @@ export default {
   computed: {
     columns() {
       const column = {
-        浙江: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
-        福建: ['福州', '厦门', '莆田', '三明', '泉州']
+        '浙江': ['杭州', '宁波', '温州', '嘉兴', '湖州'],
+        '福建': ['福州', '厦门', '莆田', '三明', '泉州']
       };
       return [
         {
@@ -90,8 +94,8 @@ export default {
     },
     onChange2(picker, values) {
       const column = {
-        浙江: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
-        福建: ['福州', '厦门', '莆田', '三明', '泉州']
+        '浙江': ['杭州', '宁波', '温州', '嘉兴', '湖州'],
+        '福建': ['福州', '厦门', '莆田', '三明', '泉州']
       };
       picker.setColumnValues(1, column[values[0]]);
     },

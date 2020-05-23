@@ -15,7 +15,6 @@
           v-if="title"
           v-text="title"
           :class="b('title')"
-          class="vm-ellipsis"
         />
         <div
           v-text="confirmButtonText || '确认'"
