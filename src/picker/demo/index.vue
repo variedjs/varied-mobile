@@ -1,9 +1,5 @@
 <template>
   <demo-section>
-    <vm-picker
-      :columns="['杭州', '宁波', '温州', '嘉兴', '湖州']"
-      @change="onChange1"
-    />
     <demo-block title="基础用法">
       <vm-picker
         :columns="['杭州', '宁波', '温州', '嘉兴', '湖州']"
