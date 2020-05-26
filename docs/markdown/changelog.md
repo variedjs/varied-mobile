@@ -4,8 +4,11 @@
 
 #### 功能
   > Checkbox：新增复选框组件
+  
   > PasswordInput：新增密码/验证码输入框组件
+  
   > Radio：新增单选框组件
+  
   > Rate：新增评分组件
   
 
