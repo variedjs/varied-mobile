@@ -4,6 +4,8 @@ import Button from './button';
 import CarouselMap from './carousel-map';
 import Cell from './cell';
 import CellGroup from './cell-group';
+import Checkbox from './checkbox';
+import CheckboxGroup from './checkbox-group';
 import Col from './col';
 import Collapse from './collapse';
 import CollapseItem from './collapse-item';
@@ -14,8 +16,12 @@ import Info from './info';
 import Loading from './loading';
 import NavBar from './nav-bar';
 import Overlay from './overlay';
+import PasswordInput from './password-input';
 import Picker from './picker';
 import Popup from './popup';
+import Radio from './radio';
+import RadioGroup from './radio-group';
+import Rate from './rate';
 import Row from './row';
 import SafeKeyboard from './safe-keyboard';
 import Search from './search';
@@ -23,13 +29,15 @@ import Tabbar from './tabbar';
 import TabbarItem from './tabbar-item';
 import Toast from './toast';
 
-const version = '0.0.42';
+const version = '0.0.5';
 const components = [
   AddressPicker,
   Button,
   CarouselMap,
   Cell,
   CellGroup,
+  Checkbox,
+  CheckboxGroup,
   Col,
   Collapse,
   CollapseItem,
@@ -40,8 +48,12 @@ const components = [
   Loading,
   NavBar,
   Overlay,
+  PasswordInput,
   Picker,
   Popup,
+  Radio,
+  RadioGroup,
+  Rate,
   Row,
   SafeKeyboard,
   Search,
@@ -69,6 +81,8 @@ export {
   CarouselMap,
   Cell,
   CellGroup,
+  Checkbox,
+  CheckboxGroup,
   Col,
   Collapse,
   CollapseItem,
@@ -79,8 +93,12 @@ export {
   Loading,
   NavBar,
   Overlay,
+  PasswordInput,
   Picker,
   Popup,
+  Radio,
+  RadioGroup,
+  Rate,
   Row,
   SafeKeyboard,
   Search,

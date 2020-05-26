@@ -1,0 +1,83 @@
+@import '../style/theme';
+
+.vm-password-input {
+  position: relative;
+  margin: @password-input-margin;
+  user-select: none;
+
+  &-info,
+  &-error-info {
+    margin-top: @padding-md;
+    font-size: @password-input-info-font-size;
+    text-align: center;
+  }
+
+  &-info {
+    color: @password-input-info-color;
+  }
+
+  &-error-info {
+    color: @password-input-error-info-color;
+  }
+
+  &-security {
+    display: flex;
+    width: 100%;
+    height: @password-input-height;
+    cursor: pointer;
+
+    &::after {
+      border-radius: @password-input-border-radius;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: @password-input-font-size;
+      line-height: 1.2;
+      background-color: @password-input-background-color;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: @password-input-dot-size;
+      height: @password-input-dot-size;
+      background-color: @password-input-dot-color;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+  }
+
+  &-cursor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: @safe-keyboard-cursor-width;
+    height: @safe-keyboard-cursor-height;
+    background-color: @safe-keyboard-cursor-color;
+    transform: translate(-50%, -50%);
+    animation: @safe-keyboard-cursor-animation-duration vm-cursor-flicker
+    infinite;
+  }
+}
+
+@keyframes vm-cursor-flicker {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

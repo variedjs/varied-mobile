@@ -21,3 +21,4 @@ Vue.use(Icon);
 | name | 内置图标名称 | `String` |-|
 | color | 图标颜色 | `String` |- |
 | size | 图标大小 | `String` `Number` |-|
+| class-prefix | 类名前缀，用于使用自定义图标 | `String` |`vm-icon`|

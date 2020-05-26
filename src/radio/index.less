@@ -1,0 +1,88 @@
+@import '../style/theme';
+
+.vm-radio {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+
+  &-disabled {
+    cursor: not-allowed;
+  }
+
+  &-label-disabled {
+    cursor: default;
+  }
+
+  &-horizontal {
+    margin-right: @padding-sm;
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    flex: none;
+    height: 1em;
+    font-size: @radio-size;
+    line-height: 1em;
+    cursor: pointer;
+
+    .vm-icon {
+      display: block;
+      box-sizing: border-box;
+      width: 1.25em;
+      height: 1.25em;
+      color: transparent;
+      font-size: 0.8em;
+      line-height: 1.25;
+      text-align: center;
+      border: 1px solid @radio-border-color;
+      transition-duration: @radio-transition-duration;
+      transition-property: color, border-color, background-color;
+    }
+
+    &-round {
+      .vm-icon {
+        border-radius: 100%;
+      }
+    }
+
+    &-checked {
+      .vm-icon {
+        color: @white;
+        background-color: @radio-checked-icon-color;
+        border-color: @radio-checked-icon-color;
+      }
+    }
+
+    &-disabled {
+      cursor: not-allowed;
+
+      .vm-icon {
+        background-color: @radio-disabled-background-color;
+        border-color: @radio-disabled-icon-color;
+      }
+    }
+
+    &-disabled&-checked {
+      .vm-icon {
+        color: @radio-disabled-icon-color;
+      }
+    }
+  }
+
+  &-label {
+    margin-left: @radio-label-margin;
+    color: @radio-label-color;
+    line-height: @radio-size;
+
+    &-left {
+      margin: 0 @radio-label-margin 0 0;
+    }
+
+    &-disabled {
+      color: @radio-disabled-label-color;
+    }
+  }
+}

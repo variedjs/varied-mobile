@@ -1,6 +1,6 @@
 import pkgJson from '../../package.json';
 
-const { version } = pkgJson;
+const {version} = pkgJson;
 
 export const versions = [version];
 
@@ -126,16 +126,32 @@ export default {
           groupName: '表单组件',
           list: [
             {
+              path: '/checkbox',
+              title: 'Checkbox 复选框'
+            },
+            {
               path: '/field',
               title: 'Field 输入框'
+            },
+            {
+              path: '/safe-keyboard',
+              title: 'SafeKeyboard 安全键盘'
             },
             {
               path: '/search',
               title: 'Search 搜索框'
             },
             {
-              path: '/safe-keyboard',
-              title: 'SafeKeyboard 安全键盘'
+              path: '/password-input',
+              title: 'PasswordInput 密码输入框'
+            },
+            {
+              path: '/radio',
+              title: 'Radio 单选框'
+            },
+            {
+              path: '/rate',
+              title: 'Rate 评分'
             },
           ]
         },
