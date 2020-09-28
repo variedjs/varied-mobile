@@ -1,7 +1,9 @@
 <template>
   <div class="side-nav">
     <h1 class="vant-title">
-      <img src="http://huangwanneng.cn/static/favicon.png">
+      <img
+        src="https://wuner.gitee.io/static-resources/varied-mobile/static/favicon.png"
+      />
       <span>Varied</span>
     </h1>
     <h2 class="vant-desc">轻量、可靠的移动端Vue组件库</h2>
@@ -17,8 +19,8 @@
 </template>
 
 <script>
-import docConfig from '../doc.config';
-import MobileNav from './MobileNav';
+import docConfig from "../doc.config";
+import MobileNav from "./MobileNav";
 
 export default {
   components: {
@@ -34,16 +36,15 @@ export default {
   computed: {
     navList() {
       return (this.docConfig.nav || []).filter(item => item.showInMobile);
-    },
+    }
   },
 
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
 <style lang="less">
-@import '../../../src/style/theme';
+@import "../../../src/style/theme";
 
 .side-nav {
   box-sizing: border-box;

@@ -1,12 +1,13 @@
 <div class="card">
   <div class="van-doc-intro">
-    <img class="van-doc-intro__logo" style="width: 120px; height: 120px; box-shadow: none;" src="http://huangwanneng.cn/static/favicon.png">
+    <img class="van-doc-intro__logo" style="width: 120px; height: 120px; box-shadow: none;" src="https://wuner.gitee.io/static-resources/varied-mobile/static/favicon.png">
     <h2 style="margin: 0; font-size: 36px; line-height: 60px;">Varied</h2>
     <p>轻量、可靠的移动端Vue组件库</p>
   </div>
 </div>
 <p align="center">
-  🔥 <a href="http://huangwanneng.cn/">文档网站</a>
+  🔥 <a href="https://wuner.gitee.io/varied-mobile/">文档网站-国内</a><br>
+  🔥 <a href="https://variedjs.github.io/varied-mobile/">文档网站-国外</a>
 </p>
 ### 特性
 

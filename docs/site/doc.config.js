@@ -9,7 +9,8 @@ export const github = "https://github.com/variedjs/varied-mobile";
 export default {
   header: {
     logo: {
-      image: "http://huangwanneng.cn/static/logo.png",
+      image:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/logo.png",
       title: "Varied",
       href: "#/"
     },
@@ -19,7 +20,8 @@ export default {
       },
       logoLink: [
         {
-          image: "http://huangwanneng.cn/static/github.svg",
+          image:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/github.svg",
           url: github
         }
       ]
