@@ -10,10 +10,9 @@
 </p>
 ### 特性
 
-* 完善的文档和示例
-* 支持按需引入
-* 支持 TS
-* 支持 SSR
+- 完善的文档和示例
+- 支持按需引入
+- 支持 SSR
 
 ### 安装
 
@@ -26,10 +25,11 @@ yarn add @varied/mobile
 ```
 
 ### 快速上手
+
 ```js
-import Vue from 'vue';
-import { Button } from '@varied/mobile';
-import '@varied/mobile/lib/index.css';
+import Vue from "vue";
+import { Button } from "@varied/mobile";
+import "@varied/mobile/lib/index.css";
 
 Vue.use(Button);
 ```
