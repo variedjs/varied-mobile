@@ -9,7 +9,9 @@ import CheckboxGroup from './checkbox-group';
 import Col from './col';
 import Collapse from './collapse';
 import CollapseItem from './collapse-item';
+import DataProcess from './data-process';
 import DatePicker from './date-picker';
+import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
 import Info from './info';
@@ -25,8 +27,14 @@ import Rate from './rate';
 import Row from './row';
 import SafeKeyboard from './safe-keyboard';
 import Search from './search';
+import Slider from './slider';
+import Stepper from './stepper';
+import Sticky from './sticky';
+import Switch from './switch';
+import Tab from './tab';
 import Tabbar from './tabbar';
 import TabbarItem from './tabbar-item';
+import Tabs from './tabs';
 import Toast from './toast';
 
 const version = '0.0.5';
@@ -41,7 +49,9 @@ const components = [
   Col,
   Collapse,
   CollapseItem,
+  DataProcess,
   DatePicker,
+  Dialog,
   Field,
   Icon,
   Info,
@@ -57,8 +67,14 @@ const components = [
   Row,
   SafeKeyboard,
   Search,
+  Slider,
+  Stepper,
+  Sticky,
+  Switch,
+  Tab,
   Tabbar,
   TabbarItem,
+  Tabs,
   Toast
 ];
 
@@ -86,7 +102,9 @@ export {
   Col,
   Collapse,
   CollapseItem,
+  DataProcess,
   DatePicker,
+  Dialog,
   Field,
   Icon,
   Info,
@@ -102,8 +120,14 @@ export {
   Row,
   SafeKeyboard,
   Search,
+  Slider,
+  Stepper,
+  Sticky,
+  Switch,
+  Tab,
   Tabbar,
   TabbarItem,
+  Tabs,
   Toast
 };
 

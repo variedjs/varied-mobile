@@ -1,6 +1,7 @@
-import Vue from 'vue';
+import Vue from "vue";
 
 const isServer = Vue.prototype.$isServer;
+const inBrowser = typeof window !== "undefined";
 
 function isDef(value) {
   return value !== undefined && value !== null;
@@ -8,15 +9,15 @@ function isDef(value) {
 
 function isObj(x) {
   const type = typeof x;
-  return x !== null && (type === 'object' || type === 'function');
+  return x !== null && (type === "object" || type === "function");
 }
 
 function get(object, path) {
-  const keys = path.split('.');
+  const keys = path.split(".");
   let result = object;
 
   keys.forEach(key => {
-    result = isDef(result[key]) ? result[key] : '';
+    result = isDef(result[key]) ? result[key] : "";
   });
 
   return result;
@@ -36,6 +37,17 @@ function range(num, min, max) {
   return Math.min(Math.max(num, min), max);
 }
 
+function isFunction(val) {
+  return typeof val === "function";
+}
+
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+function noop() {}
+
+function isPromise(val) {
+  return isObj(val) && isFunction(val.then) && isFunction(val.catch);
+}
+
 export {
   get,
   range,
@@ -43,5 +55,9 @@ export {
   isDef,
   isServer,
   camelize,
-  isAndroid
+  isAndroid,
+  inBrowser,
+  isFunction,
+  noop,
+  isPromise
 };

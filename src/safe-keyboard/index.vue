@@ -1,91 +1,95 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
-  <transition
-    :name="this.transition ? 'vm-slide-up' : ''">
-    <div
-      v-show="show"
-      :style="{zIndex: this.zIndex}"
-      :class="b({ unfit: !this.safeAreaInsetBottom})"
-      @touchstart.stop
-      @animationend="onAnimationEnd"
-      @webkitAnimationEnd="onAnimationEnd"
-    >
+  <div
+    :style="style"
+    v-show="show">
+    <transition
+      :name="this.transition ? 'vm-slide-up' : ''">
       <div
-        :class="b('header')">
+        ref="safeKeyboard"
+        :style="{zIndex: this.zIndex}"
+        :class="b({ unfit: !this.safeAreaInsetBottom})"
+        @touchstart.stop
+        @animationend="onAnimationEnd"
+        @webkitAnimationEnd="onAnimationEnd"
+      >
+        <div
+          :class="b('header')">
         <span
           :class="b('title-left')">
           <slot name="title-left"></slot>
         </span>
-        <h2
-          v-if="title"
-          :class="b('title')">
-          {{title}}
-        </h2>
-        <button
-          v-if="closeButtonText"
-          type="button"
-          :class="b('close')"
-          @click="onClose">
-          {{closeButtonText}}
-        </button>
-      </div>
-      <div
-        :class="b('body')">
-        <div
-          :class="b('keys', item.className)"
-          v-for="(item, index) in keys"
-          :key="index">
-          <Key
-            :theme="themeTemp || theme"
-            :key="j"
-            :text="key.text"
-            :type="key.type"
-            :space="key.space"
-            :wider="key.wider"
-            :color="key.color"
-            @press="onPress"
-            v-for="(key, j) in item.list"
-          >
-            <template v-slot:delete>
-              <slot name="delete">
-              </slot>
-            </template>
-            <template v-slot:extraKey>
-              <slot name="extraKey">
-              </slot>
-            </template>
-          </Key>
+          <h2
+            v-if="title"
+            :class="b('title')">
+            {{title}}
+          </h2>
+          <button
+            v-if="closeButtonText"
+            type="button"
+            :class="b('close')"
+            @click="onClose">
+            {{closeButtonText}}
+          </button>
         </div>
         <div
-          v-if="theme === 'custom' ||
+          :class="b('body')">
+          <div
+            :class="b('keys', item.className)"
+            v-for="(item, index) in keys"
+            :key="index">
+            <Key
+              :theme="themeTemp || theme"
+              :key="j"
+              :text="key.text"
+              :type="key.type"
+              :space="key.space"
+              :wider="key.wider"
+              :color="key.color"
+              @press="onPress"
+              v-for="(key, j) in item.list"
+            >
+              <template v-slot:delete>
+                <slot name="delete">
+                </slot>
+              </template>
+              <template v-slot:extraKey>
+                <slot name="extraKey">
+                </slot>
+              </template>
+            </Key>
+          </div>
+          <div
+            v-if="theme === 'custom' ||
           (theme === 'number' && themeTemp === '') ||
           (theme === 'number' && themeTemp === 'number') ||
           (theme === 'letter' && themeTemp === 'number') ||
           (theme === 'letter-number' && themeTemp === 'number')"
-          :class="b('sidebar')">
-          <Key
-            v-if="showDeleteKey"
-            :text="deleteButtonText"
-            type="delete"
-            large
-            @press="onPress"
-          >
-            <template v-slot:delete>
-              <slot name="delete">
-              </slot>
-            </template>
-          </Key>
-          <Key
-            :text="closeButtonText || closeButtonTextTemp"
-            type="close"
-            color="blue"
-            large
-            :loading="closeButtonLoading"
-            @press="onPress"
-          />
+            :class="b('sidebar')">
+            <Key
+              v-if="showDeleteKey"
+              :text="deleteButtonText"
+              type="delete"
+              large
+              @press="onPress"
+            >
+              <template v-slot:delete>
+                <slot name="delete">
+                </slot>
+              </template>
+            </Key>
+            <Key
+              :text="closeButtonText || closeButtonTextTemp"
+              type="close"
+              color="blue"
+              large
+              :loading="closeButtonLoading"
+              @press="onPress"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
@@ -146,6 +150,7 @@
       return {
         capital: false,
         themeTemp: '',
+        height: '',
         closeButtonTextTemp: '完成',
       };
     },
@@ -338,6 +343,14 @@
       },
     },
 
+    updated() {
+      if (this.$refs.safeKeyboard) {
+        this.height = this.$refs.safeKeyboard.clientHeight + 'px';
+      } else {
+        this.height = 0;
+      }
+    },
+
     mounted() {
       if (this.hideOnClickOutside) {
         document.body.addEventListener('touchstart', this.onBlur);
@@ -345,6 +358,11 @@
     },
 
     computed: {
+      style() {
+        return {
+          height: this.height
+        }
+      },
       keys() {
         let keys = [];
         let theme = this.theme;

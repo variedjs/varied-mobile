@@ -1,16 +1,16 @@
 /**
  * Compile components
  */
-const fs = require('fs-extra');
-const path = require('path');
-const babel = require('@babel/core');
-const vantCompiler = require('@vant/compiler');
+const fs = require("fs-extra");
+const path = require("path");
+const babel = require("@babel/core");
+const vantCompiler = require("@vant/compiler");
 
-const esDir = path.join(__dirname, '../es');
-const libDir = path.join(__dirname, '../lib');
-const srcDir = path.join(__dirname, '../src');
+const esDir = path.join(__dirname, "../es");
+const libDir = path.join(__dirname, "../lib");
+const srcDir = path.join(__dirname, "../src");
 const babelConfig = {
-  configFile: path.join(__dirname, '../babel.config.js')
+  configFile: path.join(__dirname, "../babel.config.js")
 };
 const vueRegExp = /\.(vue)$/;
 const scriptRegExp = /\.(js|ts|tsx)$/;
@@ -37,18 +37,18 @@ function compile(dir) {
 
     // compile js or ts
     if (isVue(file)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const code = vantCompiler(content,{babel:babelConfig});
+      const content = fs.readFileSync(filePath, "utf8");
+      const code = vantCompiler(content, { babel: babelConfig });
       fs.removeSync(filePath);
       // if (code.css){
       //   fs.outputFileSync(filePath.replace(vueRegExp, '.css'), code.css);
       // }
-      fs.outputFileSync(filePath.replace(vueRegExp, '.js'), code.js);
+      fs.outputFileSync(filePath.replace(vueRegExp, ".js"), code.js);
     }
     if (isScript(file)) {
       const { code } = babel.transformFileSync(filePath, babelConfig);
       fs.removeSync(filePath);
-      fs.outputFileSync(filePath.replace(scriptRegExp, '.js'), code);
+      fs.outputFileSync(filePath.replace(scriptRegExp, ".js"), code);
     }
   });
 }
@@ -62,6 +62,6 @@ fs.copySync(srcDir, esDir);
 compile(esDir);
 
 // compile lib dir
-process.env.BABEL_MODULE = 'commonjs';
+process.env.BABEL_MODULE = "commonjs";
 fs.copySync(srcDir, libDir);
 compile(libDir);

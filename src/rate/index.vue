@@ -43,7 +43,7 @@
 </template>
 
 <script>
-  import {addUnit} from '../utils/unit';
+  import {addUnit} from '../utils/format/unit';
   import create from '../utils/create';
   import TouchMixin from '../mixins/touch';
 

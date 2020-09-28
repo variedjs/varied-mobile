@@ -28,7 +28,7 @@
 <script>
   import create from '../utils/create';
   import findParent from '../mixins/find-parent';
-  import {addUnit} from '../utils/unit';
+  import {addUnit} from '../utils/format/unit';
 
   export default create({
     name: 'radio',

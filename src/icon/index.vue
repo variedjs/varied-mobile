@@ -1,32 +1,43 @@
 <template>
   <i
     :class="b([name], classPrefix)"
-    :style="{color,fontSize: size}"
+    :style="style"
     v-on="$listeners"
   >
-    <vm-info :info="info" />
+    <vm-info :info="info"/>
   </i>
 </template>
 <script>
-import Info from '../info';
-import create from '../utils/create-basic';
+  import Info from '../info';
+  import create from '../utils/create-basic';
+  import {addUnit} from '../utils/format/unit';
 
-export default create({
-  name: 'icon',
-  components: {
-    [Info.name]: Info
-  },
-  props: {
-    name: String,
-    size: [String, Number],
-    info: [String, Number],
-    classPrefix: {
-      type: String,
-      default: 'vm-icon'
+  export default create({
+    name: 'icon',
+    components: {
+      [Info.name]: Info
     },
-    color: {
-      type: String
+    props: {
+      name: String,
+      size: [String, Number],
+      info: [String, Number],
+      classPrefix: {
+        type: String,
+        default: 'vm-icon'
+      },
+      color: {
+        type: String
+      }
+    },
+    computed: {
+      style() {
+        const {size, color} = this;
+        const fontSize = addUnit(size);
+        return {
+          fontSize,
+          color
+        }
+      }
     }
-  }
-});
+  });
 </script>

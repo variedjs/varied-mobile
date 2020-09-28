@@ -21,7 +21,7 @@
 </template>
 <script>
   import create from '../utils/create-basic';
-  import {addUnit} from '../utils/unit';
+  import {addUnit} from '../utils/format/unit';
 
   export default create({
     name: 'password-input',

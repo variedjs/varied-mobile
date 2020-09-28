@@ -19,12 +19,14 @@ then
   git commit -am $TEXT
 
   # publish
-  git push
+   git push -f 'https://github.com/variedjs/varied-mobile.git'
+   git push -f 'https://402341aa5195325dd21cbe646d205481@gitee.com/Wuner/varied-mobile.git'
+
 
   if [[ $VERSION =~ [beta] ]]
   then
     npm publish --tag beta
-  else 
+  else
     npm publish
   fi
 fi

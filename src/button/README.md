@@ -156,6 +156,38 @@ Vue.use(Button);
 </vm-button>
 ```
 
+### 自定义宽高
+```html
+<vm-button
+  width="100px"
+  height="30px"
+  class="bg-cyan">
+  默认
+</vm-button>
+```
+
+### 长按事件
+```html
+<vm-button
+  @longPress="onLongPress"
+  :longPressTime="500"
+  class="bg-cyan">
+  长按
+</vm-button>
+```
+
+```js
+import { Toast } from '@varied/mobile';
+
+export default {
+  methods: {
+    onLongPress(){
+      Toast('长按');
+    }
+  },
+};
+```
+
 ### API
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
@@ -167,9 +199,14 @@ Vue.use(Button);
 | loading-text | 加载文字 | `String` | | - |
 | block | 是否为块级元素 | `Boolean` | `false` | - |
 | radius | 圆角，可选值为 `mc` `sc` `fc` | `String` | `nc` | - |
+| width | 宽度 | _String \| Number_ | `-` | `v0.0.6` |
+| height | 高度 | _String \| Number_ | `-` | `v0.0.6` |
+| longPress | 是否开启长按 | `Boolean` | `true` | `v0.0.6` |
+| longPressTime | 长按时间 | `Number` | `1000` | `v0.0.6` |
 
 ### Event
 
 | 事件名 | 说明 | 参数 |
 |------|------|------|
 | click | 点击按钮且按钮状态不为加载或禁用时触发 | - |
+| longPress | 长按按钮且按钮状态不为加载或禁用时触发并长按事件已开启 | - |

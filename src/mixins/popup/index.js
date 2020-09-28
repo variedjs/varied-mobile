@@ -1,8 +1,8 @@
-import manager from './manager';
-import context from './context';
-import scrollUtils from '../../utils/scroll';
-import { on, off } from '../../utils/event';
-import Touch from '../touch';
+import manager from "./manager";
+import context from "./context";
+import scrollUtils from "../../utils/dom/scroll";
+import { on, off } from "../../utils/dom/event";
+import Touch from "../touch";
 
 export default {
   mixins: [Touch],
@@ -49,7 +49,7 @@ export default {
   watch: {
     value(val) {
       this.inited = this.inited || this.value;
-      this[val ? 'open' : 'close']();
+      this[val ? "open" : "close"]();
     },
 
     getContainer() {
@@ -106,11 +106,11 @@ export default {
       this.renderOverlay();
 
       if (this.lockScroll) {
-        on(document, 'touchstart', this.touchStart);
-        on(document, 'touchmove', this.onTouchMove);
+        on(document, "touchstart", this.touchStart);
+        on(document, "touchmove", this.onTouchMove);
 
         if (!context.lockCount) {
-          document.body.classList.add('vm-overflow-hidden');
+          document.body.classList.add("vm-overflow-hidden");
         }
         context.lockCount++;
       }
@@ -123,17 +123,17 @@ export default {
 
       if (this.lockScroll) {
         context.lockCount--;
-        off(document, 'touchstart', this.touchStart);
-        off(document, 'touchmove', this.onTouchMove);
+        off(document, "touchstart", this.touchStart);
+        off(document, "touchmove", this.onTouchMove);
 
         if (!context.lockCount) {
-          document.body.classList.remove('vm-overflow-hidden');
+          document.body.classList.remove("vm-overflow-hidden");
         }
       }
 
       this.opened = false;
       manager.close(this);
-      this.$emit('input', false);
+      this.$emit("input", false);
     },
 
     move() {
@@ -142,7 +142,7 @@ export default {
       const { getContainer } = this;
       if (getContainer) {
         container =
-          typeof getContainer === 'string'
+          typeof getContainer === "string"
             ? document.querySelector(getContainer)
             : getContainer();
       } else if (this.$parent) {
@@ -156,22 +156,22 @@ export default {
 
     onTouchMove(e) {
       this.touchMove(e);
-      const direction = this.deltaY > 0 ? '10' : '01';
+      const direction = this.deltaY > 0 ? "10" : "01";
       const el = scrollUtils.getScrollEventTarget(e.target, this.$el);
       const { scrollHeight, offsetHeight, scrollTop } = el;
-      let status = '11';
+      let status = "11";
 
       /* istanbul ignore next */
       if (scrollTop === 0) {
-        status = offsetHeight >= scrollHeight ? '00' : '01';
+        status = offsetHeight >= scrollHeight ? "00" : "01";
       } else if (scrollTop + offsetHeight >= scrollHeight) {
-        status = '10';
+        status = "10";
       }
 
       /* istanbul ignore next */
       if (
-        status !== '11' &&
-        this.direction === 'vertical' &&
+        status !== "11" &&
+        this.direction === "vertical" &&
         !(parseInt(status, 2) & parseInt(direction, 2))
       ) {
         e.preventDefault();

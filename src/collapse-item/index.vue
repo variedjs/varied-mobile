@@ -5,19 +5,10 @@
       :class="b('title', { disabled, expanded })"
       @click="onClick"
     >
-      <slot
-        name="title"
-        v-slot:title
-      />
-      <slot
-        name="icon"
-        v-slot:icon
-      />
+      <slot name="title" v-slot:title />
+      <slot name="icon" v-slot:icon />
       <slot name="value" />
-      <slot
-        name="right-icon"
-        v-slot:right-icon
-      />
+      <slot name="right-icon" v-slot:right-icon />
     </cell>
     <div
       v-if="inited"
@@ -26,10 +17,7 @@
       :class="b('wrapper')"
       @transitionend="onTransitionEnd"
     >
-      <div
-        ref="content"
-        :class="b('content')"
-      >
+      <div ref="content" :class="b('content')">
         <slot />
       </div>
     </div>
@@ -37,13 +25,13 @@
 </template>
 
 <script>
-import { raf } from '../utils/raf';
-import create from '../utils/create';
-import CellMixin from '../mixins/cell';
-import FindParent from '../mixins/find-parent';
+import { raf } from "../utils/dom/raf";
+import create from "../utils/create";
+import CellMixin from "../mixins/cell";
+import FindParent from "../mixins/find-parent";
 
 export default create({
-  name: 'collapse-item',
+  name: "collapse-item",
 
   mixins: [CellMixin, FindParent],
 
@@ -89,7 +77,7 @@ export default create({
   },
 
   created() {
-    this.findParent('vm-collapse');
+    this.findParent("vm-collapse");
     this.items.push(this);
     this.show = this.expanded;
     this.inited = this.expanded;
@@ -134,7 +122,7 @@ export default create({
       const { parent } = this;
       const name =
         parent.accordion && this.currentName === parent.value
-          ? ''
+          ? ""
           : this.currentName;
       const expanded = !this.expanded;
       this.parent.switch(name, expanded);

@@ -1,6 +1,6 @@
 @import "hairline";
 
-// 颜色主题
+// Color 颜色主题
 @black: #333;
 @black-shadow: rgba(26, 26, 26, 0.2);
 @blue: #2196f3;
@@ -51,7 +51,7 @@
 @yellow-shadow: rgba(224, 170, 7, 0.2);
 @white: #fff;
 
-// Component Colors
+// Component Colors 组件颜色
 @text-color: @gray-8;
 @active-color: @gray-2;
 @active-opacity: .7;
@@ -60,10 +60,10 @@
 @background-color-light: #fafafa;
 @text-link-color: #576b95;
 
-// 蒙层背景颜色
+// CoverBackground 蒙层背景颜色
 @cover-background: rgba(0, 0, 0, 0.6);
 
-// 背景颜色
+// BackgroundColor 背景颜色
 .background-color(@background-color, @text-color) {
   background-color: @background-color;
   color: @text-color;
@@ -217,7 +217,7 @@
   background-repeat: no-repeat;
 }
 
-// 阴影
+// Shadow 阴影
 .box-shadow(@box-shadow-color) {
   box-shadow: 6px 6px 8px @box-shadow-color;
 }
@@ -278,7 +278,7 @@
   .box-shadow(@black-shadow);
 }
 
-// 边框颜色
+// BorderColor 边框颜色
 .border(@border-color) {
   color: @border-color;
   border-color: @border-color;
@@ -344,11 +344,11 @@
   .border(@white);
 }
 
-// 边框
+// Border 边框
 @border-width: 1px;
 @border-padding: 15px;
 
-// content
+// Content 文本
 @content-padding: 10px 15px;
 @content-padding-lg: 13px 15px;
 @content-padding-li: 15px 15px;
@@ -356,16 +356,21 @@
 @content-line-height: 24px;
 @content-line-height-md: 18px;
 
-//font
+// Font 字体
 @font-size-lg: 16px;
 @font-size-md: 14px;
 @font-size-ml: 12px;
 @font-size-sm: 10px;
+@line-height-xs: 14px;
+@line-height-sm: 18px;
+@line-height-md: 20px;
+@line-height-lg: 22px;
 @font-weight-lg: 700;
 @font-weight-md: 600;
 @font-weight-sm: 500;
+@font-weight-bold: 500;
 
-// padding
+// Padding 内边距
 @padding-base: 4px;
 @padding-xs: @padding-base * 2;
 @padding-sm: @padding-base * 3;
@@ -373,7 +378,7 @@
 @padding-lg: @padding-base * 6;
 @padding-xl: @padding-base * 8;
 
-// Default colors
+// Default colors 默认颜色
 @text-color: #323233;
 @border-color: #e0e0e0;
 @active-color: #e8e8e8;
@@ -381,7 +386,7 @@
 @background-color-light: #fafafa;
 
 
-// 按钮
+// Button 按钮
 @button-margin-left: 3px;
 @button-mc-radius: 4px;
 @button-sc-radius: 2500px;
@@ -393,7 +398,7 @@
 @button-sm-padding: 0 10px;
 @button-disabled-opacity: 0.6;
 
-// Collapse
+// Collapse 折叠面板
 @collapse-item-transition-duration: .3s;
 @collapse-item-content-padding: 15px;
 @collapse-item-content-font-size: 13px;
@@ -405,10 +410,10 @@
 // 选中颜色
 @select-color: @blue;
 
-// address-picker
+// address-picker 地址选择器
 @address-content-background: @white;
 
-// date-picker
+// date-picker 时间选择器
 @date-content-width: 320px;
 @date-content-day-width: 280px;
 @date-content-hour-width: 90px;
@@ -418,7 +423,7 @@
 @date-content-background: @white;
 @date-content-border-bottom: 1px solid @gray;
 
-// field
+// field 输入框
 @field-title-max-width: 90px;
 @field-date-min-height: 24px;
 @field-control-min-height: 60px;
@@ -432,7 +437,7 @@
 @field-error-message-color: @red;
 @field-error-message-margin-top: 5px;
 
-// Info
+// Info 文本
 @info-size: 16px;
 @info-color: @white;
 @info-padding: 0 3px;
@@ -442,7 +447,7 @@
 @info-background-color: @red;
 @info-font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
 
-// nav-bar
+// nav-bar 导航栏
 @nav-bar-min-height: 50px;
 @nav-bar-title-height: 30px;
 @nav-bar-title-margin: 15px;
@@ -450,7 +455,7 @@
 // Overlay
 @overlay-background-color: rgba(0, 0, 0, 0.7);
 
-// picker
+// picker 选择器
 @picker-background-color: @white;
 @picker-loading-background-color: rgba(255, 255, 255, .6);
 @picker-item-color: @gray-6;
@@ -460,7 +465,7 @@
 @picker-disabled-opacity: .3;
 @picker-toolbar-height: 44px;
 
-// search
+// search 搜索框
 @search-padding: 7px 15px;
 @search-cell-padding: 3px 10px;
 @search-cell-border-radius: 4px;
@@ -471,7 +476,7 @@
 @search-action-padding: 0 10px;
 @search-active-background: @gray-3;
 
-// Toast
+// Toast 吐司
 @toast-max-width: 70%;
 @toast-font-size: 14px;
 @toast-text-color: @white;
@@ -489,11 +494,11 @@
 @toast-loading-margin: 10px 0;
 @toast-toast-icon-text-padding-top: 5px;
 
-// Tabbar
+// Tabbar 标签栏
 @tabbar-height: 50px;
 @tabbar-background-color: @white;
 
-// TabbarItem
+// TabbarItem 标签栏
 @tabbar-item-font-size: @font-size-sm;
 @tabbar-item-text-color: @gray-7;
 @tabbar-item-active-color: @blue;
@@ -501,15 +506,15 @@
 @tabbar-item-icon-size: 18px;
 @tabbar-item-margin-bottom: 5px;
 
-// Animation
+// Animation 动画
 @animation-duration-base: .3s;
 @animation-duration-fast: .2s;
 
-// Popup
+// Popup 弹出层
 @popup-background-color: @white;
 @popup-transition: transform @animation-duration-base ease-out;
 
-// NumberKeyboard
+// SafeKeyboard 安全虚拟键盘
 @safe-keyboard-background-color: @gray-2;
 @safe-keyboard-key-height: 56px;
 @safe-keyboard-key-font-size: 28px;
@@ -531,7 +536,7 @@
 @safe-keyboard-cursor-animation-duration: 1s;
 @safe-keyboard-z-index: 100;
 
-// Border
+// Border 边框
 @border-color: @gray-3;
 @border-width-base: 1px;
 @border-radius-sm: 2px;
@@ -539,7 +544,7 @@
 @border-radius-lg: 8px;
 @border-radius-max: 999px;
 
-// Checkbox
+// Checkbox 复选框
 @checkbox-size: 20px;
 @checkbox-border-color: @gray-5;
 @checkbox-transition-duration: @animation-duration-fast;
@@ -550,7 +555,7 @@
 @checkbox-disabled-label-color: @gray-5;
 @checkbox-disabled-background-color: @border-color;
 
-// PasswordInput
+// PasswordInput 密码输入框
 @password-input-height: 50px;
 @password-input-margin: 0 @padding-md;
 @password-input-font-size: 20px;
@@ -562,7 +567,7 @@
 @password-input-dot-size: 10px;
 @password-input-dot-color: @black;
 
-// Radio
+// Radio 单选框
 @radio-size: 20px;
 @radio-border-color: @gray-5;
 @radio-transition-duration: @animation-duration-fast;
@@ -573,9 +578,70 @@
 @radio-disabled-label-color: @gray-5;
 @radio-disabled-background-color: @border-color;
 
-// Rate
+// Rate 评分
 @rate-icon-size: 20px;
 @rate-icon-gutter: @padding-base;
 @rate-icon-void-color: @gray-5;
 @rate-icon-full-color: #ffd21e;
 @rate-icon-disabled-color: @gray-5;
+
+// Slider 滑块
+@slider-active-background-color: @blue;
+@slider-inactive-background-color: @gray-3;
+@slider-disabled-opacity: @disabled-opacity;
+@slider-bar-height: 2px;
+@slider-button-border-radius: 50%;
+@slider-button-background-color: @white;
+@slider-button-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+// Stepper 步进器
+@stepper-active-color: #e8e8e8;
+@stepper-background-color: @active-color;
+@stepper-button-icon-color: @text-color;
+@stepper-button-disabled-color: @background-color;
+@stepper-button-disabled-icon-color: @gray-5;
+@stepper-button-round-theme-color: @red;
+@stepper-input-width: 32px;
+@stepper-input-height: 28px;
+@stepper-input-font-size: @font-size-md;
+@stepper-input-line-height: normal;
+@stepper-input-text-color: @text-color;
+@stepper-input-disabled-text-color: @gray-5;
+@stepper-input-disabled-background-color: @active-color;
+@stepper-border-radius: @border-radius-md;
+
+// Switch 开关
+@switch-size: 30px;
+@switch-width: 2em;
+@switch-height: 1em;
+@switch-node-size: 1em;
+@switch-node-z-index: 1;
+@switch-node-background-color: @white;
+@switch-node-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05),
+0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+@switch-background-color: @white;
+@switch-on-background-color: @blue;
+@switch-transition-duration: @animation-duration-base;
+@switch-disabled-opacity: @disabled-opacity;
+@switch-border: @border-width-base solid rgba(0, 0, 0, 0.1);
+
+// Sticky
+@sticky-z-index: 99;
+
+
+// Tab
+@tab-text-color: @gray-7;
+@tab-active-text-color: @text-color;
+@tab-disabled-text-color: @gray-5;
+@tab-font-size: @font-size-md;
+@tab-line-height: @line-height-md;
+
+// Tabs
+@tabs-default-color: @red;
+@tabs-line-height: 44px;
+@tabs-card-height: 30px;
+@tabs-nav-background-color: @white;
+@tabs-bottom-bar-width: 40px;
+@tabs-bottom-bar-height: 3px;
+@tabs-bottom-bar-color: @tabs-default-color;
+

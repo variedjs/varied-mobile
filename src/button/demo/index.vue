@@ -111,8 +111,33 @@
         <span>按钮</span>
       </vm-button>
     </demo-block>
+    <demo-block title="自定义宽高">
+      <vm-button
+        width="100px"
+        height="30px"
+        class="bg-cyan">
+        默认
+      </vm-button>
+    </demo-block>
+    <demo-block title="自定义宽高">
+      <vm-button
+        @longPress="onLongPress"
+        :longPressTime="500"
+        class="bg-cyan">
+        长按
+      </vm-button>
+    </demo-block>
   </demo-section>
 </template>
+<script>
+  export default {
+    methods: {
+      onLongPress() {
+        this.$toast('长按');
+      }
+    },
+  };
+</script>
 <style lang="less">
   .demo-button {
     .vm-button {

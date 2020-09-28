@@ -17,6 +17,7 @@ Toast('提示内容');
 ```
 
 #### 加载提示
+需与Loading组件配合使用
 
 ```javascript
 Toast.loading({
