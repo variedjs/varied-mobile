@@ -6,8 +6,7 @@
   </div>
 </div>
 <p align="center">
-  🔥 <a href="https://wuner.gitee.io/varied-mobile/">文档网站-国内</a><br>
-  🔥 <a href="https://variedjs.github.io/varied-mobile/">文档网站-国外</a>
+  🔥 <a href="https://wuner.gitee.io/varied-mobile/">文档网站-国内</a> | 🔥 <a href="https://variedjs.github.io/varied-mobile/">文档网站-国外</a>
 </p>
 ### 特性
 
