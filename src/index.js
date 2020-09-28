@@ -37,7 +37,7 @@ import TabbarItem from './tabbar-item';
 import Tabs from './tabs';
 import Toast from './toast';
 
-const version = '0.0.5';
+const version = '0.0.6';
 const components = [
   AddressPicker,
   Button,
