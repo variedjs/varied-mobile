@@ -77,12 +77,16 @@ export default {
               title: "Cell 单元格"
             },
             {
-              path: "/col",
-              title: "Layout 布局"
-            },
-            {
               path: "/icon",
               title: "Icon 图标"
+            },
+            {
+              path: "/image",
+              title: "Image 图片"
+            },
+            {
+              path: "/col",
+              title: "Layout 布局"
             },
             {
               path: "/popup",
@@ -93,6 +97,10 @@ export default {
         {
           groupName: "反馈组件",
           list: [
+            {
+              path: "/dialog",
+              title: "Dialog 弹出框"
+            },
             {
               path: "/loading",
               title: "Loading 等待框"
@@ -179,6 +187,10 @@ export default {
             {
               path: "/collapse",
               title: "Collapse 折叠面板"
+            },
+            {
+              path: "/lazy-load",
+              title: "LazyLoad 懒加载"
             },
             {
               path: "/sticky",

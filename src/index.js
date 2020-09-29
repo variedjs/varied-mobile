@@ -14,7 +14,9 @@ import DatePicker from './date-picker';
 import Dialog from './dialog';
 import Field from './field';
 import Icon from './icon';
+import Image from './image';
 import Info from './info';
+import LazyLoad from './lazy-load';
 import Loading from './loading';
 import NavBar from './nav-bar';
 import Overlay from './overlay';
@@ -37,7 +39,7 @@ import TabbarItem from './tabbar-item';
 import Tabs from './tabs';
 import Toast from './toast';
 
-const version = '0.0.6';
+const version = '0.0.7';
 const components = [
   AddressPicker,
   Button,
@@ -54,6 +56,7 @@ const components = [
   Dialog,
   Field,
   Icon,
+  Image,
   Info,
   Loading,
   NavBar,
@@ -80,7 +83,11 @@ const components = [
 
 const install = (Vue) => {
   components.forEach(Component => {
-    Vue.use(Component);
+    if (Component.install) {
+      Vue.use(Component);
+    } else if (Component.name) {
+      Vue.component(Component.name, Component);
+    }
   });
 };
 
@@ -107,7 +114,9 @@ export {
   Dialog,
   Field,
   Icon,
+  Image,
   Info,
+  LazyLoad,
   Loading,
   NavBar,
   Overlay,

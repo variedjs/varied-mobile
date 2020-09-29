@@ -98,7 +98,7 @@ export default {
 ```
 
 ```js
-import { Toast } from "vant";
+import { Toast } from "@varied/mobile";
 
 export default {
   data() {

@@ -1,18 +1,21 @@
-import '../../../src/index.less';
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import routes from '../router';
-import App from './App';
-import { importAll } from '../utils';
-import '@vant/touch-emulator';
-
+import "../../../src/index.less";
+import Vue from "vue";
+import VueRouter from "vue-router";
+import routes from "../router";
+import App from "./App";
+import { importAll } from "../utils";
+import "@vant/touch-emulator";
+import LazyLoad from "../../../src/lazy-load";
+Vue.use(LazyLoad, {
+  lazyComponent: true
+});
 const componentMap = {};
-const context = require.context('../../../src', true, /demo\/index.vue$/);
+const context = require.context("../../../src", true, /demo\/index.vue$/);
 
 importAll(componentMap, context);
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: "hash",
   routes: routes({ mobile: true, componentMap }),
   scrollBehavior(to, from, savedPosition) {
     return savedPosition || { x: 0, y: 0 };
@@ -27,12 +30,12 @@ router.afterEach(() => {
 
 window.vueRouter = router;
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   Vue.config.productionTip = false;
 }
 
 new Vue({
-  el: '#app',
+  el: "#app",
   render: h => h(App),
   router
 });

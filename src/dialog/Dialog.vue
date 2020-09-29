@@ -1,43 +1,43 @@
 <template>
-  <transition name="mm-dialog-bounce">
-    <div
-      v-show="value"
-      :class="[b(), className]"
-    >
+  <transition name="vm-dialog-bounce">
+    <div v-show="value" :class="[b(), className]">
       <div
         v-if="title"
         v-text="title"
-        :class="b('header', { isolated: !message && !$slots.default })"
+        :class="b('-header', { isolated: !message && !$slots.default })"
       />
-      <div
-        :class="b('content')"
-        v-if="message || $slots.default"
-      >
+      <div :class="b('content')" v-if="message || $slots.default">
         <slot>
           <div
             v-if="message"
             v-html="message"
-            :class="b('message', { 'has-title': title, [messageAlign]: messageAlign })"
+            :class="
+              b('message', { 'has-title': title, [messageAlign]: messageAlign })
+            "
           />
         </slot>
       </div>
       <div
-        class="mm-hairline-top"
-        :class="b('footer', { 'buttons': showCancelButton && showConfirmButton })"
+        class="vm-hairline-top"
+        :class="b('footer', { buttons: showCancelButton && showConfirmButton })"
       >
-        <mm-button
+        <vm-button
           v-show="showCancelButton"
           size="lg"
-          :class="[b('cancel'),'bg-white']"
+          :class="[b('cancel'), 'bg-white']"
           :loading="loading.cancel"
           :text="cancelButtonText || '取消'"
           @click="handleAction('cancel')"
         />
-        <mm-button
+        <vm-button
           v-show="showConfirmButton"
           size="lg"
           block
-          :class="[b('confirm'), 'bg-white',{ 'mm-hairline-left': showCancelButton && showConfirmButton }]"
+          :class="[
+            b('confirm'),
+            'bg-white',
+            { 'vm-hairline-left': showCancelButton && showConfirmButton }
+          ]"
           :loading="loading.confirm"
           :text="confirmButtonText || '确定'"
           @click="handleAction('confirm')"
@@ -48,72 +48,75 @@
 </template>
 
 <script>
-  import create from '../utils/create';
-  import MmButton from '../button';
-  import Popup from '../mixins/popup';
+import create from "../utils/create";
+import MmButton from "../button";
+import Popup from "../mixins/popup";
 
-  export default create({
-    name: 'dialog',
+export default create({
+  name: "dialog",
 
-    components: {
-      MmButton
+  components: {
+    MmButton
+  },
+
+  mixins: [Popup],
+
+  props: {
+    title: String,
+    message: String,
+    callback: Function,
+    className: [String, Object, Array],
+    beforeClose: Function,
+    messageAlign: String,
+    confirmButtonText: String,
+    cancelButtonText: String,
+    showCancelButton: Boolean,
+    showConfirmButton: {
+      type: Boolean,
+      default: true
     },
-
-    mixins: [Popup],
-
-    props: {
-      title: String,
-      message: String,
-      callback: Function,
-      className: [String, Object, Array],
-      beforeClose: Function,
-      messageAlign: String,
-      confirmButtonText: String,
-      cancelButtonText: String,
-      showCancelButton: Boolean,
-      showConfirmButton: {
-        type: Boolean,
-        default: true
-      },
-      overlay: {
-        type: Boolean,
-        default: true
-      },
-      closeOnClickOverlay: {
-        type: Boolean,
-        default: false
-      }
+    overlay: {
+      type: Boolean,
+      default: true
     },
-
-    data() {
-      return {
-        loading: {
-          confirm: false,
-          cancel: false
-        }
-      };
-    },
-
-    methods: {
-      handleAction(action) {
-        if (this.beforeClose) {
-          this.loading[action] = true;
-          this.beforeClose(action, state => {
-            if (state !== false) {
-              this.onClose(action);
-            }
-            this.loading[action] = false;
-          });
-        } else {
-          this.onClose(action);
-        }
-      },
-
-      onClose(action) {
-        this.$emit('input', false);
-        this.$emit(action);
-        this.callback && this.callback(action);
-      }
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: false
     }
-  });
+  },
+
+  data() {
+    return {
+      loading: {
+        confirm: false,
+        cancel: false
+      }
+    };
+  },
+  created() {
+    console.log(this.title);
+  },
+
+  methods: {
+    handleAction(action) {
+      if (this.beforeClose) {
+        this.loading[action] = true;
+        this.beforeClose(action, state => {
+          if (state !== false) {
+            this.onClose(action);
+          }
+          this.loading[action] = false;
+        });
+      } else {
+        this.onClose(action);
+      }
+    },
+
+    onClose(action) {
+      this.$emit("input", false);
+      this.$emit(action);
+      this.callback && this.callback(action);
+    }
+  }
+});
 </script>
