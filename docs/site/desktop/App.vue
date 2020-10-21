@@ -7,9 +7,10 @@
       :versions="versions"
       :simulators="simulators"
       :current-simulator="currentSimulator"
+      :search-config="searchConfig"
       @switch-version="onSwitchVersion"
     >
-      <router-view @changeDemoURL="onChangeDemoURL"/>
+      <router-view @changeDemoURL="onChangeDemoURL" />
     </van-doc>
     <div
       @click="jump"
@@ -20,74 +21,80 @@
       background-color: #fff;
       color: #108EE9;
       font-size: 12px;
-      cursor: pointer">
+      cursor: pointer"
+    >
       备案号：晋ICP备19014733号-1
     </div>
   </div>
 </template>
 
 <script>
-  import pkgJson from '../../../package.json';
-  import docConfig, {github, versions} from '../doc.config';
+import pkgJson from "../../../package.json";
+import docConfig, { github, versions } from "../doc.config";
 
-  export default {
-    data() {
-      this.github = github;
-      this.versions = versions;
+export default {
+  data() {
+    this.github = github;
+    this.versions = versions;
 
-      return {
-        simulators: [`mobile.html${location.hash}`],
-        demoURL: ''
-      };
+    return {
+      searchConfig: {
+        apiKey: "74a690993da89a515f8e9efb98660a99",
+        indexName: "varied_mobile",
+        placeholder: "搜索文档..."
+      },
+      simulators: [`mobile.html${location.hash}`],
+      demoURL: ""
+    };
+  },
+
+  computed: {
+    base() {
+      return ``;
     },
 
-    computed: {
-      base() {
-        return ``;
-      },
-
-      config() {
-        return docConfig;
-      },
-
-      currentSimulator() {
-        const {name} = this.$route;
-        return name && name.indexOf('demo') !== -1 ? 1 : 0;
-      }
+    config() {
+      return docConfig;
     },
 
-    methods: {
-      onChangeDemoURL(url) {
-        this.simulators = [this.simulators[0], url];
-      },
-
-      onSwitchVersion(version) {
-        if (version !== pkgJson.version) {
-        }
-      },
-      jump() {
-        window.location.href = 'http://www.beian.miit.gov.cn';
-      }
+    currentSimulator() {
+      const { name } = this.$route;
+      return name && name.indexOf("demo") !== -1 ? 1 : 0;
     }
-  };
+  },
+
+  methods: {
+    onChangeDemoURL(url) {
+      this.simulators = [this.simulators[0], url];
+    },
+
+    onSwitchVersion(version) {
+      if (version !== pkgJson.version) {
+      }
+    },
+    jump() {
+      window.location.href = "http://www.beian.miit.gov.cn";
+    }
+  }
+};
 </script>
 
 <style lang="less">
-  .van-doc-intro {
-    padding-top: 20px;
-    font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    text-align: center;
+.van-doc-intro {
+  padding-top: 20px;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
 
-    p {
-      margin-bottom: 20px;
-    }
+  p {
+    margin-bottom: 20px;
   }
+}
 
-  .van-doc {
-    code {
-      background-color: #f2f2f2;
-      padding: 10px;
-      border-radius: 3px;
-    }
+.van-doc {
+  code {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 3px;
   }
+}
 </style>

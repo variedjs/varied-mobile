@@ -111,6 +111,9 @@ export default {
     .vm-checkbox {
       margin: 0;
     }
+    .vm-cell-value {
+      flex: none;
+    }
   }
 }
 </style>

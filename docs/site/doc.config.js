@@ -217,5 +217,6 @@ export default {
         }
       ]
     }
-  ]
+  ],
+  markdown: { lineNumbers: true, extractHeaders: ["h2", "h3", "h4"] }
 };
