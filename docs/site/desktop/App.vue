@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <van-doc
+      lang="zh-CN"
       :base="base"
       :config="config"
       :github="github"
@@ -41,7 +42,7 @@ export default {
       searchConfig: {
         apiKey: "74a690993da89a515f8e9efb98660a99",
         indexName: "varied_mobile",
-        placeholder: "搜索文档..."
+        placeholder: "搜索文档搜索..."
       },
       simulators: [`mobile.html${location.hash}`],
       demoURL: ""
@@ -75,7 +76,8 @@ export default {
     jump() {
       window.location.href = "http://www.beian.miit.gov.cn";
     }
-  }
+  },
+  mounted() {}
 };
 </script>
 
