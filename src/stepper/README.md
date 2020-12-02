@@ -133,29 +133,29 @@ export default {
 
 ### Props
 
-| 参数                 | 说明                                       | 类型               | 默认值  |
-| -------------------- | ------------------------------------------ | ------------------ | ------- |
-| v-model              | 当前输入的值                               | _number \| string_ | -       |
-| min                  | 最小值                                     | _number \| string_ | `1`     |
-| max                  | 最大值                                     | _number \| string_ | -       |
-| default-value        | 初始值，当 v-model 为空时生效              | _number \| string_ | `1`     |
-| step                 | 步长，每次点击时改变的值                   | _number \| string_ | `1`     |
-| name                 | 标识符，可以在`change`事件回调参数中获取   | _number \| string_ | -       |
-| input-width          | 输入框宽度，默认单位为`px`                 | _number \| string_ | `32px`  |
-| button-size          | 按钮大小以及输入框高度，默认单位为`px`     | _number \| string_ | `28px`  |
-| decimal-length       | 固定显示的小数位数                         | _number \| string_ | -       |
-| theme `v2.8.2`       | 样式风格，可选值为 `round`                 | _string_           | -       |
-| placeholder `v2.8.6` | 输入框占位提示文字                         | _string_           | -       |
-| integer              | 是否只允许输入整数                         | _boolean_          | `false` |
-| disabled             | 是否禁用步进器                             | _boolean_          | `false` |
-| disable-plus         | 是否禁用增加按钮                           | _boolean_          | `false` |
-| disable-minus        | 是否禁用减少按钮                           | _boolean_          | `false` |
-| disable-input        | 是否禁用输入框                             | _boolean_          | `false` |
-| async-change         | 是否开启异步变更，开启后需要手动控制输入值 | _boolean_          | `false` |
-| show-plus            | 是否显示增加按钮                           | _boolean_          | `true`  |
-| show-minus           | 是否显示减少按钮                           | _boolean_          | `true`  |
-| long-press `v2.4.3`  | 是否开启长按手势                           | _boolean_          | `true`  |
-| allow-empty `v2.9.1` | 是否允许输入的值为空                       | _boolean_          | `false` |
+| 参数           | 说明                                       | 类型               | 默认值  |
+| -------------- | ------------------------------------------ | ------------------ | ------- |
+| v-model        | 当前输入的值                               | _number \| string_ | -       |
+| min            | 最小值                                     | _number \| string_ | `1`     |
+| max            | 最大值                                     | _number \| string_ | -       |
+| default-value  | 初始值，当 v-model 为空时生效              | _number \| string_ | `1`     |
+| step           | 步长，每次点击时改变的值                   | _number \| string_ | `1`     |
+| name           | 标识符，可以在`change`事件回调参数中获取   | _number \| string_ | -       |
+| input-width    | 输入框宽度，默认单位为`px`                 | _number \| string_ | `32px`  |
+| button-size    | 按钮大小以及输入框高度，默认单位为`px`     | _number \| string_ | `28px`  |
+| decimal-length | 固定显示的小数位数                         | _number \| string_ | -       |
+| theme          | 样式风格，可选值为 `round`                 | _string_           | -       |
+| placeholder    | 输入框占位提示文字                         | _string_           | -       |
+| integer        | 是否只允许输入整数                         | _boolean_          | `false` |
+| disabled       | 是否禁用步进器                             | _boolean_          | `false` |
+| disable-plus   | 是否禁用增加按钮                           | _boolean_          | `false` |
+| disable-minus  | 是否禁用减少按钮                           | _boolean_          | `false` |
+| disable-input  | 是否禁用输入框                             | _boolean_          | `false` |
+| async-change   | 是否开启异步变更，开启后需要手动控制输入值 | _boolean_          | `false` |
+| show-plus      | 是否显示增加按钮                           | _boolean_          | `true`  |
+| show-minus     | 是否显示减少按钮                           | _boolean_          | `true`  |
+| long-press     | 是否开启长按手势                           | _boolean_          | `true`  |
+| allow-empty    | 是否允许输入的值为空                       | _boolean_          | `false` |
 
 ### Events
 

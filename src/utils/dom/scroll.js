@@ -4,29 +4,47 @@ function isWindow(val) {
   return val === window;
 }
 
+const overflowScrollReg = /scroll|auto/i;
+
 export default {
   // get nearest scroll element
-  getScrollEventTarget(element, rootParent = window) {
+  getScrollEventTarget(element, root = window) {
     let node = element;
-    // bugfix, see http://w3help.org/zh-cn/causes/SD9013 and http://stackoverflow.com/questions/17016740/onscroll-function-is-not-working-for-chrome
+
     while (
       node &&
       node.tagName !== "HTML" &&
-      node.tagName !== "BODY" &&
       node.nodeType === 1 &&
-      node !== rootParent
+      node !== root
     ) {
-      const { overflowY } = this.getComputedStyle(node);
-      if (overflowY === "scroll" || overflowY === "auto") {
-        return node;
+      const { overflowY } = window.getComputedStyle(node);
+
+      if (overflowScrollReg.test(overflowY)) {
+        if (node.tagName !== "BODY") {
+          return node;
+        }
+
+        // see: https://github.com/youzan/vant/issues/3823
+        const { overflowY: htmlOverflowY } = window.getComputedStyle(
+          node.parentNode
+        );
+
+        if (overflowScrollReg.test(htmlOverflowY)) {
+          return node;
+        }
       }
       node = node.parentNode;
     }
-    return rootParent;
+
+    return root;
   },
 
   getScrollTop(element) {
-    return "scrollTop" in element ? element.scrollTop : element.pageYOffset;
+    const top =
+      "scrollTop" in element ? element.scrollTop : element.pageYOffset;
+
+    // iOS scroll bounce cause minus scrollTop
+    return Math.max(top, 0);
   },
 
   setScrollTop(element, value) {

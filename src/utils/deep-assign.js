@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import { isDef, isObj } from '.';
+import { isDef, isObj } from ".";
 
 const { hasOwnProperty } = Object.prototype;
 

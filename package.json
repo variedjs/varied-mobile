@@ -1,6 +1,6 @@
 {
   "name": "@varied/mobile",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "一款轻量、可靠的移动端 Vue 组件库",
   "author": "Wuner",
   "private": false,
@@ -49,7 +49,6 @@
   "files": [
     "es",
     "lib",
-    "src",
     "vetur"
   ],
   "dependencies": {
@@ -76,6 +75,7 @@
     "autoprefixer": "^9.7.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "codecov": "^3.6.1",
     "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",

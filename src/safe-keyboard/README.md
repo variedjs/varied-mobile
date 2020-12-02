@@ -7,8 +7,8 @@
 ### 引入
 
 ```js
-import Vue from 'vue';
-import { SafeKeyboard } from '@varied/mobile';
+import Vue from "vue";
+import { SafeKeyboard } from "@varied/mobile";
 
 Vue.use(SafeKeyboard);
 ```
@@ -21,22 +21,23 @@ Vue.use(SafeKeyboard);
 
 ```html
 <vm-cell plain type="primary" @touchstart.native.stop="show = true">
-        点击弹出键盘
+  点击弹出键盘
 </vm-cell>
 <vm-safe-keyboard
   :show="show"
   @blur="show = false"
   @getKey="onGetKey"
-  @delete="onDelete"/>
+  @delete="onDelete"
+/>
 ```
 
 ```js
-import { Toast } from '@varied/mobile';
+import { Toast } from "@varied/mobile";
 
 export default {
   data() {
     return {
-      show: true,
+      show: true
     };
   },
   methods: {
@@ -44,9 +45,9 @@ export default {
       Toast(value);
     },
     onDelete() {
-      Toast('删除');
-    },
-  },
+      Toast("删除");
+    }
+  }
 };
 ```
 
@@ -63,6 +64,7 @@ export default {
   @delete="onDelete"
 />
 ```
+
 ### 英文键盘
 
 ```html
@@ -74,6 +76,7 @@ export default {
   @delete="onDelete"
 />
 ```
+
 ### 英文数字键盘
 
 ```html
@@ -85,6 +88,7 @@ export default {
   @delete="onDelete"
 />
 ```
+
 ### 带右侧栏的键盘
 
 将 theme 属性设置为 `custom` 来展示键盘的右侧栏，常用于输入金额的场景
@@ -180,9 +184,9 @@ export default {
   data() {
     return {
       show: false,
-      value: '',
+      value: ""
     };
-  },
+  }
 };
 ```
 
@@ -190,28 +194,28 @@ export default {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model (value) `v2.0.2` | 当前输入值 | _string_ | - |
-| show | 是否显示键盘 | _boolean_ | - |
-| title | 键盘标题 | _string_ | - |
-| theme | 样式风格，可选值为 `custom`,`number`,`letter`,`letter-number` | _string_ | `default` |
-| maxlength `v2.0.2` | 输入值最大长度 | _number \| string_ | - |
-| transition | 是否开启过场动画 | _boolean_ | `true` |
-| z-index | 键盘 z-index 层级 | _number \| string_ | `100` |
-| extra-key `v2.8.2` | 底部额外按键的内容 | _string \| string[]_ | `''` |
-| close-button-text | 关闭按钮文字，空则不展示 | _string_ | - |
-| delete-button-text | 删除按钮文字，空则展示删除图标 | _string_ | - |
-| close-button-loading `v2.7.0` | 是否将关闭按钮设置为加载中状态，仅在 `theme="custom"` 时有效 | _boolean_ | `false` |
-| show-delete-key `v2.5.9` | 是否展示删除图标 | _boolean_ | `true` |
-| hide-on-click-outside | 点击外部时是否收起键盘 | _boolean_ | `true` |
-| safe-area-inset-bottom | 是否开启[底部安全区适配](#/zh-CN/quickstart#di-bu-an-quan-qu-gua-pei) | _boolean_ | `true` |
+| 参数                   | 说明                                                            | 类型                 | 默认值    |
+| ---------------------- | --------------------------------------------------------------- | -------------------- | --------- |
+| v-model (value)        | 当前输入值                                                      | _string_             | -         |
+| show                   | 是否显示键盘                                                    | _boolean_            | -         |
+| title                  | 键盘标题                                                        | _string_             | -         |
+| theme                  | 样式风格，可选值为 `custom`,`number`,`letter`,`letter-number`   | _string_             | `default` |
+| maxlength              | 输入值最大长度                                                  | _number \| string_   | -         |
+| transition             | 是否开启过场动画                                                | _boolean_            | `true`    |
+| z-index                | 键盘 z-index 层级                                               | _number \| string_   | `100`     |
+| extra-key              | 底部额外按键的内容                                              | _string \| string[]_ | `''`      |
+| close-button-text      | 关闭按钮文字，空则不展示                                        | _string_             | -         |
+| delete-button-text     | 删除按钮文字，空则展示删除图标                                  | _string_             | -         |
+| close-button-loading   | 是否将关闭按钮设置为加载中状态，仅在 `theme="custom"` 时有效    | _boolean_            | `false`   |
+| show-delete-key        | 是否展示删除图标                                                | _boolean_            | `true`    |
+| hide-on-click-outside  | 点击外部时是否收起键盘                                          | _boolean_            | `true`    |
+| safe-area-inset-bottom | 是否开启[底部安全区适配](#/quickstart#di-bu-an-quan-qu-gua-pei) | _boolean_            | `true`    |
 
 ### Events
 
 | 事件名 | 说明                           | 回调参数      |
 | ------ | ------------------------------ | ------------- |
-| getKey  | 点击按键时触发                 | key: 按键内容 |
+| getKey | 点击按键时触发                 | key: 按键内容 |
 | delete | 点击删除键时触发               | -             |
 | close  | 点击关闭按钮时触发             | -             |
 | blur   | 点击关闭按钮或非键盘区域时触发 | -             |

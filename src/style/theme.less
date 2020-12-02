@@ -54,8 +54,8 @@
 // Component Colors 组件颜色
 @text-color: @gray-8;
 @active-color: @gray-2;
-@active-opacity: .7;
-@disabled-opacity: .5;
+@active-opacity: 0.7;
+@disabled-opacity: 0.5;
 @background-color: @gray-1;
 @background-color-light: #fafafa;
 @text-link-color: #576b95;
@@ -357,6 +357,7 @@
 @content-line-height-md: 18px;
 
 // Font 字体
+@font-size-xs: 10px;
 @font-size-lg: 16px;
 @font-size-md: 14px;
 @font-size-ml: 12px;
@@ -385,7 +386,6 @@
 @background-color: #f8f8f8;
 @background-color-light: #fafafa;
 
-
 // Button 按钮
 @button-margin-left: 3px;
 @button-mc-radius: 4px;
@@ -399,7 +399,7 @@
 @button-disabled-opacity: 0.6;
 
 // Collapse 折叠面板
-@collapse-item-transition-duration: .3s;
+@collapse-item-transition-duration: 0.3s;
 @collapse-item-content-padding: 15px;
 @collapse-item-content-font-size: 13px;
 @collapse-item-content-line-height: 1.5;
@@ -457,12 +457,12 @@
 
 // picker 选择器
 @picker-background-color: @white;
-@picker-loading-background-color: rgba(255, 255, 255, .6);
+@picker-loading-background-color: rgba(255, 255, 255, 0.6);
 @picker-item-color: @gray-6;
 @picker-item-padding: 0 5px;
 @picker-confirm-padding: 0 15px;
 @picker-confirm-color: @blue;
-@picker-disabled-opacity: .3;
+@picker-disabled-opacity: 0.3;
 @picker-toolbar-height: 44px;
 
 // search 搜索框
@@ -482,7 +482,7 @@
 @toast-text-color: @white;
 @toast-line-height: 20px;
 @toast-border-radius: 4px;
-@toast-background-color: rgba(@text-color, .88);
+@toast-background-color: rgba(@text-color, 0.88);
 @toast-icon-size: 48px;
 @toast-text-min-width: 96px;
 @toast-text-padding: 8px 12px;
@@ -496,23 +496,31 @@
 
 // Tabbar 标签栏
 @tabbar-height: 50px;
+@tabbar-z-index: 1;
 @tabbar-background-color: @white;
 
 // TabbarItem 标签栏
 @tabbar-item-font-size: @font-size-sm;
 @tabbar-item-text-color: @gray-7;
 @tabbar-item-active-color: @blue;
+@tabbar-item-active-background-color: @tabbar-background-color;
 @tabbar-item-line-height: 1;
 @tabbar-item-icon-size: 18px;
 @tabbar-item-margin-bottom: 5px;
 
 // Animation 动画
-@animation-duration-base: .3s;
-@animation-duration-fast: .2s;
+@animation-duration-base: 0.3s;
+@animation-duration-fast: 0.2s;
 
 // Popup 弹出层
 @popup-background-color: @white;
 @popup-transition: transform @animation-duration-base ease-out;
+@popup-round-border-radius: 20px;
+@popup-close-icon-size: 22px;
+@popup-close-icon-color: @gray-5;
+@popup-close-icon-active-color: @gray-6;
+@popup-close-icon-margin: 16px;
+@popup-close-icon-z-index: 1;
 
 // SafeKeyboard 安全虚拟键盘
 @safe-keyboard-background-color: @gray-2;
@@ -618,7 +626,7 @@
 @switch-node-z-index: 1;
 @switch-node-background-color: @white;
 @switch-node-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05),
-0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+  0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
 @switch-background-color: @white;
 @switch-on-background-color: @blue;
 @switch-transition-duration: @animation-duration-base;
@@ -627,7 +635,6 @@
 
 // Sticky
 @sticky-z-index: 99;
-
 
 // Tab
 @tab-text-color: @gray-7;
@@ -674,3 +681,94 @@
 @image-loading-icon-color: @gray-4;
 @image-error-icon-size: 32px;
 @image-error-icon-color: @gray-4;
+
+// Calendar
+@calendar-background-color: @white;
+@calendar-popup-height: 80%;
+@calendar-header-box-shadow: 0 2px 10px rgba(125, 126, 128, 0.16);
+@calendar-header-title-height: 44px;
+@calendar-header-title-font-size: @font-size-lg;
+@calendar-header-subtitle-font-size: @font-size-md;
+@calendar-weekdays-height: 30px;
+@calendar-weekdays-font-size: @font-size-sm;
+@calendar-month-title-font-size: @font-size-md;
+@calendar-month-mark-color: fade(@gray-2, 80%);
+@calendar-month-mark-font-size: 160px;
+@calendar-day-height: 64px;
+@calendar-day-font-size: @font-size-lg;
+@calendar-range-edge-color: @white;
+@calendar-range-edge-background-color: @red;
+@calendar-range-middle-color: @red;
+@calendar-range-middle-background-opacity: 0.1;
+@calendar-selected-day-size: 54px;
+@calendar-selected-day-color: @white;
+@calendar-info-font-size: @font-size-xs;
+@calendar-info-line-height: @line-height-xs;
+@calendar-selected-day-background-color: @red;
+@calendar-day-disabled-color: @gray-5;
+@calendar-confirm-button-height: 36px;
+@calendar-confirm-button-margin: 7px 0;
+
+// List
+@list-icon-margin-right: 5px;
+@list-text-color: @gray-6;
+@list-text-font-size: @font-size-md;
+@list-text-line-height: 50px;
+
+// PullRefresh
+@pull-refresh-head-height: 50px;
+@pull-refresh-head-font-size: @font-size-md;
+@pull-refresh-head-text-color: @gray-6;
+
+// Loading
+@loading-text-color: @gray-6;
+@loading-text-font-size: @font-size-md;
+@loading-spinner-color: @gray-5;
+@loading-spinner-size: 30px;
+@loading-spinner-animation-duration: 0.8s;
+
+// Swipe
+@swipe-indicator-size: 6px;
+@swipe-indicator-margin: @padding-sm;
+@swipe-indicator-active-opacity: 1;
+@swipe-indicator-inactive-opacity: 0.3;
+@swipe-indicator-active-background-color: @blue;
+@swipe-indicator-inactive-background-color: @border-color;
+
+// ImagePreview
+@image-preview-index-text-color: @white;
+@image-preview-index-font-size: @font-size-md;
+@image-preview-index-line-height: @line-height-md;
+@image-preview-index-text-shadow: 0 1px 1px @gray-8;
+@image-preview-overlay-background-color: rgba(0, 0, 0, 0.9);
+@image-preview-close-icon-size: 22px;
+@image-preview-close-icon-color: @gray-5;
+@image-preview-close-icon-active-color: @gray-6;
+@image-preview-close-icon-margin: @padding-md;
+@image-preview-close-icon-z-index: 1;
+
+// Uploader
+@uploader-size: 80px;
+@uploader-icon-size: 24px;
+@uploader-icon-color: @gray-4;
+@uploader-text-color: @gray-6;
+@uploader-text-font-size: @font-size-sm;
+@uploader-upload-background-color: @gray-1;
+@uploader-upload-active-color: @active-color;
+@uploader-delete-color: @white;
+@uploader-delete-icon-size: 14px;
+@uploader-delete-background-color: rgba(0, 0, 0, 0.7);
+@uploader-file-background-color: @background-color;
+@uploader-file-icon-size: 20px;
+@uploader-file-icon-color: @gray-7;
+@uploader-file-name-padding: 0 @padding-base;
+@uploader-file-name-margin-top: @padding-xs;
+@uploader-file-name-font-size: @font-size-sm;
+@uploader-file-name-text-color: @gray-7;
+@uploader-mask-background-color: fade(@gray-8, 88%);
+@uploader-mask-icon-size: 22px;
+@uploader-mask-message-font-size: @font-size-sm;
+@uploader-mask-message-line-height: @line-height-xs;
+@uploader-loading-icon-size: 22px;
+@uploader-loading-icon-color: @white;
+@uploader-disabled-opacity: @disabled-opacity;

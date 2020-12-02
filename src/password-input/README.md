@@ -7,8 +7,8 @@
 ### 引入
 
 ```js
-import Vue from 'vue';
-import { PasswordInput, SafeKeyboard } from '@varied/mobile';
+import Vue from "vue";
+import { PasswordInput, SafeKeyboard } from "@varied/mobile";
 
 Vue.use(PasswordInput);
 Vue.use(SafeKeyboard);
@@ -39,8 +39,8 @@ Vue.use(SafeKeyboard);
 export default {
   data() {
     return {
-      value: '123',
-      showKeyboard: true,
+      value: "123",
+      showKeyboard: true
     };
   },
   methods: {
@@ -49,8 +49,8 @@ export default {
     },
     onDelete() {
       this.value = this.value.slice(0, this.value.length - 1);
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -102,24 +102,24 @@ export default {
 export default {
   data() {
     return {
-      value: '123',
+      value: "123",
       showKeyboard: true,
-      errorInfo: '',
+      errorInfo: ""
     };
   },
   methods: {
     onInput(key) {
       this.value = (this.value + key).slice(0, 6);
       if (this.value.length === 6) {
-        this.errorInfo = '密码错误';
+        this.errorInfo = "密码错误";
       } else {
-        this.errorInfo = '';
+        this.errorInfo = "";
       }
     },
     onDelete() {
       this.value = this.value.slice(0, this.value.length - 1);
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -127,15 +127,15 @@ export default {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 密码值 | _string_ | `''` |
-| info | 输入框下方文字提示 | _string_ | - |
-| error-info | 输入框下方错误提示 | _string_ | - |
-| length | 密码最大长度 | _number \| string_ | `6` |
-| gutter | 输入框格子之间的间距，如 `20px` `2em`，默认单位为`px` | _number \| string_ | `0` |
-| mask | 是否隐藏密码内容 | _boolean_ | `true` |
-| focused `v2.1.8` | 是否已聚焦，聚焦时会显示光标 | _boolean_ | `false` |
+| 参数       | 说明                                                  | 类型               | 默认值  |
+| ---------- | ----------------------------------------------------- | ------------------ | ------- |
+| value      | 密码值                                                | _string_           | `''`    |
+| info       | 输入框下方文字提示                                    | _string_           | -       |
+| error-info | 输入框下方错误提示                                    | _string_           | -       |
+| length     | 密码最大长度                                          | _number \| string_ | `6`     |
+| gutter     | 输入框格子之间的间距，如 `20px` `2em`，默认单位为`px` | _number \| string_ | `0`     |
+| mask       | 是否隐藏密码内容                                      | _boolean_          | `true`  |
+| focused    | 是否已聚焦，聚焦时会显示光标                          | _boolean_          | `false` |
 
 ### Events
 

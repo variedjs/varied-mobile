@@ -3,23 +3,41 @@
     <div
       v-if="shouldRender"
       v-show="value"
-      :class="b({ [position]: position })"
+      :class="b({ round, [position]: position })"
     >
       <slot />
+      <Icon
+        v-if="closeable"
+        role="button"
+        tabindex="0"
+        :name="closeIcon"
+        :class="b('close-icon', closeIconPosition)"
+        @click="close"
+      />
     </div>
   </transition>
 </template>
 
 <script>
-import create from '../utils/create';
-import Popup from '../mixins/popup';
+import create from "../utils/create";
+import Popup from "../mixins/popup";
+import Icon from "../icon";
 
 export default create({
-  name: 'popup',
-
+  components: { Icon },
+  name: "popup",
   mixins: [Popup],
-
   props: {
+    round: Boolean,
+    closeable: Boolean,
+    closeIcon: {
+      type: String,
+      default: "close"
+    },
+    closeIconPosition: {
+      type: String,
+      default: "top-right"
+    },
     position: String,
     transition: String,
     overlay: {
@@ -31,12 +49,11 @@ export default create({
       default: true
     }
   },
-
   computed: {
     currentTransition() {
       return (
         this.transition ||
-        (this.position ? `popup-slide-${this.position}` : 'van-fade')
+        (this.position ? `popup-slide-${this.position}` : "vm-fade")
       );
     }
   }

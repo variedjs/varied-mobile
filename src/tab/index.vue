@@ -7,7 +7,7 @@
       :class="b('pane-wrapper', { inactive: !isActive })"
     >
       <div :class="b('pane')">
-        <slot />
+        <slot v-if="shouldRender" />
       </div>
     </div>
     <div
@@ -16,7 +16,7 @@
       role="tabpanel"
       :class="b('pane')"
     >
-      <slot />
+      <slot v-if="shouldRender" />
     </div>
   </div>
 </template>
@@ -58,6 +58,10 @@ export default create({
     };
   },
   computed: {
+    shouldRender() {
+      return this.inited || this.parents.scrollspy || !this.parents.lazyRender;
+    },
+
     computedName() {
       return this.name || this.index;
     },

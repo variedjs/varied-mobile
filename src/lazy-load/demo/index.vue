@@ -30,18 +30,18 @@ export default {
         title3: "懒加载模块"
       },
       imageList: [
-        "https://img.yzcdn.cn/vant/apple-1.jpg",
-        "https://img.yzcdn.cn/vant/apple-2.jpg",
-        "https://img.yzcdn.cn/vant/apple-3.jpg",
-        "https://img.yzcdn.cn/vant/apple-4.jpg"
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe.jpg",
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-1.jpg",
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-2.jpg",
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-3.jpg"
       ],
       backgroundImageList: [
-        "https://img.yzcdn.cn/vant/apple-5.jpg",
-        "https://img.yzcdn.cn/vant/apple-6.jpg"
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-4.jpg",
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-5.jpg"
       ],
       componentImageList: [
-        "https://img.yzcdn.cn/vant/apple-8.jpg",
-        "https://img.yzcdn.cn/vant/apple-7.jpg"
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-6.jpg",
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe-7.jpg"
       ]
     };
   },

@@ -103,7 +103,15 @@ export default {
             },
             {
               path: "/loading",
-              title: "Loading 等待框"
+              title: "Loading 加载"
+            },
+            {
+              path: "/overlay",
+              title: "Overlay 遮罩层"
+            },
+            {
+              path: "/pull-refresh",
+              title: "PullRefresh 下拉刷新"
             },
             {
               path: "/toast",
@@ -135,6 +143,10 @@ export default {
         {
           groupName: "表单组件",
           list: [
+            {
+              path: "/calendar",
+              title: "Calendar 日历"
+            },
             {
               path: "/checkbox",
               title: "Checkbox 复选框"
@@ -178,6 +190,10 @@ export default {
             {
               path: "/stepper",
               title: "Stepper 步进器"
+            },
+            {
+              path: "/uploader",
+              title: "Uploader 文件上传"
             }
           ]
         },
@@ -189,12 +205,24 @@ export default {
               title: "Collapse 折叠面板"
             },
             {
+              path: "/image-preview",
+              title: "ImagePreview 图片预览"
+            },
+            {
               path: "/lazy-load",
               title: "LazyLoad 懒加载"
             },
             {
+              path: "/list",
+              title: "List 列表"
+            },
+            {
               path: "/sticky",
               title: "Sticky 粘性布局"
+            },
+            {
+              path: "/swipe",
+              title: "Swipe 轮播"
             }
           ]
         },

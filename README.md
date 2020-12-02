@@ -29,7 +29,7 @@ yarn add @varied/mobile
 ```js
 import Vue from "vue";
 import { Button } from "@varied/mobile";
-import "@varied/mobile/lib/index.css";
+import "@varied/mobile/lib/index.less";
 
 Vue.use(Button);
 ```

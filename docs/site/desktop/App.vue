@@ -13,27 +13,15 @@
     >
       <router-view @changeDemoURL="onChangeDemoURL" />
     </van-doc>
-    <div
-      @click="jump"
-      class="bottom"
-      style="height: 50px;
-      line-height:50px;
-      text-align: center;
-      background-color: #fff;
-      color: #108EE9;
-      font-size: 12px;
-      cursor: pointer"
-    >
-      备案号：晋ICP备19014733号-1
-    </div>
   </div>
 </template>
 
 <script>
 import pkgJson from "../../../package.json";
 import docConfig, { github, versions } from "../doc.config";
-
+import VanDoc from "./components";
 export default {
+  components: { VanDoc },
   data() {
     this.github = github;
     this.versions = versions;

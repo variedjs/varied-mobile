@@ -113,7 +113,9 @@ export default {
 
 ```html
 <vm-dialog v-model="show" title="标题" show-cancel-button>
-  <img src="https://img.yzcdn.cn/@varied/mobile/apple-3.jpg" />
+  <img
+    src="https://wuner.gitee.io/static-resources/varied-mobile/static/universe.jpg"
+  />
 </vm-dialog>
 ```
 
@@ -140,38 +142,38 @@ export default {
 
 ## Options
 
-| 参数                | 说明                                                                            | 类型                      | 默认值   | 版本 |
-| ------------------- | ------------------------------------------------------------------------------- | ------------------------- | -------- | ---- |
-| title               | 标题                                                                            | `String`                  | -        | -    |
-| message             | 内容                                                                            | `String`                  | -        | -    |
-| messageAlign        | 内容对齐方式，可选值为`left` `right`                                            | `String`                  | `center` | -    |
-| className           | 自定义类名                                                                      | `String | Array | Object` | -        | -    |
-| showConfirmButton   | 是否展示确认按钮                                                                | `Boolean`                 | `true`   | -    |
-| showCancelButton    | 是否展示取消按钮                                                                | `Boolean`                 | `false`  | -    |
-| confirmButtonText   | 确认按钮的文案                                                                  | `String`                  | `确认`   | -    |
-| cancelButtonText    | 取消按钮的文案                                                                  | `String`                  | `取消`   | -    |
-| overlay             | 是否展示蒙层                                                                    | `Boolean`                 | `true`   | -    |
-| closeOnClickOverlay | 点击蒙层时是否关闭弹窗                                                          | `Boolean`                 | `false`  | -    |
-| lockScroll          | 是否锁定背景滚动                                                                | `Boolean`                 | `true`   | -    |
-| beforeClose         | 关闭前的回调函数，<br>调用 done() 后关闭弹窗，<br>调用 done(false) 阻止弹窗关闭 | `(action, done) => void`  | -        | -    |
+| 参数                | 说明                                                                            | 类型                      | 默认值   |
+| ------------------- | ------------------------------------------------------------------------------- | ------------------------- | -------- |
+| title               | 标题                                                                            | `String`                  | -        |
+| message             | 内容                                                                            | `String`                  | -        |
+| messageAlign        | 内容对齐方式，可选值为`left` `right`                                            | `String`                  | `center` |
+| className           | 自定义类名                                                                      | `String | Array | Object` | -        |
+| showConfirmButton   | 是否展示确认按钮                                                                | `Boolean`                 | `true`   |
+| showCancelButton    | 是否展示取消按钮                                                                | `Boolean`                 | `false`  |
+| confirmButtonText   | 确认按钮的文案                                                                  | `String`                  | `确认`   |
+| cancelButtonText    | 取消按钮的文案                                                                  | `String`                  | `取消`   |
+| overlay             | 是否展示蒙层                                                                    | `Boolean`                 | `true`   |
+| closeOnClickOverlay | 点击蒙层时是否关闭弹窗                                                          | `Boolean`                 | `false`  |
+| lockScroll          | 是否锁定背景滚动                                                                | `Boolean`                 | `true`   |
+| beforeClose         | 关闭前的回调函数，<br>调用 done() 后关闭弹窗，<br>调用 done(false) 阻止弹窗关闭 | `(action, done) => void`  | -        |
 
 ## API
 
-| 参数                   | 说明                                                                            | 类型                         | 默认值   | 版本 |
-| ---------------------- | ------------------------------------------------------------------------------- | ---------------------------- | -------- | ---- |
-| v-model                | 是否显示弹窗                                                                    | `Boolean`                    | -        | -    |
-| title                  | 标题                                                                            | `String`                     | -        | -    |
-| message                | 内容                                                                            | `String`                     | -        | -    |
-| message-align          | 内容对齐方式，可选值为`left` `right`                                            | `String`                     | `center` | -    |
-| show-confirm-button    | 是否展示确认按钮                                                                | `Boolean`                    | `true`   | -    |
-| show-cancel-button     | 是否展示取消按钮                                                                | `Boolean`                    | `false`  | -    |
-| confirm-button-text    | 确认按钮的文案                                                                  | `String`                     | `确认`   | -    |
-| cancel-button-text     | 取消按钮的文案                                                                  | `String`                     | `取消`   | -    |
-| overlay                | 是否展示蒙层                                                                    | `Boolean`                    | `true`   | -    |
-| close-on-click-overlay | 是否在点击蒙层后关闭                                                            | `Boolean`                    | `false`  | -    |
-| lock-scroll            | 是否锁定背景滚动                                                                | `Boolean`                    | `true`   | -    |
-| before-close           | 关闭前的回调函数，<br>调用 done() 后关闭弹窗，<br>调用 done(false) 阻止弹窗关闭 | `(action, done) => void`     | -        | -    |
-| get-container          | 指定挂载的节点，可以传入选择器，<br>或一个返回节点的函数                        | `String | () => HTMLElement` | -        | -    |
+| 参数                   | 说明                                                                            | 类型                         | 默认值   |
+| ---------------------- | ------------------------------------------------------------------------------- | ---------------------------- | -------- |
+| v-model                | 是否显示弹窗                                                                    | `Boolean`                    | -        |
+| title                  | 标题                                                                            | `String`                     | -        |
+| message                | 内容                                                                            | `String`                     | -        |
+| message-align          | 内容对齐方式，可选值为`left` `right`                                            | `String`                     | `center` |
+| show-confirm-button    | 是否展示确认按钮                                                                | `Boolean`                    | `true`   |
+| show-cancel-button     | 是否展示取消按钮                                                                | `Boolean`                    | `false`  |
+| confirm-button-text    | 确认按钮的文案                                                                  | `String`                     | `确认`   |
+| cancel-button-text     | 取消按钮的文案                                                                  | `String`                     | `取消`   |
+| overlay                | 是否展示蒙层                                                                    | `Boolean`                    | `true`   |
+| close-on-click-overlay | 是否在点击蒙层后关闭                                                            | `Boolean`                    | `false`  |
+| lock-scroll            | 是否锁定背景滚动                                                                | `Boolean`                    | `true`   |
+| before-close           | 关闭前的回调函数，<br>调用 done() 后关闭弹窗，<br>调用 done(false) 阻止弹窗关闭 | `(action, done) => void`     | -        |
+| get-container          | 指定挂载的节点，可以传入选择器，<br>或一个返回节点的函数                        | `String | () => HTMLElement` | -        |
 
 ## Event
 

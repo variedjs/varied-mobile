@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-row type="flex" align="center">
+      <vm-button tag="span" class="bg-cyan">默认</vm-button>
+      <vm-button radius="mc" class="bg-cyan">
+        小圆角
+      </vm-button>
+      <vm-button radius="sc" class="bg-cyan">
+        半圆角
+      </vm-button>
+      <vm-button radius="fc" class="bg-cyan shadow-blue">
+        <vm-icon name="opera"></vm-icon>
+      </vm-button>
+    </vm-row>
+  </div>
+  <div>
+    <vm-button class="border-blue">
+      海蓝
+    </vm-button>
+    <vm-button class="border-red">
+      嫣红
+    </vm-button>
+    <vm-button class="border-orange">
+      桔橙
+    </vm-button>
+    <vm-button class="border-yellow">
+      明黄
+    </vm-button>
+  </div>
+  <div>
+    <vm-button class="bg-purple shadow">
+      姹紫
+    </vm-button>
+    <vm-button class="bg-mauve shadow">
+      木槿
+    </vm-button>
+    <vm-button class="bg-pink shadow">
+      桃粉
+    </vm-button>
+    <vm-button class="bg-brown shadow">
+      棕褐
+    </vm-button>
+  </div>
+  <div>
+    <vm-button size="sm" class="bg-green">
+      小尺寸
+    </vm-button>
+    <vm-button class="bg-green">默认</vm-button>
+    <vm-button size="lg" class="bg-green">
+      大尺寸
+    </vm-button>
+  </div>
+  <div>
+    <vm-button block="" size="lg" class="bg-blue">
+      块状
+    </vm-button>
+  </div>
+  <div>
+    <vm-button loading="" class="bg-green"></vm-button>
+    <vm-button loading="" loading-text="加载中..." class="bg-red"></vm-button>
+  </div>
+  <div>
+    <vm-button disabled="" class="bg-green">
+      禁用状态
+    </vm-button>
+  </div>
+  <div>
+    <vm-button class="bg-green">
+      <vm-icon name="search"></vm-icon> <span>按钮</span>
+    </vm-button>
+  </div>
+  <div>
+    <vm-button width="100px" height="30px" class="bg-cyan">
+      默认
+    </vm-button>
+  </div>
+  <div>
+    <vm-button longpresstime="500" class="bg-cyan">
+      长按
+    </vm-button>
+  </div>
+</div>
+`;

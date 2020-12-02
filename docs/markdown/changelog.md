@@ -1,5 +1,43 @@
 # 更新日志
 
+## V0.0.8
+
+### 新增
+
+> Calendar 日历组件
+
+> PullRefresh 下拉刷新组件
+
+> List 列表组件
+
+> Swipe 轮播组件
+
+> ImagePreview 图片预览组件
+
+> Overlay 遮罩层组件
+
+> Uploader 文件上传组件
+
+### 优化
+
+> Popup 弹出层 新增属性
+>
+> - round(是否显示圆角)
+> - closeable(是否显示关闭图标)
+> - close-icon(关闭图标名称或图片链接)
+> - close-icon-position(关闭图标位置)
+
+> Loading 加载 组件新增 vertical、textSize 属性和新增默认插槽
+
+> 优化 tabbar 标签栏 组件
+
+> Button 按钮 组件 新增属性
+>
+> - color(按钮字体颜色)
+> - background(按钮背景颜色)
+> - icon-position(图标展示位置)
+> - icon(图标名称或图片链接)
+
 ## v0.0.7
 
 ### 新增功能

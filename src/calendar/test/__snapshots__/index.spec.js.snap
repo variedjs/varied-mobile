@@ -1,0 +1,1570 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`color prop when type is range 1`] = `
+<div class="vm-calendar">
+  <div class="vm-calendar-header">
+    <div class="vm-calendar-header-title"><span>日期选择</span></div>
+    <div class="vm-calendar-header-subtitle">
+      2010年1月
+    </div>
+    <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+  </div>
+  <div class="vm-calendar-body">
+    <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+      <!---->
+      <div role="grid" class="vm-calendar-days">
+        <div class="vm-calendar-month-mark">
+          1
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="margin-left: 71.42857142857143%;">
+          <div class="">
+            <!---->
+            1
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            2
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            3
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            4
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            5
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            6
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            7
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            8
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            9
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-start" style="background: blue;">
+          <div class="">
+            <!---->
+            10
+            <div class="vm-calendar-bottom-info">
+              开始
+            </div>
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            11
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            12
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            13
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            14
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            15
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            16
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            17
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            18
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-middle" style="color: blue;">
+          <div class="">
+            <!---->
+            19
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-end" style="background: blue;">
+          <div class="">
+            <!---->
+            20
+            <div class="vm-calendar-bottom-info">
+              结束
+            </div>
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            21
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            22
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            23
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            24
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            25
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            26
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            27
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            28
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            29
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            30
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            31
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vm-calendar-footer"><button class="bg-red vm-button vm-button-block vm-button-md vm-button-mc vm-calendar-confirm" style="color: blue;" type="danger" nativetype="button"><i class="vm-icon vm-button-icon">
+        <!---->
+      </i>
+      确定
+      <!---->
+    </button></div>
+</div>
+`;
+
+exports[`color prop when type is single 1`] = `
+<div class="vm-calendar">
+  <div class="vm-calendar-header">
+    <div class="vm-calendar-header-title"><span>日期选择</span></div>
+    <div class="vm-calendar-header-subtitle">
+      2010年1月
+    </div>
+    <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+  </div>
+  <div class="vm-calendar-body">
+    <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+      <!---->
+      <div role="grid" class="vm-calendar-days">
+        <div class="vm-calendar-month-mark">
+          1
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="margin-left: 71.42857142857143%;">
+          <div class="">
+            <!---->
+            1
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            2
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            3
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            4
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            5
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            6
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            7
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            8
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            9
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-selected">
+          <div class="vm-calendar-selected-day" style="background: blue;">
+            <!---->
+            10
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            11
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            12
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            13
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            14
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            15
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            16
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            17
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            18
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            19
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            20
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            21
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            22
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            23
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            24
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            25
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            26
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            27
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            28
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            29
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            30
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            31
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vm-calendar-footer"><button class="bg-red vm-button vm-button-block vm-button-md vm-button-mc vm-calendar-confirm" style="color: blue;" type="danger" nativetype="button"><i class="vm-icon vm-button-icon">
+        <!---->
+      </i>
+      确定
+      <!---->
+    </button></div>
+</div>
+`;
+
+exports[`formatter prop 1`] = `
+<div class="vm-calendar">
+  <div class="vm-calendar-header">
+    <div class="vm-calendar-header-title"><span>日期选择</span></div>
+    <div class="vm-calendar-header-subtitle">
+      2010年1月
+    </div>
+    <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+  </div>
+  <div class="vm-calendar-body">
+    <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+      <!---->
+      <div role="grid" class="vm-calendar-days">
+        <div class="vm-calendar-month-mark">
+          1
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="margin-left: 71.42857142857143%;">
+          <div class="">
+            <!---->
+            1
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            2
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            3
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            4
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            5
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            6
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            7
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            8
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            9
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-selected">
+          <div class="vm-calendar-selected-day">
+            <!---->
+            10
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <div class="vm-calendar-top-info">
+              Top Info
+            </div>
+            11
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            12
+            <div class="vm-calendar-bottom-info">
+              Bottom Info
+            </div>
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            Text
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day test">
+          <div class="">
+            <!---->
+            14
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            15
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            16
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            17
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            18
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            19
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            20
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            21
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            22
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            23
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            24
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            25
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            26
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            27
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            28
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            29
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            30
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            31
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vm-calendar-footer"><button class="bg-red vm-button vm-button-block vm-button-md vm-button-mc vm-calendar-confirm" type="danger" nativetype="button"><i class="vm-icon vm-button-icon">
+        <!---->
+      </i>
+      确定
+      <!---->
+    </button></div>
+</div>
+`;
+
+exports[`popup wrapper 1`] = `
+<transition-stub name="popup-slide-bottom" closeonpopstate="true" class="vm-calendar-popup">
+  <!---->
+</transition-stub>
+`;
+
+exports[`popup wrapper 2`] = `
+<transition-stub name="popup-slide-bottom" closeonpopstate="true" class="vm-calendar-popup" style="z-index: 2001;">
+  <div class="vm-popup vm-popup-round vm-popup-bottom">
+    <div class="vm-calendar">
+      <div class="vm-calendar-header">
+        <div class="vm-calendar-header-title"><span>日期选择</span></div>
+        <div class="vm-calendar-header-subtitle">
+          2010年1月
+        </div>
+        <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+      </div>
+      <div class="vm-calendar-body">
+        <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+          <!---->
+          <div role="grid" class="vm-calendar-days">
+            <div class="vm-calendar-month-mark">
+              1
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="margin-left: 71.42857142857143%;">
+              <div class="">
+                <!---->
+                1
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                2
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                3
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                4
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                5
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                6
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                7
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                8
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                9
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-selected">
+              <div class="vm-calendar-selected-day">
+                <!---->
+                10
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                11
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                12
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                13
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                14
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                15
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                16
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                17
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                18
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                19
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+              <div class="">
+                <!---->
+                20
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                21
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                22
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                23
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                24
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                25
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                26
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                27
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                28
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                29
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                30
+                <!---->
+              </div>
+            </div>
+            <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+              <div class="">
+                <!---->
+                31
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vm-calendar-footer"><button class="bg-red vm-button vm-button-block vm-button-md vm-button-mc vm-calendar-confirm" type="danger" nativetype="button"><i class="vm-icon vm-button-icon">
+            <!---->
+          </i>
+          确定
+          <!---->
+        </button></div>
+    </div> <i class="vm-icon vm-icon-close vm-popup-close-icon vm-popup-close-icon-top-right" role="button" tabindex="0">
+      <!---->
+    </i>
+  </div>
+</transition-stub>
+`;
+
+exports[`row-height prop 1`] = `
+<div class="vm-calendar">
+  <div class="vm-calendar-header">
+    <div class="vm-calendar-header-title"><span>日期选择</span></div>
+    <div class="vm-calendar-header-subtitle">
+      2010年1月
+    </div>
+    <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+  </div>
+  <div class="vm-calendar-body">
+    <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+      <!---->
+      <div role="grid" class="vm-calendar-days">
+        <div class="vm-calendar-month-mark">
+          1
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px; margin-left: 71.42857142857143%;">
+          <div class="">
+            <!---->
+            1
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            2
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            3
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            4
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            5
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            6
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            7
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            8
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            9
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-selected" style="height: 50px;">
+          <div class="vm-calendar-selected-day" style="width: 50px; height: 50px;">
+            <!---->
+            10
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            11
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            12
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            13
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            14
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            15
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            16
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            17
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            18
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            19
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day" style="height: 50px;">
+          <div class="">
+            <!---->
+            20
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            21
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            22
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            23
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            24
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            25
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            26
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            27
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            28
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            29
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            30
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="height: 50px;">
+          <div class="">
+            <!---->
+            31
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vm-calendar-footer"><button class="bg-red vm-button vm-button-block vm-button-md vm-button-mc vm-calendar-confirm" type="danger" nativetype="button"><i class="vm-icon vm-button-icon">
+        <!---->
+      </i>
+      确定
+      <!---->
+    </button></div>
+</div>
+`;
+
+exports[`title & footer slot 1`] = `
+<div class="vm-calendar">
+  <div class="vm-calendar-header">
+    <div class="vm-calendar-header-title"><span>日期选择</span></div>
+    <div class="vm-calendar-header-subtitle">
+      2010年1月
+    </div>
+    <div class="vm-calendar-weekdays"><span class="vm-calendar-weekday">
+      日
+    </span><span class="vm-calendar-weekday">
+      一
+    </span><span class="vm-calendar-weekday">
+      二
+    </span><span class="vm-calendar-weekday">
+      三
+    </span><span class="vm-calendar-weekday">
+      四
+    </span><span class="vm-calendar-weekday">
+      五
+    </span><span class="vm-calendar-weekday">
+      六
+    </span></div>
+  </div>
+  <div class="vm-calendar-body">
+    <div class="vm-calendar-month" style="padding-bottom: 0px;" refinfor="">
+      <!---->
+      <div role="grid" class="vm-calendar-days">
+        <div class="vm-calendar-month-mark">
+          1
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled" style="margin-left: 71.42857142857143%;">
+          <div class="">
+            <!---->
+            1
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            2
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            3
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            4
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            5
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            6
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            7
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            8
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            9
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-selected">
+          <div class="vm-calendar-selected-day">
+            <!---->
+            10
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            11
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            12
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            13
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            14
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            15
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            16
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            17
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            18
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            19
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day">
+          <div class="">
+            <!---->
+            20
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            21
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            22
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            23
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            24
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            25
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            26
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            27
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            28
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            29
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            30
+            <!---->
+          </div>
+        </div>
+        <div refinfor="" role="gridcell" tabindex="-1" class="vm-calendar-day vm-calendar-day-disabled">
+          <div class="">
+            <!---->
+            31
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vm-calendar-footer">Custom Footer</div>
+</div>
+`;

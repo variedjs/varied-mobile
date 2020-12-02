@@ -1,9 +1,9 @@
-import Vue from 'vue';
-import context from './context';
-import Overlay from '../../overlay';
+import Vue from "vue";
+import context from "./context";
+import Overlay from "../../overlay";
 
 const defaultConfig = {
-  className: '',
+  className: "",
   customStyle: {}
 };
 
@@ -36,15 +36,15 @@ export default {
 
     if (!modal) {
       modal = new (Vue.extend(Overlay))({
-        el: document.createElement('div')
+        el: document.createElement("div")
       });
-      modal.$on('click', this.onClick);
+      modal.$on("click", this.onClick);
 
       context.modal = modal;
     }
 
     if (modal.$el.parentNode) {
-      modal.visible = false;
+      modal.show = false;
     }
 
     if (context.top) {
@@ -52,7 +52,7 @@ export default {
 
       target.appendChild(modal.$el);
       Object.assign(modal, defaultConfig, config, {
-        visible: true
+        show: true
       });
     }
   },
@@ -62,8 +62,8 @@ export default {
     /* istanbul ignore else */
     if (context.top) {
       const { vm } = context.top;
-      vm.$emit('click-overlay');
-      vm.closeOnClickOverlay && vm.$emit('input', false);
+      vm.$emit("click-overlay");
+      vm.closeOnClickOverlay && vm.$emit("input", false);
     }
   }
 };

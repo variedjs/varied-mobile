@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-cell is-link="" title="选择单个日期"></vm-cell>
+    <vm-cell is-link="" title="选择多个日期"></vm-cell>
+    <vm-cell is-link="" title="选择日期区间"></vm-cell>
+  </div>
+  <div>
+    <vm-cell is-link="" title="选择单个日期"></vm-cell>
+    <vm-cell is-link="" title="选择日期区间"></vm-cell>
+  </div>
+  <div>
+    <vm-cell is-link="" title="自定义颜色"></vm-cell>
+    <vm-cell is-link="" title="自定义日期范围"></vm-cell>
+    <vm-cell is-link="" title="自定义按钮文字"></vm-cell>
+    <vm-cell is-link="" title="自定义日期文案"></vm-cell>
+    <vm-cell is-link="" title="自定义弹出位置"></vm-cell>
+    <vm-cell is-link="" title="日期区间最大范围"></vm-cell>
+    <vm-cell is-link="" title="自定义周起始日"></vm-cell>
+  </div>
+  <div>
+    <vm-calendar title="日历" min-date="Tue Jan 10 2012 00:00:00 GMT+0800 (GMT+08:00)" max-date="Tue Mar 20 2012 00:00:00 GMT+0800 (GMT+08:00)" default-date="Tue Jan 10 2012 00:00:00 GMT+0800 (GMT+08:00)" style="height: 500px;"></vm-calendar>
+  </div>
+  <vm-calendar type="single" round="true" first-day-of-week="0"></vm-calendar>
+</div>
+`;

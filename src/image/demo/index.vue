@@ -81,7 +81,8 @@ export default {
         customTip: "自定义提示",
         loadFail: "加载失败"
       },
-      image: "https://img.yzcdn.cn/vant/cat.jpeg",
+      image:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/landscape-3.jpg",
       fits: ["contain", "cover", "fill", "none", "scale-down"]
     };
   },

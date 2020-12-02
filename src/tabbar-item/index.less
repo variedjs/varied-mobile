@@ -1,4 +1,4 @@
-@import '../style/theme';
+@import "../style/theme";
 
 .vm-tabbar-item {
   display: flex;
@@ -9,6 +9,7 @@
   color: @tabbar-item-text-color;
   font-size: @tabbar-item-font-size;
   line-height: @tabbar-item-line-height;
+  cursor: pointer;
 
   &-icon {
     position: relative;
@@ -22,15 +23,16 @@
 
     img {
       display: block;
-      height: @tabbar-item-icon-size;
+      height: 20px;
     }
   }
 
   &-active {
+    background-color: @tabbar-item-active-background-color;
     color: @tabbar-item-active-color;
   }
 
   .vm-info {
-    margin-top: 2px;
+    margin-top: @padding-base;
   }
 }

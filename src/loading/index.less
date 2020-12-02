@@ -1,24 +1,23 @@
-@import '../style/theme';
+@import "../style/theme";
 @import "../style/animation";
 
 .vm-loading {
-  width: 30px;
-  height: 30px;
-  z-index: 0;
   font-size: 0;
-  line-height: 0;
   position: relative;
   vertical-align: middle;
+  color: @loading-spinner-color;
 
-  &-container{
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+  &-container {
+    width: @loading-spinner-size;
+    // compatible for 1.x, users may set width or height in root element
+    max-width: 100%;
+    height: @loading-spinner-size;
+    max-height: 100%;
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    animation: vm-rotate 0.8s linear infinite;
-
+    vertical-align: middle;
+    animation: vm-rotate @loading-spinner-animation-duration linear infinite;
 
     &-spinner {
       animation-timing-function: steps(12);
@@ -33,7 +32,7 @@
         &::before {
           width: 2px;
           height: 25%;
-          content: ' ';
+          content: " ";
           display: block;
           margin: 0 auto;
           border-radius: 40%;
@@ -48,6 +47,7 @@
   }
 
   &-circle {
+    display: block;
     width: 100%;
     height: 100%;
 
@@ -56,6 +56,24 @@
       stroke-width: 3;
       stroke-linecap: round;
       animation: vm-circular 1.5s ease-in-out infinite;
+    }
+  }
+
+  &-text {
+    display: inline-block;
+    margin-left: @padding-xs;
+    color: @loading-text-color;
+    font-size: @loading-text-font-size;
+    vertical-align: middle;
+  }
+
+  &-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .vm-loading-text {
+      margin: @padding-xs 0 0;
     }
   }
 }

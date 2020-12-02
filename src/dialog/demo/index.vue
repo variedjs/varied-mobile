@@ -39,7 +39,8 @@ export default {
       },
       show: false,
       currentRate: 0,
-      image: "https://img.yzcdn.cn/vant/apple-3.jpg"
+      image:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/universe.jpg"
     };
   },
 

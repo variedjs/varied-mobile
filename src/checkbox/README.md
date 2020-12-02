@@ -3,8 +3,8 @@
 ### 引入
 
 ```js
-import Vue from 'vue';
-import { Checkbox, CheckboxGroup } from '@varied/mobile';
+import Vue from "vue";
+import { Checkbox, CheckboxGroup } from "@varied/mobile";
 
 Vue.use(Checkbox);
 Vue.use(CheckboxGroup);
@@ -24,9 +24,9 @@ Vue.use(CheckboxGroup);
 export default {
   data() {
     return {
-      checked: true,
+      checked: true
     };
-  },
+  }
 };
 ```
 
@@ -86,10 +86,12 @@ export default {
   data() {
     return {
       checked: true,
-      activeIcon: 'https://img.yzcdn.cn/vant/user-active.png',
-      inactiveIcon: 'https://img.yzcdn.cn/vant/user-inactive.png',
+      activeIcon:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/active-tick.svg",
+      inactiveIcon:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/inactive-tick.svg"
     };
-  },
+  }
 };
 ```
 
@@ -108,9 +110,9 @@ export default {
 export default {
   data() {
     return {
-      result: ['a', 'b'],
+      result: ["a", "b"]
     };
-  },
+  }
 };
 ```
 
@@ -129,9 +131,9 @@ export default {
 export default {
   data() {
     return {
-      result: [],
+      result: []
     };
-  },
+  }
 };
 ```
 
@@ -166,7 +168,7 @@ export default {
 export default {
   data() {
     return {
-      result: [],
+      result: []
     };
   },
   methods: {
@@ -175,8 +177,8 @@ export default {
     },
     toggleAll() {
       this.$refs.checkboxGroup.toggleAll();
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -206,15 +208,15 @@ export default {
 export default {
   data() {
     return {
-      list: ['a', 'b'],
-      result: [],
+      list: ["a", "b"],
+      result: []
     };
   },
   methods: {
     toggle(index) {
       this.$refs.checkboxes[index].toggle();
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -222,28 +224,28 @@ export default {
 
 ### Checkbox Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model (value) | 是否为选中状态 | _boolean_ | `false` |
-| name | 标识符 | _any_ | - |
-| shape | 形状，可选值为 `square` | _string_ | `round` |
-| disabled | 是否禁用复选框 | _boolean_ | `false` |
-| label-disabled | 是否禁用复选框文本点击 | _boolean_ | `false` |
-| label-position | 文本位置，可选值为 `left` | _string_ | `right` |
-| icon-size | 图标大小，默认单位为`px` | _number \| string_ | `20px` |
-| checked-color | 选中状态颜色 | _string_ | `#1989fa` |
-| bind-group `v2.2.4` | 是否与复选框组绑定 | _boolean_ | `true` |
+| 参数            | 说明                      | 类型               | 默认值    |
+| --------------- | ------------------------- | ------------------ | --------- |
+| v-model (value) | 是否为选中状态            | _boolean_          | `false`   |
+| name            | 标识符                    | _any_              | -         |
+| shape           | 形状，可选值为 `square`   | _string_           | `round`   |
+| disabled        | 是否禁用复选框            | _boolean_          | `false`   |
+| label-disabled  | 是否禁用复选框文本点击    | _boolean_          | `false`   |
+| label-position  | 文本位置，可选值为 `left` | _string_           | `right`   |
+| icon-size       | 图标大小，默认单位为`px`  | _number \| string_ | `20px`    |
+| checked-color   | 选中状态颜色              | _string_           | `#1989fa` |
+| bind-group      | 是否与复选框组绑定        | _boolean_          | `true`    |
 
 ### CheckboxGroup Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model (value) | 所有选中项的标识符 | _any[]_ | - |
-| disabled | 是否禁用所有复选框 | _boolean_ | `false` |
-| max | 最大可选数，`0`为无限制 | _number \| string_ | `0` |
-| direction `v2.5.0` | 排列方向，可选值为`horizontal` | _string_ | `vertical` |
-| icon-size `v2.2.3` | 所有复选框的图标大小，默认单位为`px` | _number \| string_ | `20px` |
-| checked-color `v2.2.3` | 所有复选框的选中状态颜色 | _string_ | `#1989fa` |
+| 参数            | 说明                                 | 类型               | 默认值     |
+| --------------- | ------------------------------------ | ------------------ | ---------- |
+| v-model (value) | 所有选中项的标识符                   | _any[]_            | -          |
+| disabled        | 是否禁用所有复选框                   | _boolean_          | `false`    |
+| max             | 最大可选数，`0`为无限制              | _number \| string_ | `0`        |
+| direction       | 排列方向，可选值为`horizontal`       | _string_           | `vertical` |
+| icon-size       | 所有复选框的图标大小，默认单位为`px` | _number \| string_ | `20px`     |
+| checked-color   | 所有复选框的选中状态颜色             | _string_           | `#1989fa`  |
 
 ### Checkbox Events
 
@@ -267,16 +269,16 @@ export default {
 
 ### CheckboxGroup 方法
 
-通过 ref 可以获取到 CheckboxGroup 实例并调用实例方法，详见[组件实例方法](#/zh-CN/quickstart#zu-jian-shi-li-fang-fa)
+通过 ref 可以获取到 CheckboxGroup 实例并调用实例方法，详见[组件实例方法](#/quickstart#zu-jian-shi-li-fang-fa)
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| toggleAll | 切换所有复选框，传`true`为选中，`false`为取消选中，不传参为取反 | _checked?: boolean_ | - |
+| 方法名    | 说明                                                            | 参数                | 返回值 |
+| --------- | --------------------------------------------------------------- | ------------------- | ------ |
+| toggleAll | 切换所有复选框，传`true`为选中，`false`为取消选中，不传参为取反 | _checked?: boolean_ | -      |
 
 ### Checkbox 方法
 
-通过 ref 可以获取到 Checkbox 实例并调用实例方法，详见[组件实例方法](#/zh-CN/quickstart#zu-jian-shi-li-fang-fa)
+通过 ref 可以获取到 Checkbox 实例并调用实例方法，详见[组件实例方法](#/quickstart#zu-jian-shi-li-fang-fa)
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| toggle | 切换选中状态，传`true`为选中，`false`为取消选中，不传参为取反 | _checked?: boolean_ | - |
+| 方法名 | 说明                                                          | 参数                | 返回值 |
+| ------ | ------------------------------------------------------------- | ------------------- | ------ |
+| toggle | 切换选中状态，传`true`为选中，`false`为取消选中，不传参为取反 | _checked?: boolean_ | -      |

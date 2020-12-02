@@ -230,61 +230,61 @@ export default {
 
 ### Tabs Props
 
-| 参数                   | 说明                                                                 | 类型                           | 默认值    |
-| ---------------------- | -------------------------------------------------------------------- | ------------------------------ | --------- |
-| v-model                | 绑定当前选中标签的标识符                                             | _number \| string_             | `0`       |
-| type                   | 样式风格类型，可选值为 `card`                                        | _string_                       | `line`    |
-| color                  | 标签主题色                                                           | _string_                       | `#ee0a24` |
-| background             | 标签栏背景色                                                         | _string_                       | `white`   |
-| duration               | 动画时间，单位秒                                                     | _number \| string_             | `0.3`     |
-| line-width             | 底部条宽度，默认单位 `px`                                            | _number \| string_             | `40px`    |
-| line-height            | 底部条高度，默认单位 `px`                                            | _number \| string_             | `3px`     |
-| animated               | 是否开启切换标签内容时的转场动画                                     | _boolean_                      | `false`   |
-| border                 | 是否显示标签栏外边框，仅在 `type="line"` 时有效                      | _boolean_                      | `false`   |
-| ellipsis               | 是否省略过长的标题文字                                               | _boolean_                      | `true`    |
-| sticky                 | 是否使用粘性定位布局                                                 | _boolean_                      | `false`   |
-| swipeable              | 是否开启手势滑动切换                                                 | _boolean_                      | `false`   |
-| lazy-render            | 是否开启延迟渲染（首次切换到标签时才触发内容渲染）                   | _boolean_                      | `true`    |
-| scrollspy `v2.3.0`     | 是否开启滚动导航                                                     | _boolean_                      | `false`   |
-| offset-top `v2.8.7`    | 粘性定位布局下与顶部的最小距离，支持 `px` `vw` `rem` 单位，默认 `px` | _number \| string_             | `0`       |
-| swipe-threshold        | 滚动阈值，标签数量超过阈值时开始横向滚动                             | _number \| string_             | `5`       |
-| title-active-color     | 标题选中态颜色                                                       | _string_                       | -         |
-| title-inactive-color   | 标题默认态颜色                                                       | _string_                       | -         |
-| before-change `v2.9.3` | 切换标签前的回调函数，返回 `false` 可阻止切换，支持返回 Promise      | _(name) => boolean \| Promise_ | -         |
+| 参数                 | 说明                                                                 | 类型                           | 默认值    |
+| -------------------- | -------------------------------------------------------------------- | ------------------------------ | --------- |
+| v-model              | 绑定当前选中标签的标识符                                             | _number \| string_             | `0`       |
+| type                 | 样式风格类型，可选值为 `card`                                        | _string_                       | `line`    |
+| color                | 标签主题色                                                           | _string_                       | `#ee0a24` |
+| background           | 标签栏背景色                                                         | _string_                       | `white`   |
+| duration             | 动画时间，单位秒                                                     | _number \| string_             | `0.3`     |
+| line-width           | 底部条宽度，默认单位 `px`                                            | _number \| string_             | `40px`    |
+| line-height          | 底部条高度，默认单位 `px`                                            | _number \| string_             | `3px`     |
+| animated             | 是否开启切换标签内容时的转场动画                                     | _boolean_                      | `false`   |
+| border               | 是否显示标签栏外边框，仅在 `type="line"` 时有效                      | _boolean_                      | `false`   |
+| ellipsis             | 是否省略过长的标题文字                                               | _boolean_                      | `true`    |
+| sticky               | 是否使用粘性定位布局                                                 | _boolean_                      | `false`   |
+| swipeable            | 是否开启手势滑动切换                                                 | _boolean_                      | `false`   |
+| lazy-render          | 是否开启延迟渲染（首次切换到标签时才触发内容渲染）                   | _boolean_                      | `true`    |
+| scrollspy            | 是否开启滚动导航                                                     | _boolean_                      | `false`   |
+| offset-top           | 粘性定位布局下与顶部的最小距离，支持 `px` `vw` `rem` 单位，默认 `px` | _number \| string_             | `0`       |
+| swipe-threshold      | 滚动阈值，标签数量超过阈值时开始横向滚动                             | _number \| string_             | `5`       |
+| title-active-color   | 标题选中态颜色                                                       | _string_                       | -         |
+| title-inactive-color | 标题默认态颜色                                                       | _string_                       | -         |
+| before-change        | 切换标签前的回调函数，返回 `false` 可阻止切换，支持返回 Promise      | _(name) => boolean \| Promise_ | -         |
 
 ### Tab Props
 
-| 参数           | 说明                                                                                      | 类型               | 默认值       |
-| -------------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------ |
-| title          | 标题                                                                                      | _string_           | -            |
-| disabled       | 是否禁用标签                                                                              | _boolean_          | `false`      |
-| dot `v2.3.0`   | 是否在标题右上角显示小红点                                                                | _boolean_          | `false`      |
-| badge `v2.5.6` | 图标右上角徽标的内容                                                                      | _number \| string_ | -            |
-| info `v2.3.0`  | 图标右上角徽标的内容（已废弃，请使用 badge 属性）                                         | _number \| string_ | -            |
-| name           | 标签名称，作为匹配的标识符                                                                | _number \| string_ | 标签的索引值 |
-| url            | 点击后跳转的链接地址                                                                      | _string_           | -            |
-| to             | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | _string \| object_ | -            |
-| replace        | 是否在跳转时替换当前页面历史                                                              | _boolean_          | `false`      |
-| title-style    | 自定义标题样式                                                                            | _any_              | -            |
+| 参数        | 说明                                                                                      | 类型               | 默认值       |
+| ----------- | ----------------------------------------------------------------------------------------- | ------------------ | ------------ |
+| title       | 标题                                                                                      | _string_           | -            |
+| disabled    | 是否禁用标签                                                                              | _boolean_          | `false`      |
+| dot         | 是否在标题右上角显示小红点                                                                | _boolean_          | `false`      |
+| badge       | 图标右上角徽标的内容                                                                      | _number \| string_ | -            |
+| info        | 图标右上角徽标的内容（已废弃，请使用 badge 属性）                                         | _number \| string_ | -            |
+| name        | 标签名称，作为匹配的标识符                                                                | _number \| string_ | 标签的索引值 |
+| url         | 点击后跳转的链接地址                                                                      | _string_           | -            |
+| to          | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | _string \| object_ | -            |
+| replace     | 是否在跳转时替换当前页面历史                                                              | _boolean_          | `false`      |
+| title-style | 自定义标题样式                                                                            | _any_              | -            |
 
 ### Tabs Events
 
-| 事件名            | 说明                                             | 回调参数                                       |
-| ----------------- | ------------------------------------------------ | ---------------------------------------------- |
-| click             | 点击标签时触发                                   | name：标识符，title：标题                      |
-| change            | 当前激活的标签改变时触发                         | name：标识符，title：标题                      |
-| disabled          | 点击被禁用的标签时触发                           | name：标识符，title：标题                      |
-| rendered `v2.3.0` | 标签内容首次渲染时触发（仅在开启延迟渲染后触发） | name：标识符，title：标题                      |
-| scroll            | 滚动时触发，仅在 sticky 模式下生效               | { scrollTop: 距离顶部位置, isFixed: 是否吸顶 } |
+| 事件名   | 说明                                             | 回调参数                                       |
+| -------- | ------------------------------------------------ | ---------------------------------------------- |
+| click    | 点击标签时触发                                   | name：标识符，title：标题                      |
+| change   | 当前激活的标签改变时触发                         | name：标识符，title：标题                      |
+| disabled | 点击被禁用的标签时触发                           | name：标识符，title：标题                      |
+| rendered | 标签内容首次渲染时触发（仅在开启延迟渲染后触发） | name：标识符，title：标题                      |
+| scroll   | 滚动时触发，仅在 sticky 模式下生效               | { scrollTop: 距离顶部位置, isFixed: 是否吸顶 } |
 
 ### Tabs 方法
 
-通过 ref 可以获取到 Tabs 实例并调用实例方法，详见[组件实例方法](#/zh-CN/quickstart#zu-jian-shi-li-fang-fa)
+通过 ref 可以获取到 Tabs 实例并调用实例方法，详见[组件实例方法](#/quickstart#zu-jian-shi-li-fang-fa)
 
-| 方法名            | 说明                                         | 参数         | 返回值 |
-| ----------------- | -------------------------------------------- | ------------ | ------ |
-| resize            | 外层元素大小变化后，可以调用此方法来触发重绘 | -            | void   |
-| scrollTo `v2.9.3` | 滚动到指定的标签页，在滚动导航模式下可用     | name: 标识符 | void   |
+| 方法名   | 说明                                         | 参数         | 返回值 |
+| -------- | -------------------------------------------- | ------------ | ------ |
+| resize   | 外层元素大小变化后，可以调用此方法来触发重绘 | -            | void   |
+| scrollTo | 滚动到指定的标签页，在滚动导航模式下可用     | name: 标识符 | void   |
 
 ### Tabs Slots
 

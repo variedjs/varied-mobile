@@ -3,8 +3,8 @@
 ### 引入
 
 ```js
-import Vue from 'vue';
-import { RadioGroup, Radio } from '@varied/mobile';
+import Vue from "vue";
+import { RadioGroup, Radio } from "@varied/mobile";
 
 Vue.use(Radio);
 Vue.use(RadioGroup);
@@ -27,9 +27,9 @@ Vue.use(RadioGroup);
 export default {
   data() {
     return {
-      radio: '1',
+      radio: "1"
     };
-  },
+  }
 };
 ```
 
@@ -119,11 +119,13 @@ export default {
 export default {
   data() {
     return {
-      radio: '1',
-      activeIcon: 'https://img.yzcdn.cn/vant/user-active.png',
-      inactiveIcon: 'https://img.yzcdn.cn/vant/user-inactive.png',
+      radio: "1",
+      activeIcon:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/active-tick.svg",
+      inactiveIcon:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/inactive-tick.svg"
     };
-  },
+  }
 };
 ```
 
@@ -163,24 +165,24 @@ export default {
 
 ### Radio Props
 
-| 参数           | 说明                      | 类型               | 默认值    |
-| -------------- | ------------------------- | ------------------ | --------- |
-| name           | 标识符                    | _any_              | -         |
-| shape          | 形状，可选值为 `square`   | _string_           | `round`   |
-| disabled       | 是否为禁用状态            | _boolean_          | `false`   |
-| label-disabled | 是否禁用文本内容点击      | _boolean_          | `false`   |
-| icon-size      | 图标大小，默认单位为`px`  | _number \| string_ | `20px`    |
-| checked-color  | 选中状态颜色              | _string_           | `#1989fa` |
+| 参数           | 说明                     | 类型               | 默认值    |
+| -------------- | ------------------------ | ------------------ | --------- |
+| name           | 标识符                   | _any_              | -         |
+| shape          | 形状，可选值为 `square`  | _string_           | `round`   |
+| disabled       | 是否为禁用状态           | _boolean_          | `false`   |
+| label-disabled | 是否禁用文本内容点击     | _boolean_          | `false`   |
+| icon-size      | 图标大小，默认单位为`px` | _number \| string_ | `20px`    |
+| checked-color  | 选中状态颜色             | _string_           | `#1989fa` |
 
 ### RadioGroup Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model (value) | 当前选中项的标识符 | _any_ | - |
-| disabled | 是否禁用所有单选框 | _boolean_ | `false` |
-| direction `v2.5.0` | 排列方向，可选值为`horizontal` | _string_ | `vertical` |
-| icon-size `v2.2.3` | 所有单选框的图标大小，默认单位为`px` | _number \| string_ | `20px` |
-| checked-color `v2.2.3` | 所有单选框的选中状态颜色 | _string_ | `#1989fa` |
+| 参数            | 说明                                 | 类型               | 默认值     |
+| --------------- | ------------------------------------ | ------------------ | ---------- |
+| v-model (value) | 当前选中项的标识符                   | _any_              | -          |
+| disabled        | 是否禁用所有单选框                   | _boolean_          | `false`    |
+| direction       | 排列方向，可选值为`horizontal`       | _string_           | `vertical` |
+| icon-size       | 所有单选框的图标大小，默认单位为`px` | _number \| string_ | `20px`     |
+| checked-color   | 所有单选框的选中状态颜色             | _string_           | `#1989fa`  |
 
 ### Radio Events
 

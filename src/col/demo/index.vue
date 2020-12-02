@@ -9,19 +9,13 @@
 
       <vm-row>
         <vm-col span="4">span: 4</vm-col>
-        <vm-col
-          span="10"
-          offset="4"
-        >
+        <vm-col span="10" offset="4">
           offset: 4, span: 10
         </vm-col>
       </vm-row>
 
       <vm-row>
-        <vm-col
-          offset="12"
-          span="12"
-        >
+        <vm-col offset="12" span="12">
           offset: 12, span: 12
         </vm-col>
       </vm-row>
@@ -42,37 +36,25 @@
         <vm-col span="6">span: 6</vm-col>
       </vm-row>
 
-      <vm-row
-        type="flex"
-        justify="center"
-      >
+      <vm-row type="flex" justify="center">
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
       </vm-row>
 
-      <vm-row
-        type="flex"
-        justify="end"
-      >
+      <vm-row type="flex" justify="end">
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
       </vm-row>
 
-      <vm-row
-        type="flex"
-        justify="space-between"
-      >
+      <vm-row type="flex" justify="space-between">
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
       </vm-row>
 
-      <vm-row
-        type="flex"
-        justify="space-around"
-      >
+      <vm-row type="flex" justify="space-around">
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
         <vm-col span="6">span: 6</vm-col>
@@ -81,11 +63,10 @@
   </demo-section>
 </template>
 
-<script>
-</script>
+<script></script>
 
 <style lang="less">
-@import '../../style/theme';
+@import "../../style/theme";
 
 .demo-col {
   .van-doc-demo-block {

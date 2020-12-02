@@ -35,3 +35,10 @@ export function raf(fn) {
 export function cancel(id) {
   iCancel.call(root, id);
 }
+
+// double raf for animation
+export function doubleRaf(fn) {
+  raf(() => {
+    raf(fn);
+  });
+}

@@ -27,7 +27,7 @@
       </vm-checkbox>
     </demo-block>
     <demo-block title="自定义图标">
-      <vm-checkbox v-model="checked">
+      <vm-checkbox class="my-checkbox" v-model="checked">
         自定义图标
         <template v-slot:icon="slotProps">
           <img :src="slotProps.checked ? icon.active : icon.normal" />
@@ -83,9 +83,9 @@ export default {
       result3: [],
       icon: {
         normal:
-          "https://img.yzcdn.cn/public_files/2017/10/13/c547715be149dd3faa817e4a948b40c4.png",
+          "https://wuner.gitee.io/static-resources/varied-mobile/static/inactive-tick.svg",
         active:
-          "https://img.yzcdn.cn/public_files/2017/10/13/793c77793db8641c4c325b7f25bf130d.png"
+          "https://wuner.gitee.io/static-resources/varied-mobile/static/active-tick.svg"
       }
     };
   },
@@ -100,10 +100,15 @@ export default {
 .demo-checkbox {
   .vm-checkbox {
     margin: 10px 0 0 20px;
-    .vm-checkbox-icon {
-      img {
-        width: 30px;
-      }
+  }
+
+  .my-checkbox .vm-checkbox-icon {
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 30px;
+      height: 30px;
     }
   }
 
@@ -111,6 +116,7 @@ export default {
     .vm-checkbox {
       margin: 0;
     }
+
     .vm-cell-value {
       flex: none;
     }
