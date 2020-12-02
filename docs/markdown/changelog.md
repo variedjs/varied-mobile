@@ -27,11 +27,11 @@
 > - close-icon(关闭图标名称或图片链接)
 > - close-icon-position(关闭图标位置)
 
-> Loading 加载 组件新增 vertical、textSize 属性和新增默认插槽
+> Loading 加载组件新增 vertical、textSize 属性和新增默认插槽
 
-> 优化 tabbar 标签栏 组件
+> 优化 tabbar 标签栏组件
 
-> Button 按钮 组件 新增属性
+> Button 按钮组件新增属性
 >
 > - color(按钮字体颜色)
 > - background(按钮背景颜色)
