@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render content slot correctly 1`] = `<div class="vm-badge">Custom Content</div>`;
+
+exports[`should render nothing when content is empty string 1`] = `
+<div class="vm-badge">
+
+</div>
+`;
+
+exports[`should render nothing when content is undefined 1`] = `
+<div class="vm-badge">
+
+</div>
+`;
+
+exports[`should render nothing when content is zero 1`] = `
+<div class="vm-badge">
+  0
+</div>
+`;

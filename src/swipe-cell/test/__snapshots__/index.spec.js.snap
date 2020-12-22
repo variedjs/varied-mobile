@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`auto calc width 1`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`drag and show left part 1`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`drag and show left part 2`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`drag and show left part 3`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`drag and show left part 4`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`drag and show right part 1`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`render one side 1`] = `
+<div class="vm-swipe-cell">
+  <div class="vm-swipe-cell-wrapper" style="transform: translate3d(0px, 0, 0); transition-duration: .6s;">
+    <!---->
+    <!---->
+  </div>
+</div>
+`;

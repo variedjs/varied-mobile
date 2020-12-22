@@ -3,22 +3,20 @@
  * Build style entry of all components
  */
 
-const fs = require('fs-extra');
-const path = require('path');
-const dependencyTree = require('dependency-tree');
-const components = require('./get-components')();
+const fs = require("fs-extra");
+const path = require("path");
+const dependencyTree = require("dependency-tree");
+const components = require("./get-components")();
 
 // replace seq for windows
 function replaceSeq(path) {
-  return path.split(path.sep).join('/');
+  return path.split(path.sep).join("/");
 }
 
-const whiteList = [
-  'collapse',
-];
-const dir = path.join(__dirname, '../es');
+const whiteList = ["collapse"];
+const dir = path.join(__dirname, "../es");
 
-function destEntryFile(component, filename, ext = '') {
+function destEntryFile(component, filename, ext = "") {
   const deps = analyzeDependencies(component).map(dep =>
     getStyleRelativePath(component, dep, ext)
   );
@@ -26,12 +24,16 @@ function destEntryFile(component, filename, ext = '') {
   const esEntry = path.join(dir, component, `style/${filename}`);
   const libEntry = path.join(
     __dirname,
-    '../lib',
+    "../lib",
     component,
     `style/${filename}`
   );
-  const esContent = deps.map(dep => `import '${dep.replace(/\\/g,"/")}';`).join('\n');
-  const libContent = deps.map(dep => `require('${dep.replace(/\\/g,"/")}');`).join('\n');
+  const esContent = deps
+    .map(dep => `import '${dep.replace(/\\/g, "/")}';`)
+    .join("\n");
+  const libContent = deps
+    .map(dep => `require('${dep.replace(/\\/g, "/")}');`)
+    .join("\n");
 
   fs.outputFileSync(esEntry, esContent);
   fs.outputFileSync(libEntry, libContent);
@@ -39,13 +41,13 @@ function destEntryFile(component, filename, ext = '') {
 
 // analyze component dependencies
 function analyzeDependencies(component) {
-  const checkList = ['base'];
+  const checkList = ["base", "reset"];
 
   search(
     dependencyTree({
       directory: dir,
-      filename: path.join(dir, component, 'index.js'),
-      filter: path => !~path.indexOf('node_modules')
+      filename: path.join(dir, component, "index.js"),
+      filter: path => !~path.indexOf("node_modules")
     }),
     component,
     checkList
@@ -64,8 +66,8 @@ function search(tree, component, checkList) {
     components
       .filter(item =>
         key
-          .replace(dir, '')
-          .split('/')
+          .replace(dir, "")
+          .split("/")
           .includes(item)
       )
       .forEach(item => {
@@ -80,9 +82,13 @@ function search(tree, component, checkList) {
   });
 }
 
-function getStylePath(component, ext = '.css') {
-  if (component === 'base') {
+function getStylePath(component, ext = ".css") {
+  if (component === "base") {
     return path.join(__dirname, `../es/style/base${ext}`);
+  }
+
+  if (component === "reset") {
+    return path.join(__dirname, `../es/style/reset${ext}`);
   }
 
   return path.join(__dirname, `../es/${component}/index${ext}`);
@@ -103,7 +109,7 @@ function checkComponentHasStyle(component) {
 
 components.forEach(component => {
   // css entry
-  destEntryFile(component, 'index.js', '.css');
+  destEntryFile(component, "index.js", ".css");
   // less entry
-  destEntryFile(component, 'less.js', '.less');
+  destEntryFile(component, "less.js", ".less");
 });

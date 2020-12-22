@@ -1,78 +1,95 @@
-## DataProcess 数据加解密
+# DataProcess 数据加解密
+
+0.0.6 版本开始支持此组件。
 
 ### 使用指南
-``` javascript
-import { DataProcess } from '@varied/mobile';
+
+```javascript
+import { DataProcess } from "@varied/mobile";
 
 Vue.use(DataProcess);
 ```
 
 ### 代码演示
 
+#### des 加密
 
-#### des加密
-
-``` javascript
+```javascript
 // 加解密秘钥
-let firstKey = '123';
-let secondKey = 'faada';
-let thirdKey = '131';
-let result = this.$DataProcess.desEncrypt('需要加密的数据', firstKey, secondKey, thirdKey);
+let firstKey = "123";
+let secondKey = "faada";
+let thirdKey = "131";
+let result = this.$DataProcess.desEncrypt(
+  "需要加密的数据",
+  firstKey,
+  secondKey,
+  thirdKey
+);
 ```
 
-#### des解密
+#### des 解密
 
-``` javascript
+```javascript
 // 加解密秘钥
-let firstKey = '123';
-let secondKey = 'faada';
-let thirdKey = '131';
-let result = this.$DataProcess.desDecrypt('需要解密的数据', firstKey, secondKey, thirdKey);
+let firstKey = "123";
+let secondKey = "faada";
+let thirdKey = "131";
+let result = this.$DataProcess.desDecrypt(
+  "需要解密的数据",
+  firstKey,
+  secondKey,
+  thirdKey
+);
 ```
 
-#### aes加密
+#### aes 加密
 
-``` javascript
+```javascript
 // 加解密秘钥
-let privateKey = '123';
+let privateKey = "123";
 let nBits = 128;
-let result = this.$DataProcess.aesEncrypt('需要加密的数据', privateKey, nBits);
+let result = this.$DataProcess.aesEncrypt("需要加密的数据", privateKey, nBits);
 ```
 
-#### aes解密
+#### aes 解密
 
-``` javascript
+```javascript
 // 加解密秘钥
-let privateKey = '123';
+let privateKey = "123";
 let nBits = 128;
-let result = this.$DataProcess.aesDecrypt('需要解密的数据', privateKey, nBits);
+let result = this.$DataProcess.aesDecrypt("需要解密的数据", privateKey, nBits);
 ```
 
-#### ras加密
+#### ras 加密
 
-``` javascript
+```javascript
 // 公钥
-let module = 'a5261939975948bb7a58dffe5ff54e65f0498f9175f5a09288810b8975871e99af3b5dd94057b0fc07535f5f97444504fa35169d461d0d30cf0192e307727c065168c788771c561a9400fb49175e9e6aa4e23fe11af69e9412dd23b0cb6684c4c2429bce139e848ab26d0829073351f4acd36074eafd036a5eb83359d2a698d3';
-let empoent = '10001';
+let module =
+  "a5261939975948bb7a58dffe5ff54e65f0498f9175f5a09288810b8975871e99af3b5dd94057b0fc07535f5f97444504fa35169d461d0d30cf0192e307727c065168c788771c561a9400fb49175e9e6aa4e23fe11af69e9412dd23b0cb6684c4c2429bce139e848ab26d0829073351f4acd36074eafd036a5eb83359d2a698d3";
+let empoent = "10001";
 this.$DataProcess.setPublic(module, empoent);
-let result = this.$DataProcess.rsaEncrypt('需要加密的数据');
+let result = this.$DataProcess.rsaEncrypt("需要加密的数据");
 ```
 
-#### ras解密
+#### ras 解密
 
-``` javascript
+```javascript
 // 公钥
-let module = 'a5261939975948bb7a58dffe5ff54e65f0498f9175f5a09288810b8975871e99af3b5dd94057b0fc07535f5f97444504fa35169d461d0d30cf0192e307727c065168c788771c561a9400fb49175e9e6aa4e23fe11af69e9412dd23b0cb6684c4c2429bce139e848ab26d0829073351f4acd36074eafd036a5eb83359d2a698d3';
-let empoent = '10001';
+let module =
+  "a5261939975948bb7a58dffe5ff54e65f0498f9175f5a09288810b8975871e99af3b5dd94057b0fc07535f5f97444504fa35169d461d0d30cf0192e307727c065168c788771c561a9400fb49175e9e6aa4e23fe11af69e9412dd23b0cb6684c4c2429bce139e848ab26d0829073351f4acd36074eafd036a5eb83359d2a698d3";
+let empoent = "10001";
 // 私钥
-let privateKey = '8e9912f6d3645894e8d38cb58c0db81ff516cf4c7e5a14c7f1eddb1459d2cded4d8d293fc97aee6aefb861859c8b6a3d1dfe710463e1f9ddc72048c09751971c4a580aa51eb523357a3cc48d31cfad1d4a165066ed92d4748fb6571211da5cb14bc11b6e2df7c1a559e6d5ac1cd5c94703a22891464fba23d0d965086277a161';
+let privateKey =
+  "8e9912f6d3645894e8d38cb58c0db81ff516cf4c7e5a14c7f1eddb1459d2cded4d8d293fc97aee6aefb861859c8b6a3d1dfe710463e1f9ddc72048c09751971c4a580aa51eb523357a3cc48d31cfad1d4a165066ed92d4748fb6571211da5cb14bc11b6e2df7c1a559e6d5ac1cd5c94703a22891464fba23d0d965086277a161";
 this.$DataProcess.setPrivate(module, empoent, privateKey);
-let result = this.$DataProcess.rsaDecrypt('需要解密的数据');
+let result = this.$DataProcess.rsaDecrypt("需要解密的数据");
 ```
-#### rsa秘钥生成
-``` javascript
+
+#### rsa 秘钥生成
+
+```javascript
 package com.xxx.common.crypto;
- 
+
 import javax.crypto.Cipher;
 import java.io.ByteArrayOutputStream;
 import java.math.BigInteger;
@@ -84,12 +101,12 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.RSAPublicKeySpec;
- 
- 
+
+
 public class RSAUtil {
     private static final int MAX_ENCRYPT_BLOCK = 117; // RSA最大加密明文大小
     private static final int MAX_DECRYPT_BLOCK = 128; // RSA最大解密密文大小
- 
+
     /**
      * 生成公钥和私钥
      *
@@ -100,7 +117,7 @@ public class RSAUtil {
         keyPairGen.initialize(1024);
         return keyPairGen.generateKeyPair();
     }
- 
+
     /**
      * 使用模和指数生成RSA公钥
      * 注意：【此代码用了默认补位方式，为RSA/None/PKCS1Padding，不同JDK默认的补位方式可能不同，如Android默认是RSA
@@ -122,7 +139,7 @@ public class RSAUtil {
             return null;
         }
     }
- 
+
     /**
      * 使用模和指数生成RSA私钥
      * 注意：【此代码用了默认补位方式，为RSA/None/PKCS1Padding，不同JDK默认的补位方式可能不同，如Android默认是RSA
@@ -144,7 +161,7 @@ public class RSAUtil {
             return null;
         }
     }
- 
+
     /**
      * 公钥加密
      */
@@ -152,7 +169,7 @@ public class RSAUtil {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.ENCRYPT_MODE, publicKey);
         int inputLen = data.length;
- 
+
         try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             int offSet = 0;
             byte[] cache;
@@ -171,7 +188,7 @@ public class RSAUtil {
             return out.toByteArray();
         }
     }
- 
+
     /**
      * 私钥解密
      */
@@ -179,13 +196,13 @@ public class RSAUtil {
         Cipher cipher = Cipher.getInstance("RSA");
         cipher.init(Cipher.DECRYPT_MODE, privateKey);
         int inputLen = encryptedData.length;
- 
+
         try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
- 
+
             int offSet = 0;
             byte[] cache;
             int i = 0;
- 
+
             // 对数据分段解密
             while (inputLen - offSet > 0) {
                 if (inputLen - offSet > MAX_DECRYPT_BLOCK) {
@@ -200,7 +217,7 @@ public class RSAUtil {
             return out.toByteArray();
         }
     }
- 
+
     /**
      * ASCII码转BCD码
      */
@@ -213,10 +230,10 @@ public class RSAUtil {
         }
         return bcd;
     }
- 
+
     public static byte asc_to_bcd(byte asc) {
         byte bcd;
- 
+
         if ((asc >= '0') && (asc <= '9'))
             bcd = (byte) (asc - '0');
         else if ((asc >= 'A') && (asc <= 'F'))
@@ -227,23 +244,23 @@ public class RSAUtil {
             bcd = (byte) (asc - 48);
         return bcd;
     }
- 
+
     /**
      * BCD转字符串
      */
     public static String bcd2Str(byte[] bytes) {
         char temp[] = new char[bytes.length * 2], val;
- 
+
         for (int i = 0; i < bytes.length; i++) {
             val = (char) (((bytes[i] & 0xf0) >> 4) & 0x0f);
             temp[i * 2] = (char) (val > 9 ? val + 'A' - 10 : val + '0');
- 
+
             val = (char) (bytes[i] & 0x0f);
             temp[i * 2 + 1] = (char) (val > 9 ? val + 'A' - 10 : val + '0');
         }
         return new String(temp);
     }
- 
+
     /**
      * 拆分字符串
      */
@@ -266,7 +283,7 @@ public class RSAUtil {
         }
         return strings;
     }
- 
+
     /**
      * 拆分数组
      */
@@ -290,43 +307,43 @@ public class RSAUtil {
         }
         return arrays;
     }
- 
+
     public static void main(String[] args) throws Exception {
         KeyPair keyPair = genRSAKeyPair();
- 
+
         //生成公钥和私钥
         RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
- 
- 
+
+
         //模hex
         String modulus = publicKey.getModulus().toString(16);
- 
+
         //公钥指数hex
         String public_exponent = publicKey.getPublicExponent().toString(16);
         //私钥指数hex
         String private_exponent = privateKey.getPrivateExponent().toString(16);
- 
+
         System.err.println("public_modulus: " + modulus);
         System.err.println("public_exponent: " + public_exponent);
         System.err.println("private_exponent: " + private_exponent);
- 
+
         //明文
         String plaintStr = "test就撒3242旦立刻反击啊是！@#￥#%……￥#%43";
         System.err.println("plaintStr: " + plaintStr);
- 
+
         //使用模和指数生成公钥和私钥
         RSAPublicKey pubKey = getPublicKey(modulus, public_exponent);
         RSAPrivateKey priKey = getPrivateKey(modulus, private_exponent);
- 
+
         //公钥加密后的密文
         byte[] encryptStr = encryptByPublicKey(plaintStr.getBytes("utf-8"), pubKey);
         System.err.println("encryptStr: " + HexUtil.bytesToHexString(encryptStr));
- 
+
         //私钥解密后的明文
         byte[] decryptStr = decryptByPrivateKey(encryptStr, priKey);
         System.err.println("decryptStr: " + new String(decryptStr, "utf-8"));
     }
- 
+
 }
 ```

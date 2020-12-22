@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`click option 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar vm-dropdown-menu-bar-opened">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            B
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            B
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content" style="z-index: 2007;">
+        <div class="vm-popup vm-popup-top" style="display: none;">
+          <div class="vm-cell vm-cell-clickable vm-dropdown-item-option">
+            <div class="vm-cell-content">
+              <!---->
+              <div class="vm-cell-title"><span>A</span></div>
+              <!---->
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <div class="vm-cell vm-cell-clickable vm-dropdown-item-option vm-dropdown-item-option-active">
+            <div class="vm-cell-content">
+              <!---->
+              <div class="vm-cell-title"><span>B</span></div>
+              <div class="vm-cell-value"><i class="vm-icon vm-icon-check vm-dropdown-item-icon">
+                  <!---->
+                </i></div>
+              <!---->
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`close-on-click-outside 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`destroy one item 1`] = `
+<vm-dropdown-menu>
+  <vm-dropdown-item options="[object Object],[object Object]"></vm-dropdown-item>
+  <vm-dropdown-item options="[object Object],[object Object]"></vm-dropdown-item>
+</vm-dropdown-menu>
+`;
+
+exports[`didn\`t find matched option 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`direction up 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title vm-dropdown-menu-title-down"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title vm-dropdown-menu-title-down"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-up" style="bottom: 0px; display: none;">
+      <transition-stub name="popup-slide-bottom" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-up" style="bottom: 0px; display: none;">
+      <transition-stub name="popup-slide-bottom" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`direction up 2`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title vm-dropdown-menu-title-down"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title vm-dropdown-menu-title-down"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-up" style="bottom: 0px; display: none;">
+      <transition-stub name="popup-slide-bottom" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-up" style="bottom: 0px; display: none;">
+      <transition-stub name="popup-slide-bottom" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`disable close-on-click-outside 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`disable dropdown item 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="-1" class="vm-dropdown-menu-item vm-dropdown-menu-item-disabled"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render option icon 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`show dropdown item 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`show dropdown item 2`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`show dropdown item 3`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            A
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`title prop 1`] = `
+<div class="vm-dropdown-menu">
+  <div class="vm-dropdown-menu-bar">
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            Title
+          </div></span></div>
+    <div role="button" tabindex="0" class="vm-dropdown-menu-item"><span class="vm-dropdown-menu-title"><div class="vm-ellipsis">
+            Title
+          </div></span></div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+  <div>
+    <div class="vm-dropdown-item vm-dropdown-item-down" style="top: 0px; display: none;">
+      <transition-stub name="popup-slide-top" class="vm-dropdown-item-content">
+        <!---->
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`title slot 1`] = `
+<vm-dropdown-menu>
+  <vm-dropdown-item></vm-dropdown-item>
+</vm-dropdown-menu>
+`;

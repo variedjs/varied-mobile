@@ -48,8 +48,10 @@ export default {
 
   watch: {
     value(val) {
+      const type = val ? "open" : "close";
       this.inited = this.inited || this.value;
-      this[val ? "open" : "close"]();
+      this[type]();
+      this.$emit(type);
     },
 
     getContainer() {
@@ -75,6 +77,14 @@ export default {
     if (this.value) {
       this.open();
     }
+  },
+
+  beforeCreate() {
+    const createEmitter = eventName => event => this.$emit(eventName, event);
+
+    this.onClick = createEmitter("click");
+    this.onOpened = createEmitter("opened");
+    this.onClosed = createEmitter("closed");
   },
 
   beforeDestroy() {
@@ -183,6 +193,7 @@ export default {
       if (this.overlay) {
         manager.open(this, {
           zIndex: context.zIndex++,
+          duration: this.duration,
           className: this.overlayClass,
           customStyle: this.overlayStyle
         });

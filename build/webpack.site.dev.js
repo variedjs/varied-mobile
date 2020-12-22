@@ -1,7 +1,25 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const config = require("./webpack.base");
+const os = require("os");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+function getIPAddress() {
+  let interfaces = os.networkInterfaces();
+  let host = null;
+  Object.values(interfaces).forEach(value => {
+    for (let i = 0; i < value.length; i++) {
+      let alias = value[i];
+      if (
+        alias.family === "IPv4" &&
+        alias.address !== "127.0.0.1" &&
+        !alias.internal
+      ) {
+        host = alias.address;
+      }
+    }
+  });
+  return host;
+}
 
 module.exports = merge(config, {
   entry: {
@@ -11,7 +29,7 @@ module.exports = merge(config, {
   devServer: {
     open: true,
     progress: true,
-    host: "localhost",
+    host: getIPAddress(),
     port: "8888",
     stats: "errors-only",
     disableHostCheck: true

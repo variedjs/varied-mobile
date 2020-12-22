@@ -1,16 +1,16 @@
-const fs = require('fs-extra');
-const glob = require('fast-glob');
-const path = require('path');
-const less = require('less');
+const fs = require("fs-extra");
+const glob = require("fast-glob");
+const path = require("path");
+const less = require("less");
 // const csso = require('csso');
-const postcss = require('postcss');
-const postcssrc = require('postcss-load-config');
+const postcss = require("postcss");
+const postcssrc = require("postcss-load-config");
 
 async function compileLess(lessCodes, paths) {
   const outputs = await Promise.all(
     lessCodes.map((source, index) =>
       less.render(source, {
-        paths: [path.resolve(__dirname, 'node_modules')],
+        paths: [path.resolve(__dirname, "node_modules")],
         filename: paths[index]
       })
     )
@@ -35,13 +35,27 @@ async function compileCsso(cssCodes) {
 
 async function dest(output, paths) {
   await Promise.all(
-    output.map((css, index) => fs.writeFile(paths[index].replace('.less', '.css'), css))
+    output.map((css, index) => {
+      const cPath = paths[index];
+      if (
+        cPath.indexOf("lib/index.less") > -1 ||
+        cPath.indexOf("es/index.less") > -1
+      ) {
+        css = css.replace(
+          "../style/css/font-awesome.min.css",
+          "./style/css/font-awesome.min.css"
+        );
+      }
+      return fs.writeFile(paths[index].replace(".less", ".css"), css);
+    })
   );
 
   // icon.less should be replaced by compiled file
-  const iconCss = await glob(['./es/icon/*.css', './lib/icon/*.css'], { absolute: true });
+  const iconCss = await glob(["./es/icon/*.css", "./lib/icon/*.css"], {
+    absolute: true
+  });
   iconCss.forEach(file => {
-    fs.copyFileSync(file, file.replace('.css', '.less'));
+    fs.copyFileSync(file, file.replace(".css", ".less"));
   });
 }
 
@@ -49,9 +63,11 @@ async function dest(output, paths) {
 async function compile() {
   let codes;
   try {
-    const paths = await glob(['./es/**/*.less', './lib/**/*.less'], { absolute: true });
+    const paths = await glob(["./es/**/*.less", "./lib/**/*.less"], {
+      absolute: true
+    });
 
-    codes = await Promise.all(paths.map(path => fs.readFile(path, 'utf-8')));
+    codes = await Promise.all(paths.map(path => fs.readFile(path, "utf-8")));
     codes = await compileLess(codes, paths);
     codes = await compilePostcss(codes, paths);
     // codes = await compileCsso(codes);

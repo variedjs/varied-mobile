@@ -13,7 +13,7 @@ function buildEntry() {
   const importList = Components.map(
     name => `import ${uppercamelize(name)} from './${name}';`
   );
-  const importLessList = [];
+  const importLessList = ["@import 'style/base';", "@import 'style/reset';"];
   Components.map(name => {
     let val = `./src/${name}/index.less`;
     if (fs.existsSync(val)) {

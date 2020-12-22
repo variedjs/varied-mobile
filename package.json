@@ -1,6 +1,6 @@
 {
   "name": "@varied/mobile",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "一款轻量、可靠的移动端 Vue 组件库",
   "author": "Wuner",
   "private": false,

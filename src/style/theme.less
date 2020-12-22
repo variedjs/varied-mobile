@@ -370,6 +370,9 @@
 @font-weight-md: 600;
 @font-weight-sm: 500;
 @font-weight-bold: 500;
+@base-font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+  Helvetica, Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB",
+  "Microsoft Yahei", sans-serif;
 
 // Padding 内边距
 @padding-base: 4px;
@@ -390,7 +393,7 @@
 @button-margin-left: 3px;
 @button-mc-radius: 4px;
 @button-sc-radius: 2500px;
-@button-lg-height: 40px;
+@button-lg-height: 44px;
 @button-md-height: 32px;
 @button-sm-height: 24px;
 @button-lg-padding: 0 20px;
@@ -446,6 +449,9 @@
 @info-border-width: 1px;
 @info-background-color: @red;
 @info-font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+
+// Cell
+@cell-border-color: @border-color;
 
 // nav-bar 导航栏
 @nav-bar-min-height: 50px;
@@ -772,3 +778,98 @@
 @uploader-loading-icon-size: 22px;
 @uploader-loading-icon-color: @white;
 @uploader-disabled-opacity: @disabled-opacity;
+
+// ActionSheet
+@action-sheet-max-height: 80%;
+@action-sheet-header-height: 48px;
+@action-sheet-header-font-size: @font-size-lg;
+@action-sheet-description-color: @gray-6;
+@action-sheet-description-font-size: @font-size-md;
+@action-sheet-description-line-height: @line-height-md;
+@action-sheet-item-background: @white;
+@action-sheet-item-font-size: @font-size-lg;
+@action-sheet-item-line-height: @line-height-lg;
+@action-sheet-item-text-color: @text-color;
+@action-sheet-item-disabled-text-color: @gray-5;
+@action-sheet-subname-color: @gray-6;
+@action-sheet-subname-font-size: @font-size-sm;
+@action-sheet-subname-line-height: @line-height-sm;
+@action-sheet-close-icon-size: 22px;
+@action-sheet-close-icon-color: @gray-5;
+@action-sheet-close-icon-active-color: @gray-6;
+@action-sheet-close-icon-padding: 0 @padding-md;
+@action-sheet-cancel-text-color: @gray-7;
+@action-sheet-cancel-padding-top: @padding-xs;
+@action-sheet-cancel-padding-color: @background-color;
+@action-sheet-loading-icon-size: 22px;
+
+// DropdownMenu
+@dropdown-menu-height: 48px;
+@dropdown-menu-background-color: @white;
+@dropdown-menu-box-shadow: 0 2px 12px fade(@gray-7, 12);
+@dropdown-menu-title-font-size: 15px;
+@dropdown-menu-title-text-color: @text-color;
+@dropdown-menu-title-active-text-color: @red;
+@dropdown-menu-title-disabled-text-color: @gray-6;
+@dropdown-menu-title-padding: 0 @padding-xs;
+@dropdown-menu-title-line-height: @line-height-lg;
+@dropdown-menu-option-active-color: @red;
+@dropdown-menu-content-max-height: 80%;
+@dropdown-item-z-index: 10;
+
+// Notify
+@notify-text-color: @white;
+@notify-padding: @padding-xs @padding-md;
+@notify-font-size: @font-size-md;
+@notify-line-height: @line-height-md;
+@notify-primary-background-color: @blue;
+@notify-success-background-color: @green;
+@notify-danger-background-color: @red;
+@notify-warning-background-color: @orange;
+
+// ShareSheet
+@share-sheet-header-padding: @padding-sm @padding-md @padding-base;
+@share-sheet-title-color: @text-color;
+@share-sheet-title-font-size: @font-size-md;
+@share-sheet-title-line-height: @line-height-md;
+@share-sheet-description-color: @gray-6;
+@share-sheet-description-font-size: @font-size-sm;
+@share-sheet-description-line-height: 16px;
+@share-sheet-icon-size: 48px;
+@share-sheet-option-name-color: @gray-7;
+@share-sheet-option-name-font-size: @font-size-sm;
+@share-sheet-option-description-color: @gray-5;
+@share-sheet-option-description-font-size: @font-size-sm;
+@share-sheet-cancel-button-font-size: @font-size-lg;
+@share-sheet-cancel-button-height: 48px;
+@share-sheet-cancel-button-background: @white;
+
+// Badge
+@badge-size: 16px;
+@badge-color: @white;
+@badge-padding: 0 3px;
+@badge-font-size: @font-size-sm;
+@badge-font-weight: @font-weight-bold;
+@badge-border-width: @border-width-base;
+@badge-background-color: @red;
+@badge-dot-color: @red;
+@badge-dot-size: 8px;
+@badge-font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif;
+
+// Tag
+@tag-padding: 0 @padding-base;
+@tag-text-color: @white;
+@tag-font-size: @font-size-sm;
+@tag-border-radius: 2px;
+@tag-line-height: 16px;
+@tag-medium-padding: 2px 6px;
+@tag-large-padding: @padding-base @padding-xs;
+@tag-large-border-radius: @border-radius-md;
+@tag-large-font-size: @font-size-md;
+@tag-round-border-radius: @border-radius-max;
+@tag-danger-color: @red;
+@tag-primary-color: @blue;
+@tag-success-color: @green;
+@tag-warning-color: @orange;
+@tag-default-color: @gray-6;
+@tag-plain-background-color: @white;

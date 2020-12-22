@@ -1,0 +1,32 @@
+@import "../style/theme";
+
+.vm-notify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: @notify-padding;
+  color: @notify-text-color;
+  font-size: @notify-font-size;
+  line-height: @notify-line-height;
+
+  // allow newline charactor
+  text-align: center;
+  word-wrap: break-word;
+
+  &-primary {
+    background-color: @notify-primary-background-color !important;
+  }
+
+  &-success {
+    background-color: @notify-success-background-color !important;
+  }
+
+  &-danger {
+    background-color: @notify-danger-background-color !important;
+  }
+
+  &-warning {
+    background-color: @notify-warning-background-color !important;
+  }
+}

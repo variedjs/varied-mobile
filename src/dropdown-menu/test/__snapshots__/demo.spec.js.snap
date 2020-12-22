@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-dropdown-menu>
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+    </vm-dropdown-menu>
+  </div>
+  <div>
+    <vm-dropdown-menu>
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+      <vm-dropdown-item title="筛选">
+        <vm-cell center="" title="包邮"></vm-cell>
+        <vm-cell center="" title="团购"></vm-cell>
+        <div style="padding: 5px 16px;">
+          <vm-button block="" round="" class="bg-blue" style="height: 40px;">
+            确认
+          </vm-button>
+        </div>
+      </vm-dropdown-item>
+    </vm-dropdown-menu>
+  </div>
+  <div>
+    <vm-dropdown-menu active-color="#1989fa">
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+    </vm-dropdown-menu>
+  </div>
+  <div>
+    <vm-dropdown-menu direction="up">
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+      <vm-dropdown-item options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+    </vm-dropdown-menu>
+  </div>
+  <div>
+    <vm-dropdown-menu>
+      <vm-dropdown-item disabled="" options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+      <vm-dropdown-item disabled="" options="[object Object],[object Object],[object Object]"></vm-dropdown-item>
+    </vm-dropdown-menu>
+  </div>
+</div>
+`;

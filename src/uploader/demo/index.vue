@@ -27,7 +27,7 @@
 
     <demo-block :title="t('customUpload')">
       <vm-uploader v-model="customUploadFileList">
-        <vm-button type="primary" class="bg-green" icon="plus">
+        <vm-button class="bg-green" icon="plus">
           {{ t("upload") }}
         </vm-button>
       </vm-uploader>

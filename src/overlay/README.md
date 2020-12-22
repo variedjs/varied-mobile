@@ -2,7 +2,7 @@
 
 ### 介绍
 
-创建一个遮罩层，用于强调特定的页面元素，并阻止用户进行其他操作
+创建一个遮罩层，用于强调特定的页面元素，并阻止用户进行其他操作。0.0.8 版本开始支持此组件。
 
 ### 引入
 
@@ -18,7 +18,7 @@ Vue.use(Overlay);
 ### 基础用法
 
 ```html
-<vm-button type="primary" text="显示遮罩层" @click="show = true" />
+<vm-button class="bg-blue" text="显示遮罩层" @click="show = true" />
 <vm-overlay :show="show" @click="show = false" />
 ```
 

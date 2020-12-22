@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should allow to custom close icon with closeIcon prop 1`] = `
+<i class="vm-icon vm-icon-cross vm-action-sheet-close">
+  <!---->
+</i>
+`;
+
+exports[`should render default slot correctly 1`] = `
+<popup-stub overlay="true" closeonclickoverlay="true" lockscroll="true" lazyrender="true" round="true" closeicon="close" closeiconposition="top-right" position="bottom" safeareainsetbottom="true" class="vm-action-sheet">
+  <!---->
+  <!---->
+  <div class="vm-action-sheet-content">
+    <div>内容</div>
+  </div>
+  <!---->
+</popup-stub>
+`;
+
+exports[`should render description correctly 1`] = `
+<div class="vm-action-sheet-description">
+  This is a description
+</div>
+`;
+
+exports[`should render description slot when match snapshot 1`] = `
+<div class="vm-action-sheet-description">
+  <div>Custom Description</div>
+</div>
+`;
+
+exports[`should render subname correctly 1`] = `
+<button type="button" class="vm-action-sheet-item"><span class="vm-action-sheet-name">Option</span>
+  <div class="vm-action-sheet-subname">
+    Subname
+  </div>
+</button>
+`;

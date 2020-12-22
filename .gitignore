@@ -4,6 +4,7 @@ dist
 docs/dist
 lib
 es
+test/coverage
 
 # local env files
 .env.local

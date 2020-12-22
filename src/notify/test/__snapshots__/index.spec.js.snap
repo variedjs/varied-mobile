@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create a notify 1`] = `undefined`;
+
+exports[`notify disappear 1`] = `
+<div class="vm-popup vm-popup-top vm-notify vm-notify-danger popup-slide-top-enter popup-slide-top-enter-active" style="z-index: 2000; color: red; background: blue;">
+  test
+  <!---->
+</div>
+`;
+
+exports[`notify disappear 2`] = `
+<div class="vm-popup vm-popup-top vm-notify vm-notify-danger popup-slide-top-leave popup-slide-top-leave-active" style="z-index: 2000; color: red; background: blue;">
+  test
+  <!---->
+</div>
+`;
+
+exports[`notify disappear 3`] = `
+<div class="vm-popup vm-popup-top vm-notify vm-notify-danger popup-slide-top-enter popup-slide-top-enter-active" style="z-index: 2001;">
+  text2
+  <!---->
+</div>
+`;
+
+exports[`notify disappear 4`] = `
+<div class="vm-popup vm-popup-top vm-notify vm-notify-danger popup-slide-top-leave popup-slide-top-leave-active" style="z-index: 2001;">
+  text2
+  <!---->
+</div>
+`;
+
+exports[`type prop 1`] = `
+<div class="vm-popup vm-popup-top vm-notify vm-notify-primary popup-slide-top-enter popup-slide-top-enter-active" style="z-index: 2000;">
+  test
+  <!---->
+</div>
+`;

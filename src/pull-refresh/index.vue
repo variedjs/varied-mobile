@@ -62,9 +62,6 @@ export default create({
       default: DEFAULT_HEAD_HEIGHT
     }
   },
-  created() {
-    console.log(this.status, this.statusText);
-  },
   data() {
     return {
       status: "normal",

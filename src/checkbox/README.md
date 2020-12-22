@@ -1,5 +1,7 @@
 # Checkbox 复选框
 
+0.0.5 版本开始支持此组件。
+
 ### 引入
 
 ```js
@@ -160,8 +162,8 @@ export default {
   <vm-checkbox name="c">复选框 c</vm-checkbox>
 </vm-checkbox-group>
 
-<vm-button type="primary" @click="checkAll">全选</vm-button>
-<vm-button type="info" @click="toggleAll">反选</vm-button>
+<vm-button @click="checkAll">全选</vm-button>
+<vm-button @click="toggleAll">反选</vm-button>
 ```
 
 ```js

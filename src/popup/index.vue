@@ -1,9 +1,14 @@
 <template>
-  <transition :name="currentTransition">
+  <transition
+    :name="currentTransition"
+    @after-enter="onOpened"
+    @after-leave="onClosed"
+  >
     <div
       v-if="shouldRender"
       v-show="value"
       :class="b({ round, [position]: position })"
+      @click="onClick"
     >
       <slot />
       <Icon
@@ -29,6 +34,7 @@ export default create({
   mixins: [Popup],
   props: {
     round: Boolean,
+    duration: [Number, String],
     closeable: Boolean,
     closeIcon: {
       type: String,

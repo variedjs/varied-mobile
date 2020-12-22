@@ -1,5 +1,7 @@
+@import "../theme";
+
 .hairline-common() {
-  content: ' ';
+  content: " ";
   position: absolute;
   pointer-events: none;
   box-sizing: border-box;
@@ -14,6 +16,16 @@
   bottom: -50%;
   transform: scale(0.5);
   border: 0 solid @border-color;
+}
+
+.hairline-top(@color: @border-color, @left: 0, @right: 0) {
+  .hairline-common();
+
+  top: 0;
+  right: @right;
+  left: @left;
+  border-top: 1px solid @color;
+  transform: scaleY(0.5);
 }
 
 .hairline-bottom(@border-color: #e0e0e0, @left: 0, @right: 0) {

@@ -47,7 +47,6 @@ export default create({
       if (isDef(this.duration)) {
         style.animationDuration = `${this.duration}s`;
       }
-      console.log(style);
       return style;
     }
   }

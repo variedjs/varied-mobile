@@ -2,7 +2,7 @@
 
 ### 介绍
 
-Sticky 组件与 CSS 中`position: sticky`属性实现的效果一致，当组件在屏幕范围内时，会按照正常的布局排列，当组件滚出屏幕范围时，始终会固定在屏幕顶部。
+Sticky 组件与 CSS 中`position: sticky`属性实现的效果一致，当组件在屏幕范围内时，会按照正常的布局排列，当组件滚出屏幕范围时，始终会固定在屏幕顶部。0.0.6 版本开始支持此组件。
 
 ### 引入
 
@@ -21,7 +21,7 @@ Vue.use(Sticky);
 
 ```html
 <vm-sticky>
-  <vm-button type="primary">基础用法</vm-button>
+  <vm-button class="bg-blue">基础用法</vm-button>
 </vm-sticky>
 ```
 
@@ -31,7 +31,7 @@ Vue.use(Sticky);
 
 ```html
 <vm-sticky :offset-top="50">
-  <vm-button type="info">吸顶距离</vm-button>
+  <vm-button class="bg-red">吸顶距离</vm-button>
 </vm-sticky>
 ```
 
@@ -42,7 +42,7 @@ Vue.use(Sticky);
 ```html
 <div ref="container" style="height: 150px;">
   <vm-sticky :container="container">
-    <vm-button type="warning">指定容器</vm-button>
+    <vm-button class="bg-yellow">指定容器</vm-button>
   </vm-sticky>
 </div>
 ```

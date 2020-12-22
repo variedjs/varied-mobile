@@ -1,5 +1,9 @@
 # Uploader 文件上传
 
+## 介绍
+
+文件上传组件。0.0.8 版本开始支持此组件。
+
 ### 引入
 
 ```js
@@ -166,7 +170,7 @@ export default {
 
 ```html
 <vm-uploader v-model="fileList">
-  <vm-button icon="plus" type="primary">上传文件</vm-button>
+  <vm-button icon="plus" class="bg-green">上传文件</vm-button>
 </vm-uploader>
 ```
 

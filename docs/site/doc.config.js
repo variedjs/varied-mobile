@@ -98,12 +98,24 @@ export default {
           groupName: "反馈组件",
           list: [
             {
+              path: "/action-sheet",
+              title: "ActionSheet 动作面板"
+            },
+            {
               path: "/dialog",
               title: "Dialog 弹出框"
             },
             {
+              path: "/dropdown-menu",
+              title: "DropdownMenu 下拉菜单"
+            },
+            {
               path: "/loading",
               title: "Loading 加载"
+            },
+            {
+              path: "/notify",
+              title: "Notify 消息提示"
             },
             {
               path: "/overlay",
@@ -116,6 +128,14 @@ export default {
             {
               path: "/toast",
               title: "Toast 吐司"
+            },
+            {
+              path: "/share-sheet",
+              title: "ShareSheet 分享面板"
+            },
+            {
+              path: "/swipe-cell",
+              title: "SwipeCell 滑动单元格"
             }
           ]
         },
@@ -184,12 +204,12 @@ export default {
               title: "Slider 滑块"
             },
             {
-              path: "/switch",
-              title: "Switch 开关"
-            },
-            {
               path: "/stepper",
               title: "Stepper 步进器"
+            },
+            {
+              path: "/switch",
+              title: "Switch 开关"
             },
             {
               path: "/uploader",
@@ -200,6 +220,10 @@ export default {
         {
           groupName: "展示组件",
           list: [
+            {
+              path: "/badge",
+              title: "Badge 徽标"
+            },
             {
               path: "/collapse",
               title: "Collapse 折叠面板"
@@ -223,6 +247,10 @@ export default {
             {
               path: "/swipe",
               title: "Swipe 轮播"
+            },
+            {
+              path: "/tag",
+              title: "Tag 标签"
             }
           ]
         },

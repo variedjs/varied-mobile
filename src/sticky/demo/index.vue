@@ -2,7 +2,7 @@
   <demo-section>
     <demo-block title="基础用法">
       <vm-sticky>
-        <vm-button type="primary" style="margin-left: 15px;">
+        <vm-button class="bg-blue" style="margin-left: 15px;">
           基础用法
         </vm-button>
       </vm-sticky>
@@ -10,7 +10,7 @@
 
     <demo-block title="吸顶距离">
       <vm-sticky :offset-top="50">
-        <vm-button type="info" style="margin-left: 115px;">
+        <vm-button class="bg-red" style="margin-left: 115px;">
           吸顶距离
         </vm-button>
       </vm-sticky>
@@ -19,7 +19,7 @@
     <demo-block title="指定容器">
       <div ref="container" style="height: 150px; background-color: #fff;">
         <vm-sticky :container="container">
-          <vm-button type="warning" style="margin-left: 215px;">
+          <vm-button class="bg-yellow" style="margin-left: 215px;">
             指定容器
           </vm-button>
         </vm-sticky>

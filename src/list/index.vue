@@ -99,7 +99,6 @@ export default create({
 
         const { $el: el, scroller, offset, direction } = this;
         let scrollerRect;
-        console.log(direction);
         if (scroller.getBoundingClientRect) {
           scrollerRect = scroller.getBoundingClientRect();
         } else {

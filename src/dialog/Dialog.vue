@@ -93,9 +93,6 @@ export default create({
       }
     };
   },
-  created() {
-    console.log(this.title);
-  },
 
   methods: {
     handleAction(action) {

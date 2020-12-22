@@ -3,8 +3,8 @@
 ### 引入
 
 ```js
-import Vue from 'vue';
-import { Switch } from 'README.zh-CN.md';
+import Vue from "vue";
+import { Switch } from "@varied/mobile";
 
 Vue.use(Switch);
 ```
@@ -23,9 +23,9 @@ Vue.use(Switch);
 export default {
   data() {
     return {
-      checked: true,
+      checked: true
     };
-  },
+  }
 };
 ```
 
@@ -73,19 +73,19 @@ export default {
 export default {
   data() {
     return {
-      checked: true,
+      checked: true
     };
   },
   methods: {
     onInput(checked) {
       Dialog.confirm({
-        title: '提醒',
-        message: '是否切换开关？',
+        title: "提醒",
+        message: "是否切换开关？"
       }).then(() => {
         this.checked = checked;
       });
-    },
-  },
+    }
+  }
 };
 ```
 

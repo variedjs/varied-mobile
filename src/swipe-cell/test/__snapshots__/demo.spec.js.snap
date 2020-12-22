@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <div>
+      <vm-swipe-cell on-close="function () { [native code] }">
+        <vm-cell title="单元格"></vm-cell>
+      </vm-swipe-cell>
+    </div>
+    <div>
+      <vm-swipe-cell>
+        <vm-image width="100" height="100" src="https://wuner.gitee.io/static-resources/varied-mobile/static/landscape-3.jpg"></vm-image>
+      </vm-swipe-cell>
+    </div>
+    <div>
+      <vm-swipe-cell before-close="function () { [native code] }">
+        <vm-cell title="单元格"></vm-cell>
+      </vm-swipe-cell>
+    </div>
+  </div>
+</div>
+`;

@@ -3,7 +3,6 @@
     <demo-block :title="t('basicUsage')">
       <vm-button
         class="bg-blue"
-        type="primary"
         :text="t('showOverlay')"
         style="margin-left: 16px;"
         @click="show = true"
@@ -15,7 +14,6 @@
     <demo-block :title="t('embeddedContent')">
       <vm-button
         class="bg-blue"
-        type="primary"
         :text="t('embeddedContent')"
         style="margin-left: 16px;"
         @click="showEmbedded = true"

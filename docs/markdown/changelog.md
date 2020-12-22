@@ -1,5 +1,39 @@
 # 更新日志
 
+## V0.0.9
+
+### 新增组件
+
+> ActionSheet 动作面板
+
+> DropdownMenu 下拉菜单
+
+> Notify 消息提示
+
+> ShareSheet 分享面板
+
+> SwipeCell 滑动单元格
+
+> Badge 徽标
+
+> Tag 标签
+
+### 修复
+
+> 修复打包时，index.css 文件引入字体图标路径不对 bug
+
+### 优化
+
+> 优化公共样式，替换浏览器自带样式
+
+> Popup 弹出层新增事件、属性
+>
+> - open(打开弹出层时触发)
+> - close(关闭弹出层时触发)
+> - opened(打开弹出层且动画结束后触发)
+> - closed(关闭弹出层且动画结束后触发)
+> - duration(动画时长，单位秒)
+
 ## V0.0.8
 
 ### 新增
