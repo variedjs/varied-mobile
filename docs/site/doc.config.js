@@ -225,8 +225,24 @@ export default {
               title: "Badge 徽标"
             },
             {
+              path: "/circle",
+              title: "Circle 环形进度条"
+            },
+            {
               path: "/collapse",
               title: "Collapse 折叠面板"
+            },
+            {
+              path: "/count-down",
+              title: "CountDown 倒计时"
+            },
+            {
+              path: "/divider",
+              title: "Divider 分割线"
+            },
+            {
+              path: "/empty",
+              title: "Empty 空状态"
             },
             {
               path: "/image-preview",
@@ -239,6 +255,14 @@ export default {
             {
               path: "/list",
               title: "List 列表"
+            },
+            {
+              path: "/notice-bar",
+              title: "NoticeBar 通知栏"
+            },
+            {
+              path: "/popover",
+              title: "Popover 气泡弹出框"
             },
             {
               path: "/sticky",

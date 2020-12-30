@@ -1,21 +1,20 @@
 <template>
-  <div class="van-doc">
-    <van-doc-header
+  <div class="vm-doc">
+    <vm-doc-header
       :lang="lang"
       :github="github"
       :versions="versions"
       :config="config.header"
-      :search-config="searchConfig"
       @switch-version="$emit('switch-version', $event)"
     />
-    <van-doc-nav :nav-config="config.nav" :base="base" />
-    <van-doc-container :has-simulator="!!(simulator || simulators.length)">
-      <van-doc-content>
+    <vm-doc-nav :nav-config="config.nav" :base="base" />
+    <vm-doc-container :has-simulator="!!(simulator || simulators.length)">
+      <vm-doc-content>
         <slot />
-      </van-doc-content>
-    </van-doc-container>
-    <van-doc-simulator v-if="simulator" :src="simulator" />
-    <van-doc-simulator
+      </vm-doc-content>
+    </vm-doc-container>
+    <vm-doc-simulator v-if="simulator" :src="simulator" />
+    <vm-doc-simulator
       v-for="(url, index) in simulators"
       v-show="index === currentSimulator"
       :src="url"
@@ -25,26 +24,25 @@
 </template>
 
 <script>
-import VanDocHeader from "./Header";
-import VanDocNav from "./Nav";
-import VanDocContainer from "./Container";
-import VanDocContent from "./Content";
-import VanDocSimulator from "./Simulator";
+import VmDocHeader from "./Header";
+import VmDocNav from "./Nav";
+import VmDocContainer from "./Container";
+import VmDocContent from "./Content";
+import VmDocSimulator from "./Simulator";
 export default {
   components: {
-    VanDocHeader,
-    VanDocNav,
-    VanDocContainer,
-    VanDocContent,
-    VanDocSimulator
+    VmDocHeader,
+    VmDocNav,
+    VmDocContainer,
+    VmDocContent,
+    VmDocSimulator
   },
-  name: "van-doc",
+  name: "vm-doc",
 
   props: {
     lang: String,
     github: String,
     versions: Array,
-    searchConfig: Object,
     currentSimulator: Number,
     simulator: String,
     config: {

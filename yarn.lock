@@ -1066,6 +1066,11 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
+"@popperjs/core@^2.5.4":
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/@popperjs/core/download/@popperjs/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
+  integrity sha1-8CIZWv38lC4IjuIQEoWh0xx9cn8=
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.npmjs.org/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"
@@ -1332,6 +1337,13 @@
     markdown-it "^10.0.0"
     markdown-it-anchor "^5.2.5"
     transliteration "^2.1.7"
+
+"@vant/popperjs@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/@vant/popperjs/download/@vant/popperjs-1.0.2.tgz?cache=0&sync_timestamp=1607062513238&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Fpopperjs%2Fdownload%2F%40vant%2Fpopperjs-1.0.2.tgz#522d71656235125a3ae08e9c701a3bae6fd88d7b"
+  integrity sha1-Ui1xZWI1Elo64I6ccBo7rm/YjXs=
+  dependencies:
+    "@popperjs/core" "^2.5.4"
 
 "@vant/touch-emulator@^1.2.0":
   version "1.2.0"

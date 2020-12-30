@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "van-doc-nav-link",
+  name: "vm-doc-nav-link",
 
   props: {
     base: String,

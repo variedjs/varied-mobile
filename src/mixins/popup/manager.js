@@ -20,7 +20,7 @@ export default {
 
   close(vm) {
     const { stack } = context;
-
+    // console.log(vm.close());
     if (stack.length) {
       if (context.top.vm === vm) {
         stack.pop();
@@ -63,7 +63,14 @@ export default {
     if (context.top) {
       const { vm } = context.top;
       vm.$emit("click-overlay");
-      vm.closeOnClickOverlay && vm.$emit("input", false);
+
+      if (vm.closeOnClickOverlay) {
+        if (vm.onClickOverlay) {
+          vm.onClickOverlay();
+        } else {
+          vm.close();
+        }
+      }
     }
   }
 };

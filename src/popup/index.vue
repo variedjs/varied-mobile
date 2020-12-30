@@ -1,11 +1,11 @@
 <template>
   <transition
+    v-if="shouldRender"
     :name="currentTransition"
     @after-enter="onOpened"
     @after-leave="onClosed"
   >
     <div
-      v-if="shouldRender"
       v-show="value"
       :class="b({ round, [position]: position })"
       @click="onClick"

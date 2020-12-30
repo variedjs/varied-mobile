@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       info: {
-        basicUsage: "基本使用",
+        basicUsage: "基础用法",
         option1: "选项一",
         option2: "选项二",
         option3: "选项三",

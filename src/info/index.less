@@ -1,4 +1,4 @@
-@import '../style/theme';
+@import "../style/theme";
 
 .vm-info {
   position: absolute;
@@ -18,4 +18,12 @@
   background-color: @info-background-color;
   transform: translateX(50%);
   transform-origin: 100%;
+
+  &-dot {
+    width: @info-dot-size;
+    min-width: 0;
+    height: @info-dot-size;
+    background-color: @info-dot-color;
+    border-radius: 100%;
+  }
 }

@@ -1,12 +1,12 @@
 <template>
-  <div :class="['van-doc-simulator', { 'van-doc-simulator-fixed': isFixed }]">
+  <div :class="['vm-doc-simulator', { 'vm-doc-simulator-fixed': isFixed }]">
     <iframe ref="iframe" :src="src" :style="simulatorStyle" frameborder="0" />
   </div>
 </template>
 
 <script>
 export default {
-  name: "van-doc-simulator",
+  name: "vm-doc-simulator",
 
   props: {
     src: String
@@ -46,22 +46,22 @@ export default {
 <style lang="less">
 @import "../style/variable";
 
-.van-doc-simulator {
+.vm-doc-simulator {
   z-index: 1;
   overflow: hidden;
   position: absolute;
   border-radius: 6px;
   background: #fafafa;
   box-sizing: border-box;
-  right: @van-doc-padding;
-  width: @van-doc-simulator-width;
-  min-width: @van-doc-simulator-width;
-  top: calc(@van-doc-padding + @van-doc-header-top-height);
+  right: @vm-doc-padding;
+  width: @vm-doc-simulator-width;
+  min-width: @vm-doc-simulator-width;
+  top: calc(@vm-doc-padding + @vm-doc-header-top-height);
   box-shadow: #ebedf0 0 4px 12px;
 
   @media (max-width: 1300px) {
-    width: @van-doc-simulator-small-width;
-    min-width: @van-doc-simulator-small-width;
+    width: @vm-doc-simulator-small-width;
+    min-width: @vm-doc-simulator-small-width;
   }
 
   @media (max-width: 1100px) {
@@ -69,14 +69,14 @@ export default {
     right: auto;
   }
 
-  @media (min-width: @van-doc-row-max-width) {
+  @media (min-width: @vm-doc-row-max-width) {
     right: 50%;
-    margin-right: calc(-@van-doc-row-max-width / 2 + 40px);
+    margin-right: calc(-@vm-doc-row-max-width / 2 + 40px);
   }
 
   &-fixed {
     position: fixed;
-    top: @van-doc-padding;
+    top: @vm-doc-padding;
   }
 
   iframe {

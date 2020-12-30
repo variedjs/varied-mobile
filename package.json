@@ -8,6 +8,13 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "style": "lib/index.css",
+  "typings": "types/index.d.ts",
+  "files": [
+    "es",
+    "lib",
+    "types",
+    "vetur"
+  ],
   "scripts": {
     "bootstrap": "yarn || npm i",
     "dev": "npm run build:entry && webpack-dev-server --config build/webpack.site.dev.js",
@@ -46,13 +53,9 @@
     "vue",
     "component"
   ],
-  "files": [
-    "es",
-    "lib",
-    "vetur"
-  ],
   "dependencies": {
     "@babel/runtime": "7.x",
+    "@vant/popperjs": "^1.0.2",
     "vue-lazyload": "1.2.3"
   },
   "devDependencies": {
@@ -109,6 +112,16 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "3.9.0",
     "webpack-merge": "^4.2.2"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.css",
+    "*.less"
+  ],
+  "vetur": {
+    "tags": "vetur/tags.json",
+    "attributes": "vetur/attributes.json"
   },
   "engines": {
     "node": ">= 6.0.0",

@@ -1,5 +1,39 @@
 # 更新日志
 
+## V0.1.0
+
+### 新增组件
+
+> Circle 环形进度条
+
+> CountDown 倒计时
+
+> Divider 分割线
+
+> Empty 空状态
+
+> NoticeBar 通知栏
+
+> Popover 气泡弹出框
+
+### 优化
+
+> Icon 图标新增属性
+>
+> - dot(是否显示图标右上角小红点)
+> - badge(图标右上角徽标的内容)
+> - tag(HTML 标签)
+
+> Layout 布局新增事件绑定
+
+> Popup 重构
+
+### 修复
+
+> Tab 组件样式异常修复
+
+> Button 组件 loading-text 属性不起作用问题
+
 ## V0.0.9
 
 ### 新增组件
@@ -63,7 +97,7 @@
 
 > Loading 加载组件新增 vertical、textSize 属性和新增默认插槽
 
-> 优化 tabbar 标签栏组件
+> 优化 Tabbar 标签栏组件
 
 > Button 按钮组件新增属性
 >

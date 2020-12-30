@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-popover trigger="click" actions="[object Object],[object Object],[object Object]" placement="bottom-start" style="margin-left: 16px;"></vm-popover>
+    <vm-popover theme="dark" trigger="click" actions="[object Object],[object Object],[object Object]" style="margin-left: 16px;"></vm-popover>
+  </div>
+  <div>
+    <vm-field is-link="" readonly="" name="picker" label="选择弹出位置"></vm-field>
+    <vm-popup round="" position="bottom" get-container="body">
+      <div class="demo-popover-box">
+        <vm-popover theme="dark" trigger="click" actions="[object Object],[object Object]" placement="top"></vm-popover>
+      </div>
+      <vm-picker columns="top,top-start,top-end,left,left-start,left-end,right,right-start,right-end,bottom,bottom-start,bottom-end"></vm-picker>
+    </vm-popup>
+  </div>
+  <div>
+    <vm-popover trigger="click" actions="[object Object],[object Object],[object Object]" placement="bottom-start" style="margin-left: 16px;"></vm-popover>
+    <vm-popover trigger="click" actions="[object Object],[object Object],[object Object]" style="margin-left: 16px;"></vm-popover>
+  </div>
+  <div>
+    <vm-popover trigger="click" placement="top-start" style="margin-left: 16px;">
+      <vm-grid square="" clickable="" column-num="3" style="width: 240px;">
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+        <vm-grid-item icon="photo-o"></vm-grid-item>
+      </vm-grid>
+    </vm-popover>
+  </div>
+</div>
+`;

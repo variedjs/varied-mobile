@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-empty description="描述文字"></vm-empty>
+  </div>
+  <div>
+    <vm-tabs>
+      <vm-tab name="error" title="通用错误">
+        <vm-empty image="error" description="描述文字"></vm-empty>
+      </vm-tab>
+      <vm-tab name="network" title="网络错误">
+        <vm-empty image="network" description="描述文字"></vm-empty>
+      </vm-tab>
+      <vm-tab name="search" title="搜索提示">
+        <vm-empty image="search" description="描述文字"></vm-empty>
+      </vm-tab>
+    </vm-tabs>
+  </div>
+  <div>
+    <vm-empty image="https://wuner.gitee.io/static-resources/varied-mobile/static/custom-empty-image.png" description="描述文字" class="custom-image"></vm-empty>
+  </div>
+  <div>
+    <vm-empty description="描述文字">
+      <vm-button round="" class="bg-red bottom-button">
+        按钮
+      </vm-button>
+    </vm-empty>
+  </div>
+</div>
+`;

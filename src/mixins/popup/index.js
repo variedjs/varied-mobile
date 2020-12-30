@@ -1,11 +1,30 @@
-import manager from "./manager";
-import context from "./context";
+// Context
+import { context } from "./context";
+import {
+  openOverlay,
+  closeOverlay,
+  updateOverlay,
+  removeOverlay
+} from "./overlay";
 import scrollUtils from "../../utils/dom/scroll";
-import { on, off } from "../../utils/dom/event";
+import { removeNode } from "../../utils/dom/node";
+import { on, off, preventDefault } from "../../utils/dom/event";
 import Touch from "../touch";
+import { PortalMixin } from "../portal";
+import { CloseOnPopstateMixin } from "../close-on-popstate";
 
 export default {
-  mixins: [Touch],
+  mixins: [
+    Touch,
+    CloseOnPopstateMixin,
+    PortalMixin({
+      afterPortal() {
+        if (this.overlay) {
+          updateOverlay();
+        }
+      }
+    })
+  ],
 
   props: {
     // whether to show popup
@@ -54,19 +73,12 @@ export default {
       this.$emit(type);
     },
 
-    getContainer() {
-      this.move();
-    },
-
     overlay() {
       this.renderOverlay();
     }
   },
 
   mounted() {
-    if (this.getContainer) {
-      this.move();
-    }
     if (this.value) {
       this.open();
     }
@@ -74,8 +86,9 @@ export default {
 
   activated() {
     /* istanbul ignore next */
-    if (this.value) {
-      this.open();
+    if (this.shouldReopen) {
+      this.$emit("input", true);
+      this.shouldReopen = false;
     }
   },
 
@@ -88,19 +101,48 @@ export default {
   },
 
   beforeDestroy() {
-    this.close();
+    removeOverlay(this);
+
+    if (this.opened) {
+      this.removeLock();
+    }
 
     if (this.getContainer) {
-      this.$parent.$el.appendChild(this.$el);
+      removeNode(this.$el);
     }
   },
 
   deactivated() {
     /* istanbul ignore next */
-    this.close();
+    if (this.value) {
+      this.close();
+      this.shouldReopen = true;
+    }
   },
 
   methods: {
+    addLock() {
+      if (this.lockScroll) {
+        on(document, "touchstart", this.touchStart);
+        on(document, "touchmove", this.onTouchMove);
+
+        if (!context.lockCount) {
+          document.body.classList.add("van-overflow-hidden");
+        }
+        context.lockCount++;
+      }
+    },
+    removeLock() {
+      if (this.lockScroll && context.lockCount) {
+        context.lockCount--;
+        off(document, "touchstart", this.touchStart);
+        off(document, "touchmove", this.onTouchMove);
+
+        if (!context.lockCount) {
+          document.body.classList.remove("van-overflow-hidden");
+        }
+      }
+    },
     open() {
       /* istanbul ignore next */
       if (this.$isServer || this.opened) {
@@ -114,16 +156,7 @@ export default {
 
       this.opened = true;
       this.renderOverlay();
-
-      if (this.lockScroll) {
-        on(document, "touchstart", this.touchStart);
-        on(document, "touchmove", this.onTouchMove);
-
-        if (!context.lockCount) {
-          document.body.classList.add("vm-overflow-hidden");
-        }
-        context.lockCount++;
-      }
+      this.addLock();
     },
 
     close() {
@@ -131,43 +164,16 @@ export default {
         return;
       }
 
-      if (this.lockScroll) {
-        context.lockCount--;
-        off(document, "touchstart", this.touchStart);
-        off(document, "touchmove", this.onTouchMove);
-
-        if (!context.lockCount) {
-          document.body.classList.remove("vm-overflow-hidden");
-        }
-      }
-
+      closeOverlay(this);
       this.opened = false;
-      manager.close(this);
+      this.removeLock();
       this.$emit("input", false);
     },
 
-    move() {
-      let container;
-
-      const { getContainer } = this;
-      if (getContainer) {
-        container =
-          typeof getContainer === "string"
-            ? document.querySelector(getContainer)
-            : getContainer();
-      } else if (this.$parent) {
-        container = this.$parent.$el;
-      }
-
-      if (container) {
-        container.appendChild(this.$el);
-      }
-    },
-
-    onTouchMove(e) {
-      this.touchMove(e);
+    onTouchMove(event) {
+      this.touchMove(event);
       const direction = this.deltaY > 0 ? "10" : "01";
-      const el = scrollUtils.getScrollEventTarget(e.target, this.$el);
+      const el = scrollUtils.getScrollEventTarget(event.target, this.$el);
       const { scrollHeight, offsetHeight, scrollTop } = el;
       let status = "11";
 
@@ -184,26 +190,33 @@ export default {
         this.direction === "vertical" &&
         !(parseInt(status, 2) & parseInt(direction, 2))
       ) {
-        e.preventDefault();
-        e.stopPropagation();
+        preventDefault(event, true);
       }
     },
 
     renderOverlay() {
-      if (this.overlay) {
-        manager.open(this, {
-          zIndex: context.zIndex++,
-          duration: this.duration,
-          className: this.overlayClass,
-          customStyle: this.overlayStyle
-        });
-      } else {
-        manager.close(this);
+      if (this.$isServer || !this.value) {
+        return;
       }
 
       this.$nextTick(() => {
-        this.$el.style.zIndex = context.zIndex++;
+        this.updateZIndex(this.overlay ? 1 : 0);
+
+        if (this.overlay) {
+          openOverlay(this, {
+            zIndex: context.zIndex++,
+            duration: this.duration,
+            className: this.overlayClass,
+            customStyle: this.overlayStyle
+          });
+        } else {
+          closeOverlay(this);
+        }
       });
+    },
+
+    updateZIndex(value = 0) {
+      this.$el.style.zIndex = ++context.zIndex + value;
     }
   }
 };

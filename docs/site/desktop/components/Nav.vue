@@ -1,18 +1,18 @@
 <template>
-  <div class="van-doc-nav" :style="style">
+  <div class="vm-doc-nav" :style="style">
     <div
-      class="van-doc-nav__item"
+      class="vm-doc-nav__item"
       v-for="(item, index) in navConfig"
       :key="index"
     >
-      <van-doc-nav-link :item="item" :base="base" />
+      <vm-doc-nav-link :item="item" :base="base" />
       <div v-if="item.children">
         <div
           class="nav-item"
           v-for="(navItem, index) in item.children"
           :key="index"
         >
-          <van-doc-nav-link :item="navItem" :base="base" />
+          <vm-doc-nav-link :item="navItem" :base="base" />
         </div>
       </div>
       <div
@@ -20,15 +20,15 @@
         v-for="(group, index) in item.groups"
         :key="index"
       >
-        <div class="van-doc-nav__group-title">{{ group.groupName }}</div>
+        <div class="vm-doc-nav__group-title">{{ group.groupName }}</div>
         <div>
           <div
             :key="index"
-            class="van-doc-nav__subitem"
+            class="vm-doc-nav__subitem"
             v-for="(navItem, index) in group.list"
             v-if="!navItem.disabled"
           >
-            <van-doc-nav-link :item="navItem" :base="base" />
+            <vm-doc-nav-link :item="navItem" :base="base" />
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
 import NavLink from "./NavLink.vue";
 
 export default {
-  name: "van-doc-nav",
+  name: "vm-doc-nav",
 
   components: {
     [NavLink.name]: NavLink
@@ -87,7 +87,7 @@ export default {
 <style lang="less">
 @import "../style/variable";
 
-.van-doc-nav {
+.vm-doc-nav {
   left: 0;
   top: 60px;
   bottom: 0;
@@ -96,14 +96,14 @@ export default {
   overflow-y: scroll;
   padding: 25px 0 75px;
   background-color: #fff;
-  min-width: @van-doc-nav-width;
-  max-width: @van-doc-nav-width;
+  min-width: @vm-doc-nav-width;
+  max-width: @vm-doc-nav-width;
   box-shadow: 0 8px 12px #ebedf0;
-  border-right: 1px solid @van-doc-border-color;
+  border-right: 1px solid @vm-doc-border-color;
 
-  @media (min-width: @van-doc-row-max-width) {
+  @media (min-width: @vm-doc-row-max-width) {
     left: 50%;
-    margin-left: calc(-@van-doc-row-max-width / 2);
+    margin-left: calc(-@vm-doc-row-max-width / 2);
   }
 
   &::-webkit-scrollbar {
@@ -128,12 +128,12 @@ export default {
       display: block;
       color: #455a64;
       font-size: 16px;
-      padding: 10px 10px 10px @van-doc-padding;
+      padding: 10px 10px 10px @vm-doc-padding;
       line-height: 24px;
       transition: all 0.3s;
 
       &.active {
-        color: @van-doc-blue;
+        color: @vm-doc-blue;
       }
     }
   }
@@ -149,7 +149,7 @@ export default {
       font-size: 14px;
 
       &:hover {
-        color: @van-doc-blue;
+        color: @vm-doc-blue;
       }
     }
 
@@ -161,8 +161,8 @@ export default {
   &__group-title {
     font-size: 12px;
     line-height: 40px;
-    padding-left: @van-doc-padding;
-    color: @van-doc-text-light-blue;
+    padding-left: @vm-doc-padding;
+    color: @vm-doc-text-light-blue;
   }
 
   @media (max-width: 1300px) {

@@ -1,9 +1,8 @@
-export default {
+export const context = {
   zIndex: 2000,
-  stack: [],
   lockCount: 0,
-
-  get top() {
-    return this.stack[this.stack.length - 1];
+  stack: [],
+  find(vm) {
+    return this.stack.filter(item => item.vm === vm)[0];
   }
 };

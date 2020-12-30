@@ -3,23 +3,24 @@
     :is="tag"
     :class="b({ [span]: span, [`offset-${offset}`]: offset })"
     :style="style"
+    v-on="$listeners"
   >
     <slot />
   </component>
 </template>
 
 <script>
-import create from '../utils/create';
+import create from "../utils/create";
 
 export default create({
-  name: 'col',
+  name: "col",
 
   props: {
     span: [Number, String],
     offset: [Number, String],
     tag: {
       type: String,
-      default: 'div'
+      default: "div"
     }
   },
 

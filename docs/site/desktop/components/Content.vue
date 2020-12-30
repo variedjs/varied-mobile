@@ -1,12 +1,12 @@
 <template>
-  <div :class="['van-doc-content', `van-doc-content--${currentPage}`]">
+  <div :class="['vm-doc-content', `vm-doc-content--${currentPage}`]">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: "van-doc-content",
+  name: "vm-doc-content",
 
   computed: {
     currentPage() {
@@ -23,7 +23,7 @@ export default {
 <style lang="less">
 @import "../style/variable";
 
-.van-doc-content {
+.vm-doc-content {
   flex: 1;
   position: relative;
   padding: 0 0 75px;
@@ -37,7 +37,7 @@ export default {
   }
 
   a {
-    color: @van-doc-blue;
+    color: @vm-doc-blue;
   }
 
   h1,
@@ -48,7 +48,7 @@ export default {
   h6 {
     line-height: 1.5;
     font-weight: normal;
-    color: @van-doc-black;
+    color: @vm-doc-black;
 
     &[id] {
       cursor: pointer;
@@ -87,7 +87,7 @@ export default {
   p {
     font-size: 14px;
     line-height: 26px;
-    color: @van-doc-text-color;
+    color: @vm-doc-text-color;
   }
 
   table {
@@ -97,7 +97,7 @@ export default {
     line-height: 1.5;
     border-radius: 6px;
     border-collapse: collapse;
-    color: @van-doc-text-color;
+    color: @vm-doc-text-color;
 
     th {
       padding: 8px 10px;
@@ -115,7 +115,7 @@ export default {
 
     td {
       padding: 8px;
-      border-top: 1px solid @van-doc-code-background-color;
+      border-top: 1px solid @vm-doc-code-background-color;
 
       &:first-child {
         padding-left: 0;
@@ -136,7 +136,7 @@ export default {
 
   ul li,
   ol li {
-    color: @van-doc-text-color;
+    color: @vm-doc-text-color;
     font-size: 14px;
     line-height: 22px;
     margin: 5px 0 5px 10px;
@@ -153,7 +153,7 @@ export default {
       margin-top: 8px;
       border-radius: 50%;
       box-sizing: border-box;
-      border: 1px solid @van-doc-dark-grey;
+      border: 1px solid @vm-doc-dark-grey;
     }
   }
 

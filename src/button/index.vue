@@ -12,6 +12,7 @@
     <icon v-if="iconPosition === 'left'" :name="icon" :class="b('icon')" />
     <template v-if="loading">
       <icon name="spinner" class="vm-icon-spin" />
+      {{ loadingText }}
     </template>
     <slot v-else>{{ text }}</slot>
     <icon v-if="iconPosition === 'right'" :name="icon" :class="b('icon')" />

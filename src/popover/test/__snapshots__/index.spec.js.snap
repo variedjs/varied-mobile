@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should allow to custom the className of action 1`] = `
+<div role="menuitem" class="vm-popover-action foo">
+  <!---->
+  <div class="vm-popover-action-text vm-hairline-bottom">
+    Option
+  </div>
+</div>
+`;
+
+exports[`should locate to reference element when showed 1`] = `<!---->`;
+
+exports[`should locate to reference element when showed 2`] = `
+<transition-stub name="vm-popover-zoom" class="vm-popover vm-popover-light" style="z-index: 2007;">
+  <div class="vm-popup">
+    <div class="vm-popover-arrow"></div>
+    <div role="menu" class="vm-popover-content"></div>
+    <!---->
+  </div>
+</transition-stub>
+`;
+
+exports[`should locate to reference element when showed 3`] = `
+<transition-stub name="vm-popover-zoom" class="vm-popover vm-popover-light" style="z-index: 2007;">
+  <div class="vm-popup">
+    <div class="vm-popover-arrow"></div>
+    <div role="menu" class="vm-popover-content"></div>
+    <!---->
+  </div>
+</transition-stub>
+`;
+
+exports[`should watch placement prop and update location 1`] = `
+<transition-stub name="vm-popover-zoom" class="vm-popover vm-popover-light" style="z-index: 2008; margin: 0px; position: absolute; left: 0px; top: -8px;" data-popper-placement="top">
+  <div class="vm-popup">
+    <div class="vm-popover-arrow"></div>
+    <div role="menu" class="vm-popover-content"></div>
+    <!---->
+  </div>
+</transition-stub>
+`;

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon slot 1`] = `
+<div role="alert" class="vm-notice-bar">Custom Left Icon <div role="marquee" class="vm-notice-bar-wrap">
+    <div class="vm-notice-bar-content" style="transition-duration: 0s;">
+      Content
+    </div>
+  </div> Custom Right Icon</div>
+`;
+
+exports[`should not scroll when content width > wrap width  1`] = `
+<div role="alert" class="vm-notice-bar">
+  <!---->
+  <div role="marquee" class="vm-notice-bar-wrap">
+    <div class="vm-notice-bar-content" style="transition-duration: 0s;">foo</div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`should scroll when content width > wrap width  1`] = `
+<div role="alert" class="vm-notice-bar">
+  <!---->
+  <div role="marquee" class="vm-notice-bar-wrap">
+    <div class="vm-notice-bar-content" style="transition-duration: 2s; transform: translateX(-100px);">foo</div>
+  </div>
+  <!---->
+</div>
+`;

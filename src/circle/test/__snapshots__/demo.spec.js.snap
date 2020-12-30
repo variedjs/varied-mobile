@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-circle rate="70" speed="100" text="70%"></vm-circle>
+  </div>
+  <div>
+    <vm-circle rate="70" speed="100" stroke-width="60" text="宽度定制"></vm-circle>
+    <vm-circle color="#ee0a24" rate="70" layer-color="#ebedf0" speed="100" text="颜色定制"></vm-circle>
+    <vm-circle rate="70" speed="100" color="[object Object]" text="渐变色"></vm-circle>
+    <vm-circle color="#07c160" rate="70" speed="100" text="逆时针" style="margin-top: 15px;"></vm-circle>
+    <vm-circle color="#7232dd" rate="70" speed="100" size="120px" text="大小定制" style="margin-top: 15px;"></vm-circle>
+  </div>
+  <div style="margin-top: 15px;">
+    <vm-button text="增加" class="bg-blue"></vm-button>
+    <vm-button text="减少" class="bg-red"></vm-button>
+  </div>
+</div>
+`;

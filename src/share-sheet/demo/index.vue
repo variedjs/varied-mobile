@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       info: {
-        basicUsage: "基础使用",
+        basicUsage: "基础用法",
         qq: "QQ",
         name: "名称",
         link: "复制链接",

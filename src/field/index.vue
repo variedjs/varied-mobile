@@ -7,21 +7,17 @@
     :short-border="shortBorder"
     :is-link="isLink"
     :required="required"
-    :class="b({
-      error,
-      disabled: $attrs.disabled,
-      [`label-${labelAlign}`]: labelAlign,
-      'min-height': type === 'textarea' && !autosize
-    })"
+    :class="
+      b({
+        error,
+        disabled: $attrs.disabled,
+        [`label-${labelAlign}`]: labelAlign,
+        'min-height': type === 'textarea' && !autosize
+      })
+    "
   >
-    <slot
-      name="left-icon"
-      v-slot:icon
-    />
-    <slot
-      name="label"
-      v-slot:title
-    />
+    <slot name="left-icon" v-slot:icon />
+    <slot name="label" v-slot:title />
     <div :class="b('body')">
       <textarea
         v-if="type === 'textarea'"
@@ -41,27 +37,20 @@
         :type="type"
         :value="value"
         :readonly="readonly"
-      >
+      />
       <icon
         v-if="showClear"
         name="times-circle"
         :class="b('clear')"
         @touchstart.prevent="onClear"
       />
-      <div
-        v-if="$slots.icon || icon"
-        :class="b('icon')"
-        @click="onClickIcon"
-      >
+      <div v-if="$slots.icon || icon" :class="b('icon')" @click="onClickIcon">
         <slot name="icon">
-          <icon :name="icon"/>
+          <icon :name="icon" />
         </slot>
       </div>
-      <div
-        v-if="$slots.button"
-        :class="b('button')"
-      >
-        <slot name="button"/>
+      <div v-if="$slots.button" :class="b('button')">
+        <slot name="button" />
       </div>
     </div>
     <div
@@ -74,173 +63,173 @@
 </template>
 
 <script>
-  import create from '../utils/create';
-  import CellMixin from '../mixins/cell';
-  import {isObj} from '../utils';
+import create from "../utils/create";
+import CellMixin from "../mixins/cell";
+import { isObj } from "../utils";
 
-  export default create({
-    name: 'field',
+export default create({
+  name: "field",
 
-    inheritAttrs: false,
+  inheritAttrs: false,
 
-    mixins: [CellMixin],
+  mixins: [CellMixin],
 
-    props: {
-      error: Boolean,
-      leftIcon: String,
-      readonly: Boolean,
-      clearable: Boolean,
-      labelAlign: String,
-      inputAlign: String,
-      onIconClick: Function,
-      autosize: [Boolean, Object],
-      errorMessage: String,
-      type: {
-        type: String,
-        default: 'text'
-      }
-    },
+  props: {
+    error: Boolean,
+    leftIcon: String,
+    readonly: Boolean,
+    clearable: Boolean,
+    labelAlign: String,
+    inputAlign: String,
+    onIconClick: Function,
+    autosize: [Boolean, Object],
+    errorMessage: String,
+    type: {
+      type: String,
+      default: "text"
+    }
+  },
 
-    data() {
-      return {
-        focused: false
-      };
-    },
+  data() {
+    return {
+      focused: false
+    };
+  },
 
-    watch: {
-      value() {
-        this.$nextTick(this.adjustSize);
-      }
-    },
-
-    mounted() {
-      this.format();
+  watch: {
+    value() {
       this.$nextTick(this.adjustSize);
+    }
+  },
+
+  mounted() {
+    this.format();
+    this.$nextTick(this.adjustSize);
+  },
+
+  computed: {
+    showClear() {
+      return (
+        this.clearable &&
+        this.focused &&
+        this.value !== "" &&
+        this.isDef(this.value) &&
+        !this.readonly
+      );
     },
 
-    computed: {
-      showClear() {
-        return (
-          this.clearable &&
-          this.focused &&
-          this.value !== '' &&
-          this.isDef(this.value) &&
-          !this.readonly
-        );
-      },
+    listeners() {
+      return {
+        ...this.$listeners,
+        input: this.onInput,
+        keypress: this.onKeypress,
+        focus: this.onFocus,
+        blur: this.onBlur
+      };
+    }
+  },
 
-      listeners() {
-        return {
-          ...this.$listeners,
-          input: this.onInput,
-          keypress: this.onKeypress,
-          focus: this.onFocus,
-          blur: this.onBlur
-        };
+  methods: {
+    focus() {
+      this.$refs.input && this.$refs.input.focus();
+    },
+
+    blur() {
+      this.$refs.input && this.$refs.input.blur();
+    },
+
+    // native maxlength not work when type = number
+    format(target = this.$refs.input) {
+      let { value } = target;
+      const { maxlength } = this.$attrs;
+
+      if (
+        this.type === "number" &&
+        this.isDef(maxlength) &&
+        value.length > maxlength
+      ) {
+        value = value.slice(0, maxlength);
+        target.value = value;
+      }
+
+      return value;
+    },
+
+    onInput(event) {
+      this.$emit("input", this.format(event.target));
+    },
+
+    onFocus(event) {
+      this.focused = true;
+      this.$emit("focus", event);
+
+      // hack for safari
+      /* istanbul ignore if */
+      if (this.readonly) {
+        this.blur();
       }
     },
 
-    methods: {
-      focus() {
-        this.$refs.input && this.$refs.input.focus();
-      },
+    onBlur(event) {
+      this.focused = false;
+      this.$emit("blur", event);
+    },
 
-      blur() {
-        this.$refs.input && this.$refs.input.blur();
-      },
+    onClickIcon() {
+      this.$emit("click-icon");
+      this.onIconClick && this.onIconClick();
+    },
 
-      // native maxlength not work when type = number
-      format(target = this.$refs.input) {
-        let {value} = target;
-        const {maxlength} = this.$attrs;
+    onClear() {
+      this.$emit("input", "");
+      this.$emit("clear");
+    },
 
-        if (
-          this.type === 'number' &&
-          this.isDef(maxlength) &&
-          value.length > maxlength
-        ) {
-          value = value.slice(0, maxlength);
-          target.value = value;
+    onKeypress(event) {
+      if (this.type === "number") {
+        const { keyCode } = event;
+        const allowPoint = String(this.value).indexOf(".") === -1;
+        const isValidKey =
+          (keyCode >= 48 && keyCode <= 57) ||
+          (keyCode === 46 && allowPoint) ||
+          keyCode === 45;
+        if (!isValidKey) {
+          event.preventDefault();
         }
+      }
 
-        return value;
-      },
+      // trigger blur after click keyboard search button
+      /* istanbul ignore next */
+      if (this.type === "search" && event.keyCode === 13) {
+        this.blur();
+      }
 
-      onInput(event) {
-        this.$emit('input', this.format(event.target));
-      },
+      this.$emit("keypress", event);
+    },
 
-      onFocus(event) {
-        this.focused = true;
-        this.$emit('focus', event);
+    adjustSize() {
+      const { input } = this.$refs;
+      if (!(this.type === "textarea" && this.autosize) || !input) {
+        return;
+      }
 
-        // hack for safari
-        /* istanbul ignore if */
-        if (this.readonly) {
-          this.blur();
+      input.style.height = "auto";
+
+      let height = input.scrollHeight;
+      if (isObj(this.autosize)) {
+        const { maxHeight, minHeight } = this.autosize;
+        if (maxHeight) {
+          height = Math.min(height, maxHeight);
         }
-      },
-
-      onBlur(event) {
-        this.focused = false;
-        this.$emit('blur', event);
-      },
-
-      onClickIcon() {
-        this.$emit('click-icon');
-        this.onIconClick && this.onIconClick();
-      },
-
-      onClear() {
-        this.$emit('input', '');
-        this.$emit('clear');
-      },
-
-      onKeypress(event) {
-        if (this.type === 'number') {
-          const {keyCode} = event;
-          const allowPoint = String(this.value).indexOf('.') === -1;
-          const isValidKey =
-            (keyCode >= 48 && keyCode <= 57) ||
-            (keyCode === 46 && allowPoint) ||
-            keyCode === 45;
-          if (!isValidKey) {
-            event.preventDefault();
-          }
+        if (minHeight) {
+          height = Math.max(height, minHeight);
         }
+      }
 
-        // trigger blur after click keyboard search button
-        /* istanbul ignore next */
-        if (this.type === 'search' && event.keyCode === 13) {
-          this.blur();
-        }
-
-        this.$emit('keypress', event);
-      },
-
-      adjustSize() {
-        const {input} = this.$refs;
-        if (!(this.type === 'textarea' && this.autosize) || !input) {
-          return;
-        }
-
-        input.style.height = 'auto';
-
-        let height = input.scrollHeight;
-        if (isObj(this.autosize)) {
-          const {maxHeight, minHeight} = this.autosize;
-          if (maxHeight) {
-            height = Math.min(height, maxHeight);
-          }
-          if (minHeight) {
-            height = Math.max(height, minHeight);
-          }
-        }
-
-        if (height) {
-          input.style.height = height + 'px';
-        }
+      if (height) {
+        input.style.height = height + "px";
       }
     }
-  });
+  }
+});
 </script>

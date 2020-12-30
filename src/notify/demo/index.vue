@@ -37,7 +37,7 @@ export default {
     return {
       show: false,
       info: {
-        basicUsage: "基本使用",
+        basicUsage: "基础用法",
         primary: "主要通知",
         success: "成功通知",
         danger: "危险通知",

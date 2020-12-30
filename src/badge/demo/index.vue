@@ -72,7 +72,7 @@ export default {
   data() {
     return {
       info: {
-        basicUsage: "基本使用",
+        basicUsage: "基础用法",
         max: "最大值",
         standalone: "独立展示",
         customColor: "自定义颜色",

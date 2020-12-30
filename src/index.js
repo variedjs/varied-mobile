@@ -9,14 +9,18 @@ import Cell from './cell';
 import CellGroup from './cell-group';
 import Checkbox from './checkbox';
 import CheckboxGroup from './checkbox-group';
+import Circle from './circle';
 import Col from './col';
 import Collapse from './collapse';
 import CollapseItem from './collapse-item';
+import CountDown from './count-down';
 import DataProcess from './data-process';
 import DatePicker from './date-picker';
 import Dialog from './dialog';
+import Divider from './divider';
 import DropdownItem from './dropdown-item';
 import DropdownMenu from './dropdown-menu';
+import Empty from './empty';
 import Field from './field';
 import Icon from './icon';
 import Image from './image';
@@ -26,10 +30,12 @@ import LazyLoad from './lazy-load';
 import List from './list';
 import Loading from './loading';
 import NavBar from './nav-bar';
+import NoticeBar from './notice-bar';
 import Notify from './notify';
 import Overlay from './overlay';
 import PasswordInput from './password-input';
 import Picker from './picker';
+import Popover from './popover';
 import Popup from './popup';
 import PullRefresh from './pull-refresh';
 import Radio from './radio';
@@ -66,14 +72,18 @@ const components = [
   CellGroup,
   Checkbox,
   CheckboxGroup,
+  Circle,
   Col,
   Collapse,
   CollapseItem,
+  CountDown,
   DataProcess,
   DatePicker,
   Dialog,
+  Divider,
   DropdownItem,
   DropdownMenu,
+  Empty,
   Field,
   Icon,
   Image,
@@ -82,10 +92,12 @@ const components = [
   List,
   Loading,
   NavBar,
+  NoticeBar,
   Notify,
   Overlay,
   PasswordInput,
   Picker,
+  Popover,
   Popup,
   PullRefresh,
   Radio,
@@ -139,14 +151,18 @@ export {
   CellGroup,
   Checkbox,
   CheckboxGroup,
+  Circle,
   Col,
   Collapse,
   CollapseItem,
+  CountDown,
   DataProcess,
   DatePicker,
   Dialog,
+  Divider,
   DropdownItem,
   DropdownMenu,
+  Empty,
   Field,
   Icon,
   Image,
@@ -156,10 +172,12 @@ export {
   List,
   Loading,
   NavBar,
+  NoticeBar,
   Notify,
   Overlay,
   PasswordInput,
   Picker,
+  Popover,
   Popup,
   PullRefresh,
   Radio,

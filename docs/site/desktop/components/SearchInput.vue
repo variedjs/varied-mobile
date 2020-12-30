@@ -1,67 +1,130 @@
 <template>
-  <input
-    class="van-doc-search"
-    value="23131"
-    :placeholder="searchPlaceholder"
-  />
+  <div class="vm-doc-search">
+    <input
+      v-model="searchText"
+      class="vm-doc-search-input"
+      :placeholder="searchPlaceholder"
+      @focus="showContent = true"
+      @blur="showContent = false"
+    />
+    <div v-show="show" class="vm-doc-search-content">
+      <div
+        @mousedown="onClick(item.path)"
+        class="cell"
+        v-for="(item, index) in searchResults"
+        :key="index"
+        v-html="titleFilter(item.title)"
+      ></div>
+    </div>
+  </div>
 </template>
 
 <script>
+import config from "../../doc.config";
 export default {
-  name: "van-doc-search",
+  name: "vm-doc-search",
+
+  data() {
+    return {
+      list: [],
+      showContent: false,
+      searchPlaceholder: "搜索文档...",
+      searchText: ""
+    };
+  },
 
   props: {
     lang: String,
     searchConfig: Object
   },
 
-  computed: {
-    searchPlaceholder() {
-      return this.lang === "zh-CN" ? "搜索文档..." : "Search...";
+  methods: {
+    titleFilter(val) {
+      return val.replace(
+        new RegExp(`(${this.searchText})`, "gi"),
+        "<span>$1</span>"
+      );
+    },
+    onClick(path) {
+      this.showContent = false;
+      path !== this.$route.path && this.$router.push(path);
     }
   },
 
-  watch: {
-    lang(lang) {
-      if (this.docsearchInstance) {
-        this.docsearchInstance.algoliaOptions.facetFilters = [`lang:@{lang}`];
+  computed: {
+    show() {
+      return this.searchResults.length > 0 && this.showContent;
+    },
+    searchResults() {
+      let result = [];
+      if (this.searchText) {
+        result = this.list.filter(value => {
+          return (
+            value.title.toLowerCase().indexOf(this.searchText.toLowerCase()) >
+            -1
+          );
+        });
       }
+      return result.splice(0, 10);
     }
   },
 
   mounted() {
-    if (this.searchConfig) {
-      this.docsearchInstance = window.docsearch({
-        ...this.searchConfig,
-        inputSelector: ".van-doc-search",
-        algoliaOptions: {
-          facetFilters: [`lang:@{this.lang}`]
-        }
+    config.nav.forEach(nav => {
+      nav.groups.forEach(group => {
+        group.list.forEach(item => {
+          this.list.push(item);
+        });
       });
-    }
+    });
   }
 };
 </script>
 
 <style lang="less">
 @import "../style/variable";
-
-.van-doc-search {
-  height: 60px;
-  width: 200px;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  margin-left: 140px;
-  background-color: transparent;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::placeholder {
-    opacity: 0.7;
+.vm-doc-search {
+  position: relative;
+  &-input {
+    height: 60px;
+    width: 200px;
+    border: none;
     color: #fff;
+    font-size: 14px;
+    margin-left: 140px;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      opacity: 0.7;
+      color: #fff;
+    }
+  }
+  &-content {
+    line-height: normal;
+    position: absolute;
+    top: 62px;
+    left: 140px;
+    width: 260px;
+    background-color: #fff;
+    z-index: 100000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 6px;
+
+    .cell {
+      color: #333;
+      display: block;
+      padding: 10px 16px;
+      border-bottom: 1px solid #eee;
+
+      span {
+        color: #0c7cd5;
+      }
+    }
   }
 }
 
@@ -71,7 +134,7 @@ export default {
 
 .algolia-autocomplete {
   .algolia-docsearch-suggestion--highlight {
-    color: @van-doc-blue;
+    color: @vm-doc-blue;
     background-color: transparent;
   }
 
@@ -81,7 +144,7 @@ export default {
 
   .algolia-docsearch-suggestion--text {
     .algolia-docsearch-suggestion--highlight {
-      box-shadow: inset 0 -1px 0 0 @van-doc-blue;
+      box-shadow: inset 0 -1px 0 0 @vm-doc-blue;
     }
   }
 

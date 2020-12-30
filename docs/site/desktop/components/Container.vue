@@ -1,7 +1,7 @@
 <template>
   <div
-    class="van-doc-container van-doc-row"
-    :class="{ 'van-doc-container--with-simulator': hasSimulator }"
+    class="vm-doc-container vm-doc-row"
+    :class="{ 'vm-doc-container--with-simulator': hasSimulator }"
   >
     <slot />
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "van-doc-container",
+  name: "vm-doc-container",
 
   props: {
     hasSimulator: Boolean
@@ -20,16 +20,16 @@ export default {
 <style lang="less">
 @import "../style/variable";
 
-.van-doc-container {
+.vm-doc-container {
   overflow: hidden;
   box-sizing: border-box;
-  padding-left: @van-doc-nav-width;
+  padding-left: @vm-doc-nav-width;
 
   &--with-simulator {
-    padding-right: calc(@van-doc-simulator-width + @van-doc-padding);
+    padding-right: calc(@vm-doc-simulator-width + @vm-doc-padding);
 
     @media (max-width: 1300px) {
-      padding-right: calc(@van-doc-simulator-small-width + @van-doc-padding);
+      padding-right: calc(@vm-doc-simulator-small-width + @vm-doc-padding);
     }
   }
 }

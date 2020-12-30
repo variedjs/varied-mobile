@@ -1,23 +1,21 @@
 <template>
-  <div :class="b()">
-    <div
-      v-if="parents.animated"
-      role="tabpanel"
-      :aria-hidden="!isActive"
-      :class="b('pane-wrapper', { inactive: !isActive })"
-    >
-      <div :class="b('pane')">
-        <slot v-if="shouldRender" />
-      </div>
-    </div>
-    <div
-      v-else
-      v-show="parents.scrollspy || isActive"
-      role="tabpanel"
-      :class="b('pane')"
-    >
+  <div
+    v-if="parents.animated"
+    role="tabpanel"
+    :aria-hidden="!isActive"
+    :class="b('pane-wrapper', { inactive: !isActive })"
+  >
+    <div :class="b('pane')">
       <slot v-if="shouldRender" />
     </div>
+  </div>
+  <div
+    v-else
+    v-show="parents.scrollspy || isActive"
+    role="tabpanel"
+    :class="b('pane')"
+  >
+    <slot v-if="shouldRender" />
   </div>
 </template>
 

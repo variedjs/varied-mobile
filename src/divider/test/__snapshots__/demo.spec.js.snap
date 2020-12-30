@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-divider></vm-divider>
+  </div>
+  <div>
+    <vm-divider>
+      文本
+    </vm-divider>
+  </div>
+  <div>
+    <vm-divider content-position="left">
+      文本
+    </vm-divider>
+    <vm-divider content-position="right">
+      文本
+    </vm-divider>
+  </div>
+  <div>
+    <vm-divider dashed="">
+      文本
+    </vm-divider>
+  </div>
+  <div>
+    <vm-divider style="border-color: #1989fa; color: rgb(25, 137, 250); padding: 0px 16px;">
+      文本
+    </vm-divider>
+  </div>
+</div>
+`;

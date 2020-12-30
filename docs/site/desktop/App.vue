@@ -8,7 +8,6 @@
       :versions="versions"
       :simulators="simulators"
       :current-simulator="currentSimulator"
-      :search-config="searchConfig"
       @switch-version="onSwitchVersion"
     >
       <router-view @changeDemoURL="onChangeDemoURL" />
@@ -27,11 +26,6 @@ export default {
     this.versions = versions;
 
     return {
-      searchConfig: {
-        apiKey: "74a690993da89a515f8e9efb98660a99",
-        indexName: "varied_mobile",
-        placeholder: "搜索文档搜索..."
-      },
       simulators: [`mobile.html${location.hash}`],
       demoURL: ""
     };

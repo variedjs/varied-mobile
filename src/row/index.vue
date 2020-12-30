@@ -1,22 +1,25 @@
 <template>
   <component
     :is="tag"
-    :class="b({
-      flex,
-      [`align-${align}`]: flex && align,
-      [`justify-${justify}`]: flex && justify
-    })"
+    :class="
+      b({
+        flex,
+        [`align-${align}`]: flex && align,
+        [`justify-${justify}`]: flex && justify
+      })
+    "
     :style="style"
+    v-on="$listeners"
   >
     <slot />
   </component>
 </template>
 
 <script>
-import create from '../utils/create';
+import create from "../utils/create";
 
 export default create({
-  name: 'row',
+  name: "row",
 
   props: {
     type: String,
@@ -24,7 +27,7 @@ export default create({
     justify: String,
     tag: {
       type: String,
-      default: 'div'
+      default: "div"
     },
     gutter: {
       type: [Number, String],
@@ -34,7 +37,7 @@ export default create({
 
   computed: {
     flex() {
-      return this.type === 'flex';
+      return this.type === "flex";
     },
 
     style() {
