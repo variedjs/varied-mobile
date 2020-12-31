@@ -76,7 +76,7 @@
         默认
       </vm-button>
     </demo-block>
-    <demo-block title="自定义宽高">
+    <demo-block title="长按事件">
       <vm-button @longPress="onLongPress" :longPressTime="500" class="bg-cyan">
         长按
       </vm-button>
