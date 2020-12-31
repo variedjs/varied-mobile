@@ -91,7 +91,7 @@ export default {
     border: none;
     color: #fff;
     font-size: 14px;
-    margin-left: 140px;
+    margin-left: 40px;
     background-color: transparent;
 
     &:focus {
@@ -107,7 +107,7 @@ export default {
     line-height: normal;
     position: absolute;
     top: 62px;
-    left: 140px;
+    left: 40px;
     width: 260px;
     background-color: #fff;
     z-index: 100000;
