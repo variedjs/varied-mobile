@@ -67,6 +67,34 @@ module.exports = {
 import { Button } from "@varied/mobile";
 ```
 
+> 提示：如果你在使用 TypeScript，可以使用 [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 实现按需引入。
+
+```js
+const tsImportPluginFactory = require("ts-import-plugin");
+
+{
+  test: /\.tsx?$/,
+    loader: 'ts-loader',
+  exclude: /node_modules/,
+  options: {
+      appendTsSuffixTo: [/\.vue$/],
+        transpileOnly: true,
+        getCustomTransformers: () => ({
+        before: [
+          tsImportPluginFactory({
+            libraryName: '@varied/mobile',
+            libraryDirectory: 'es',
+            style: true,
+          }),
+        ],
+      }),
+        compilerOptions: {
+        module: 'es2015',
+      },
+    },
+}
+```
+
 ### 方式二. 手动按需引入组件
 
 在不使用插件的情况下，可以手动引入需要的组件
