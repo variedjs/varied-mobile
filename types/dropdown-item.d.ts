@@ -1,5 +1,5 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class DropdownItem extends VanComponent {
+export class DropdownItem extends VmComponent {
   toggle(show?: boolean): void;
 }

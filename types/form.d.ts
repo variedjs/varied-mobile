@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Form extends VanComponent {
+export class Form extends VmComponent {
   submit(): void;
 
   validate(name?: string): Promise<void>;

@@ -1,7 +1,7 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class SwipeCell extends VanComponent {
-  open(position: 'left' | 'right'): void;
+export class SwipeCell extends VmComponent {
+  open(position: "left" | "right"): void;
 
   close(): void;
 }

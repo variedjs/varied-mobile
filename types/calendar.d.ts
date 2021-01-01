@@ -1,5 +1,5 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Calendar extends VanComponent {
+export class Calendar extends VmComponent {
   reset(): void;
 }

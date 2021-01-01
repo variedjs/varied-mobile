@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Field extends VanComponent {
+export class Field extends VmComponent {
   focus(): void;
 
   blur(): void;

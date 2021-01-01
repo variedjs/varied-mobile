@@ -1,5 +1,5 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class CollapseItem extends VanComponent {
+export class CollapseItem extends VmComponent {
   toggle(expanded?: boolean): void;
 }

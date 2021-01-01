@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import { VanPopupMixin } from './mixins/popup';
+import Vue from "vue";
+import { VmPopupMixin } from "./mixins/popup";
 
 type ToastMessage = string | number;
-type ToastType = 'text' | 'loading' | 'success' | 'fail' | 'html';
-type ToastPosition = 'top' | 'middle' | 'bottom';
-type ToastLoadingType = 'circular' | 'spinner';
+type ToastType = "text" | "loading" | "success" | "fail" | "html";
+type ToastPosition = "top" | "middle" | "bottom";
+type ToastLoadingType = "circular" | "spinner";
 
 export type ToastOptions = {
   icon?: string;
@@ -26,7 +26,7 @@ export type ToastOptions = {
   getContainer?: string | (() => Element);
 };
 
-export interface VanToast extends Vue, VanPopupMixin {
+export interface VmToast extends Vue, VmPopupMixin {
   type: ToastType;
   position: ToastPosition;
   loadingType: ToastLoadingType;
@@ -36,10 +36,10 @@ export interface VanToast extends Vue, VanPopupMixin {
 }
 
 export interface Toast {
-  (message: ToastOptions | ToastMessage, options?: ToastOptions): VanToast;
-  loading(options?: ToastOptions | ToastMessage): VanToast;
-  success(options?: ToastOptions | ToastMessage): VanToast;
-  fail(options?: ToastOptions | ToastMessage): VanToast;
+  (message: ToastOptions | ToastMessage, options?: ToastOptions): VmToast;
+  loading(options?: ToastOptions | ToastMessage): VmToast;
+  success(options?: ToastOptions | ToastMessage): VmToast;
+  fail(options?: ToastOptions | ToastMessage): VmToast;
   clear(all?: boolean): void;
   install(): void;
   setDefaultOptions(
@@ -50,7 +50,7 @@ export interface Toast {
   allowMultiple(allow: boolean): void;
 }
 
-declare module 'vue/types/vue' {
+declare module "vue/types/vue" {
   interface Vue {
     $toast: Toast;
   }

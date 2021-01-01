@@ -1,5 +1,5 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Checkbox extends VanComponent {
+export class Checkbox extends VmComponent {
   toggle(checked?: boolean): void;
 }

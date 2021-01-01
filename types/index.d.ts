@@ -1,12 +1,12 @@
 /* eslint-disable max-classes-per-file */
 import Vue from "vue";
-import { VanComponent } from "./component";
+import {VmComponent} from "./component";
 import { Calendar } from "./calendar";
 import { Checkbox } from "./checkbox";
 import { CheckboxGroup } from "./checkbox-group";
 import { CollapseItem } from "./collapse-item";
 import { CountDown } from "./count-down";
-import { DatetimePicker } from "./datetime-picker";
+import {DataProcess} from "./data-process";
 import { Dialog } from "./dialog";
 import { DropdownItem } from "./dropdown-item";
 import { Field } from "./field";
@@ -14,7 +14,6 @@ import { Form } from "./form";
 import { ImagePreview } from "./image-preview";
 import { Lazyload } from "./lazyload";
 import { List } from "./list";
-import { Locale } from "./locale";
 import { Notify } from "./notify";
 import { Picker } from "./picker";
 import { Progress } from "./progress";
@@ -27,68 +26,51 @@ import { Uploader } from "./uploader";
 export const version: string;
 export function install(vue: typeof Vue): void;
 
-export class ActionSheet extends VanComponent {}
-export class AddressList extends VanComponent {}
-export class Badge extends VanComponent {}
-export class Button extends VanComponent {}
-export class Card extends VanComponent {}
-export class Cell extends VanComponent {}
-export class CellGroup extends VanComponent {}
-export class Circle extends VanComponent {}
-export class Col extends VanComponent {}
-export class Collapse extends VanComponent {}
-export class ContactCard extends VanComponent {}
-export class ContactEdit extends VanComponent {}
-export class ContactList extends VanComponent {}
-export class CouponCell extends VanComponent {}
-export class CouponList extends VanComponent {}
-export class Divider extends VanComponent {}
-export class DropdownMenu extends VanComponent {}
-export class Empty extends VanComponent {}
-export class Grid extends VanComponent {}
-export class GridItem extends VanComponent {}
-export class GoodsAction extends VanComponent {}
-export class GoodsActionButton extends VanComponent {}
-export class GoodsActionIcon extends VanComponent {}
-export class Icon extends VanComponent {}
-export class Image extends VanComponent {}
-export class IndexAnchor extends VanComponent {}
-export class IndexBar extends VanComponent {}
-export class Info extends VanComponent {}
-export class Loading extends VanComponent {}
-export class NavBar extends VanComponent {}
-export class NoticeBar extends VanComponent {}
-export class NumberKeyboard extends VanComponent {}
-export class Overlay extends VanComponent {}
-export class Pagination extends VanComponent {}
-export class Panel extends VanComponent {}
-export class PasswordInput extends VanComponent {}
-export class Popover extends VanComponent {}
-export class Popup extends VanComponent {}
-export class PullRefresh extends VanComponent {}
-export class Radio extends VanComponent {}
-export class RadioGroup extends VanComponent {}
-export class Rate extends VanComponent {}
-export class Row extends VanComponent {}
-export class Search extends VanComponent {}
-export class ShareSheet extends VanComponent {}
-export class Sidebar extends VanComponent {}
-export class SidebarItem extends VanComponent {}
-export class Skeleton extends VanComponent {}
-export class Slider extends VanComponent {}
-export class Step extends VanComponent {}
-export class Stepper extends VanComponent {}
-export class Steps extends VanComponent {}
-export class Sticky extends VanComponent {}
-export class SubmitBar extends VanComponent {}
-export class SwipeItem extends VanComponent {}
-export class Switch extends VanComponent {}
-export class SwitchCell extends VanComponent {}
-export class Tab extends VanComponent {}
-export class Tabbar extends VanComponent {}
-export class TabbarItem extends VanComponent {}
-export class Tag extends VanComponent {}
-export class TreeSelect extends VanComponent {}
+export class ActionSheet extends VmComponent {}
+export class AddressPicker extends VmComponent {}
+export class Api extends VmComponent {}
+export class Badge extends VmComponent {}
+export class Biz extends VmComponent {}
+export class BusinessMenu extends VmComponent {}
+export class Button extends VmComponent {}
+export class Cell extends VmComponent {}
+export class CellGroup extends VmComponent {}
+export class Circle extends VmComponent {}
+export class Col extends VmComponent {}
+export class Collapse extends VmComponent {}
+export class DatePicker extends VmComponent {}
+export class Divider extends VmComponent {}
+export class DropdownMenu extends VmComponent {}
+export class Empty extends VmComponent {}
+export class Grid extends VmComponent {}
+export class Icon extends VmComponent {}
+export class Image extends VmComponent {}
+export class Info extends VmComponent {}
+export class Loading extends VmComponent {}
+export class MenuIcon extends VmComponent {}
+export class Menus extends VmComponent {}
+export class NavBar extends VmComponent {}
+export class NoticeBar extends VmComponent {}
+export class Overlay extends VmComponent {}
+export class PasswordInput extends VmComponent {}
+export class Popover extends VmComponent {}
+export class Popup extends VmComponent {}
+export class PullRefresh extends VmComponent {}
+export class Radio extends VmComponent {}
+export class RadioGroup extends VmComponent {}
+export class Rate extends VmComponent {}
+export class Row extends VmComponent {}
+export class Search extends VmComponent {}
+export class ShareSheet extends VmComponent {}
+export class Slider extends VmComponent {}
+export class Stepper extends VmComponent {}
+export class Sticky extends VmComponent {}
+export class SwipeItem extends VmComponent {}
+export class Switch extends VmComponent {}
+export class Tab extends VmComponent {}
+export class Tabbar extends VmComponent {}
+export class TabbarItem extends VmComponent {}
+export class Tag extends VmComponent {}
 
 export {
   Calendar,
@@ -96,7 +78,7 @@ export {
   CheckboxGroup,
   CollapseItem,
   CountDown,
-  DatetimePicker,
+  DataProcess,
   Dialog,
   DropdownItem,
   Form,
@@ -104,7 +86,6 @@ export {
   ImagePreview,
   Lazyload,
   List,
-  Locale,
   Notify,
   Picker,
   Progress,

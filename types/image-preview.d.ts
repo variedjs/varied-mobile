@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
-import { VanPopupMixin } from './mixins/popup';
-import { SwipeToOptions } from './swipe';
+import { VmComponent } from "./component";
+import { VmPopupMixin } from "./mixins/popup";
+import { SwipeToOptions } from "./swipe";
 
 export type ImagePreviewOptions =
   | string[]
@@ -25,7 +25,7 @@ export type ImagePreviewOptions =
       swipeTo?(index: number, options?: SwipeToOptions): void;
     };
 
-export class VanImagePreview extends VanPopupMixin {
+export class VmImagePreview extends VmPopupMixin {
   images: string[];
 
   showIndex: boolean;
@@ -34,9 +34,9 @@ export class VanImagePreview extends VanPopupMixin {
 }
 
 export interface ImagePreview {
-  (options: ImagePreviewOptions, startPosition?: number): VanImagePreview;
+  (options: ImagePreviewOptions, startPosition?: number): VmImagePreview;
   install(): void;
-  Component: typeof VanComponent;
+  Component: typeof VmComponent;
 }
 
 export const ImagePreview: ImagePreview;

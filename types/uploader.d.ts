@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Uploader extends VanComponent {
+export class Uploader extends VmComponent {
   closeImagePreview(): void;
 
   chooseFile(): void;

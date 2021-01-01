@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-export class Tabs extends VanComponent {
+export class Tabs extends VmComponent {
   resize(): void;
 
   scrollTo(name: string | number): void;

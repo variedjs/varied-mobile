@@ -1,6 +1,6 @@
-import { VanComponent } from './component';
+import { VmComponent } from "./component";
 
-type DialogAction = 'confirm' | 'cancel';
+type DialogAction = "confirm" | "cancel";
 type DialogDone = (close?: boolean) => void;
 
 export type DialogOptions = {
@@ -36,10 +36,10 @@ export interface Dialog {
   install(): void;
   setDefaultOptions(options: DialogOptions): void;
   resetDefaultOptions(): void;
-  Component: typeof VanComponent;
+  Component: typeof VmComponent;
 }
 
-declare module 'vue/types/vue' {
+declare module "vue/types/vue" {
   interface Vue {
     $dialog: Dialog;
   }

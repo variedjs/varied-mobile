@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import { VanComponent } from './component';
+import Vue from "vue";
+import { VmComponent } from "./component";
 
 export type NotifyMessage = string | number;
 
 export type NotifyOptions = {
-  type?: 'primary' | 'success' | 'danger' | 'warning';
+  type?: "primary" | "success" | "danger" | "warning";
   value?: boolean;
   color?: string;
   message?: NotifyMessage;
@@ -16,7 +16,7 @@ export type NotifyOptions = {
   onClick?: ((event: Event) => void) | null;
 };
 
-export interface VanNotify extends Vue {
+export interface VmNotify extends Vue {
   message: NotifyMessage;
   color: string;
   background: string;
@@ -24,17 +24,17 @@ export interface VanNotify extends Vue {
 }
 
 export interface Notify {
-  (message: NotifyOptions | NotifyMessage): VanNotify;
+  (message: NotifyOptions | NotifyMessage): VmNotify;
   clear(): void;
   install(): void;
   currentOptions: NotifyOptions;
   defaultOptions: NotifyOptions;
   setDefaultOptions(options: NotifyOptions): void;
   resetDefaultOptions(): void;
-  Component: typeof VanComponent;
+  Component: typeof VmComponent;
 }
 
-declare module 'vue/types/vue' {
+declare module "vue/types/vue" {
   interface Vue {
     $notify: Notify;
   }
