@@ -64,6 +64,7 @@ export default {
   data() {
     return {
       info: {
+        basicUsage: "基础用法",
         disableMenu: "禁用菜单",
         switchTitle1: "包邮",
         switchTitle2: "团购",

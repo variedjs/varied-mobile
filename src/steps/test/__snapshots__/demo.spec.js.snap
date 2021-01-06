@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-steps active="1">
+      <vm-step>买家下单</vm-step>
+      <vm-step>商家接单</vm-step>
+      <vm-step>买家提货</vm-step>
+      <vm-step>交易完成</vm-step>
+    </vm-steps>
+    <vm-button>下一步</vm-button>
+  </div>
+  <div>
+    <vm-steps active="1" active-icon="check" inactive-icon="chevron-right" active-color="#38f">
+      <vm-step>买家下单</vm-step>
+      <vm-step>商家接单</vm-step>
+      <vm-step>买家提货</vm-step>
+      <vm-step>交易完成</vm-step>
+    </vm-steps>
+  </div>
+  <div>
+    <vm-steps active="0" direction="vertical">
+      <vm-step>
+        <h3>【城市】物流状态1</h3>
+        <p>2016-07-12 12:40</p>
+      </vm-step>
+      <vm-step>
+        <h3>【城市】物流状态</h3>
+        <p>2016-07-11 10:00</p>
+      </vm-step>
+      <vm-step>
+        <h3>快件已发货</h3>
+        <p>2016-07-10 09:30</p>
+      </vm-step>
+    </vm-steps>
+  </div>
+</div>
+`;

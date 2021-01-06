@@ -1,14 +1,24 @@
-@import '../style/theme';
+@import "../style/theme";
+@import "../style/mixins/hairline";
 
 .vm-collapse-item {
+  position: relative;
+
+  &-border {
+    &::after {
+      .hairline-top(@cell-border-color, @padding-md, @padding-md);
+    }
+  }
+
   &-title {
     .vm-cell-right-icon::before {
       transform: rotate(90deg);
-      transition: @collapse-item-transition-duration;
+      transition: transform @collapse-item-transition-duration;
     }
 
     &::after {
-      visibility: hidden;
+      right: @padding-md;
+      display: none;
     }
 
     &-expanded {
@@ -17,11 +27,19 @@
       }
 
       &::after {
-        visibility: visible;
+        display: block;
+      }
+    }
+
+    &-borderless {
+      &::after {
+        display: none;
       }
     }
 
     &-disabled {
+      cursor: not-allowed;
+
       &,
       & .vm-cell-right-icon {
         color: @collapse-item-title-disabled-color;
@@ -35,13 +53,13 @@
 
   &-wrapper {
     overflow: hidden;
-    will-change: height;
     transition: height @collapse-item-transition-duration ease-in-out;
+    will-change: height;
   }
 
   &-content {
-    color: @collapse-item-content-text-color;
     padding: @collapse-item-content-padding;
+    color: @collapse-item-content-text-color;
     font-size: @collapse-item-content-font-size;
     line-height: @collapse-item-content-line-height;
     background-color: @collapse-item-content-background-color;

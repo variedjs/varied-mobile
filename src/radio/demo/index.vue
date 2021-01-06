@@ -97,6 +97,7 @@ export default {
   data() {
     return {
       text: {
+        basicUsage: "基础用法",
         radio: "单选框",
         text1: "未选中禁用",
         text2: "选中且禁用",

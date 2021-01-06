@@ -118,6 +118,7 @@ export default {
       activeName: "b",
       tabs: [1, 2, 3, 4],
       info: {
+        basicUsage: "基础用法",
         content: "内容 ",
         tab: "标签 ",
         title2: "标签栏滚动",

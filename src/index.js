@@ -37,6 +37,7 @@ import PasswordInput from './password-input';
 import Picker from './picker';
 import Popover from './popover';
 import Popup from './popup';
+import Progress from './progress';
 import PullRefresh from './pull-refresh';
 import Radio from './radio';
 import RadioGroup from './radio-group';
@@ -46,7 +47,9 @@ import SafeKeyboard from './safe-keyboard';
 import Search from './search';
 import ShareSheet from './share-sheet';
 import Slider from './slider';
+import Step from './step';
 import Stepper from './stepper';
+import Steps from './steps';
 import Sticky from './sticky';
 import Swipe from './swipe';
 import SwipeCell from './swipe-cell';
@@ -99,6 +102,7 @@ const components = [
   Picker,
   Popover,
   Popup,
+  Progress,
   PullRefresh,
   Radio,
   RadioGroup,
@@ -108,7 +112,9 @@ const components = [
   Search,
   ShareSheet,
   Slider,
+  Step,
   Stepper,
+  Steps,
   Sticky,
   Swipe,
   SwipeCell,
@@ -179,6 +185,7 @@ export {
   Picker,
   Popover,
   Popup,
+  Progress,
   PullRefresh,
   Radio,
   RadioGroup,
@@ -188,7 +195,9 @@ export {
   Search,
   ShareSheet,
   Slider,
+  Step,
   Stepper,
+  Steps,
   Sticky,
   Swipe,
   SwipeCell,

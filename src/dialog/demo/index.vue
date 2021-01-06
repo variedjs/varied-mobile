@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       info: {
+        basicUsage: "基础用法",
         title: "标题",
         alert1: "提示弹窗",
         alert2: "提示弹窗（无标题）",

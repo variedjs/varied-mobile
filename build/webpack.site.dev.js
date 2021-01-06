@@ -27,7 +27,7 @@ module.exports = merge(config, {
     "varied-mobile": "./docs/site/mobile/main.js"
   },
   devServer: {
-    open: true,
+    open: false,
     progress: true,
     host: getIPAddress(),
     port: "8888",

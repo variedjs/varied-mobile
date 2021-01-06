@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       info: {
+        basicUsage: "基础用法",
         closed: "关闭",
         showClose: "展示关闭按钮",
         showImages: "预览图片",

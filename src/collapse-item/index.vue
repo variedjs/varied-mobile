@@ -4,6 +4,7 @@
       v-bind="$props"
       :class="b('title', { disabled, expanded })"
       @click="onClick"
+      :arrow-direction="show ? 'up' : 'down'"
     >
       <slot name="title" v-slot:title />
       <slot name="icon" v-slot:icon />
@@ -28,12 +29,16 @@
 import { raf } from "../utils/dom/raf";
 import create from "../utils/create";
 import CellMixin from "../mixins/cell";
-import FindParent from "../mixins/find-parent";
+import { ChildrenMixin } from "../mixins/relation";
+
+// Components
+import Cell from "../cell";
 
 export default create({
+  components: { Cell },
   name: "collapse-item",
 
-  mixins: [CellMixin, FindParent],
+  mixins: [CellMixin, ChildrenMixin("vmCollapse")],
 
   props: {
     name: [String, Number],

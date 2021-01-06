@@ -1,4 +1,4 @@
-# NoticeBar 通知栏
+## NoticeBar 通知栏
 
 ### 介绍
 

@@ -62,6 +62,7 @@ export default {
       stepperRound: 1,
       disabledInput: 1,
       info: {
+        basicUsage: "基础用法",
         step: "步长设置",
         range: "限制输入范围",
         integer: "限制输入整数",

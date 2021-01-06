@@ -18,6 +18,12 @@ export default {
       type: Boolean,
       default: true
     },
-    shortBorder: Boolean
+    shortBorder: Boolean,
+    size: String,
+    clickable: Boolean,
+    arrowDirection: {
+      type: String,
+      default: "right"
+    }
   }
 };

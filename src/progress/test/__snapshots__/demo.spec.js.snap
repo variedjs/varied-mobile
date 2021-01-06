@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-progress percentage="50"></vm-progress>
+  </div>
+  <div>
+    <vm-progress percentage="50" stroke-width="8"></vm-progress>
+  </div>
+  <div>
+    <vm-progress inactive="" percentage="50"></vm-progress>
+  </div>
+  <div>
+    <vm-progress color="#f2826a" percentage="25"></vm-progress>
+    <vm-progress color="#ee0a24" percentage="50"></vm-progress>
+    <vm-progress percentage="75" pivot-color="#7232dd" color="linear-gradient(to right, #be99ff, #7232dd)"></vm-progress>
+  </div>
+</div>
+`;

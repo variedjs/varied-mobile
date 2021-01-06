@@ -119,6 +119,9 @@ export default {
 @import "../style/variable";
 
 .vm-doc-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   user-select: none;
   box-shadow: 0 4px 12px #ebedf0;
