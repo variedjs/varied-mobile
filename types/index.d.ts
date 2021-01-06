@@ -63,7 +63,9 @@ export class Row extends VmComponent {}
 export class Search extends VmComponent {}
 export class ShareSheet extends VmComponent {}
 export class Slider extends VmComponent {}
+export class Step extends VmComponent {}
 export class Stepper extends VmComponent {}
+export class Steps extends VmComponent {}
 export class Sticky extends VmComponent {}
 export class SwipeItem extends VmComponent {}
 export class Switch extends VmComponent {}
