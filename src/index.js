@@ -71,7 +71,7 @@ import Toast from './toast';
 import TreeSelect from './tree-select';
 import Uploader from './uploader';
 
-const version = '0.1.2';
+const version = '0.1.3';
 const components = [
   ActionSheet,
   AddressPicker,
