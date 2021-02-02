@@ -107,15 +107,18 @@ export default {
       return [
         {
           name: this.t("name"),
-          icon: "https://img.yzcdn.cn/vant/custom-icon-fire.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-fire.png"
         },
         {
           name: this.t("name"),
-          icon: "https://img.yzcdn.cn/vant/custom-icon-light.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-light.png"
         },
         {
           name: this.t("name"),
-          icon: "https://img.yzcdn.cn/vant/custom-icon-water.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-water.png"
         }
       ];
     },

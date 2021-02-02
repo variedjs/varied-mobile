@@ -8,11 +8,12 @@
 <p align="center">
   🔥 <a href="https://wuner.gitee.io/varied-mobile/">文档网站-国内</a> | 🔥 <a href="https://variedjs.github.io/varied-mobile/">文档网站-国外</a>
 </p>
+
 ### 特性
 
 - 完善的文档和示例
 - 支持按需引入
-- 支持 SSR
+- 支持 TS
 
 ### 安装
 

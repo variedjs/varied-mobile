@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <vm-tabs>
+    <vm-tab title="基础用法">
+      <vm-index-bar>
+        <div>
+          <vm-index-anchor index="A"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="B"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="C"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="D"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="E"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="F"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="G"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="H"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="I"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="J"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="K"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="L"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="M"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="N"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="O"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="P"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="Q"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="R"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="S"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="T"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="U"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="V"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="W"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="X"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="Y"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="Z"></vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+      </vm-index-bar>
+    </vm-tab>
+    <vm-tab title="自定义索引列表">
+      <vm-index-bar index-list="1,2,3,4,5,6,8,9,10">
+        <div>
+          <vm-index-anchor index="1">
+            标题1
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="2">
+            标题2
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="3">
+            标题3
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="4">
+            标题4
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="5">
+            标题5
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="6">
+            标题6
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="8">
+            标题8
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="9">
+            标题9
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+        <div>
+          <vm-index-anchor index="10">
+            标题10
+          </vm-index-anchor>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+          <vm-cell title="文本"></vm-cell>
+        </div>
+      </vm-index-bar>
+    </vm-tab>
+  </vm-tabs>
+</div>
+`;

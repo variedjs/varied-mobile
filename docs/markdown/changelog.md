@@ -1,8 +1,22 @@
 ## 更新日志
 
+### V0.1.3
+
+#### 新增组件
+
+> Grid 宫格
+
+> IndexBar 索引栏
+
+> Pagination 分页
+
+> Sidebar 侧边导航
+
+> TreeSelect 分类选择
+
 ### V0.1.2
 
-### 新增组件
+#### 新增组件
 
 > Progress 进度条
 

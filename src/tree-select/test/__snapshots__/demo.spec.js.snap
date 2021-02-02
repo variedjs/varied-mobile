@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-tree-select items="[object Object],[object Object],[object Object]" active-id="1" main-active-index="0"></vm-tree-select>
+  </div>
+  <div>
+    <vm-tree-select items="[object Object],[object Object],[object Object]" active-id="1,2" main-active-index="0"></vm-tree-select>
+  </div>
+  <div>
+    <vm-tree-select height="55vw" items="[object Object],[object Object]" main-active-index="0"></vm-tree-select>
+  </div>
+  <div>
+    <vm-tree-select height="55vw" items="[object Object],[object Object]" active-id="1" main-active-index="0"></vm-tree-select>
+  </div>
+</div>
+`;

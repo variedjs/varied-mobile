@@ -8,7 +8,9 @@
         <vm-step>{{ t("step4") }}</vm-step>
       </vm-steps>
 
-      <vm-button @click="nextStep">{{ t("nextStep") }}</vm-button>
+      <vm-button @click="nextStep" class="bg-blue">
+        {{ t("nextStep") }}
+      </vm-button>
     </demo-block>
 
     <demo-block :title="t('customStyle')">

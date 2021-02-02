@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render page slot 1`] = `
+<ul class="vm-pagination">
+  <li class="vm-pagination-item vm-pagination-prev vm-hairline">
+    上一页
+  </li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">1</li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">2</li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">3</li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">4</li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">5</li>
+  <!---->
+  <li class="vm-pagination-item vm-pagination-next vm-hairline">
+    下一页
+  </li>
+</ul>
+`;
+
+exports[`render prev-text & next-text slot 1`] = `
+<ul class="vm-pagination">
+  <li class="vm-pagination-item vm-pagination-prev vm-hairline">Custom PrevText</li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">
+    1
+  </li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">
+    2
+  </li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">
+    3
+  </li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">
+    4
+  </li>
+  <li class="vm-pagination-item vm-pagination-page vm-hairline">
+    5
+  </li>
+  <!---->
+  <li class="vm-pagination-item vm-pagination-next vm-hairline">Custom NextText</li>
+</ul>
+`;

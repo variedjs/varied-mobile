@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`content slot 1`] = `
+<div class="vm-tree-select" style="height: 300px;">
+  <div class="vm-sidebar vm-tree-select-nav"><a class="vm-sidebar-item vm-sidebar-item-select vm-tree-select-nav-item">
+      <div class="vm-sidebar-item-text">
+        group1
+        <!---->
+      </div>
+    </a></div>
+  <div class="vm-tree-select-content">Custom Content</div>
+</div>
+`;
+
+exports[`empty list 1`] = `
+<div class="vm-tree-select" style="height: 300px;">
+  <div class="vm-sidebar vm-tree-select-nav"></div>
+  <div class="vm-tree-select-content"></div>
+</div>
+`;
+
+exports[`height prop 1`] = `
+<div class="vm-tree-select" style="height: 100vh;">
+  <div class="vm-sidebar vm-tree-select-nav"></div>
+  <div class="vm-tree-select-content"></div>
+</div>
+`;
+
+exports[`nav render badge 1`] = `
+<div class="vm-tree-select" style="height: 300px;">
+  <div class="vm-sidebar vm-tree-select-nav"><a class="vm-sidebar-item vm-sidebar-item-select vm-tree-select-nav-item">
+      <div class="vm-sidebar-item-text">
+        group1
+        <div class="vm-info vm-sidebar-item-info">3</div>
+      </div>
+    </a></div>
+  <div class="vm-tree-select-content"></div>
+</div>
+`;
+
+exports[`selected-icon prop 1`] = `
+<div class="vm-ellipsis vm-tree-select-item vm-tree-select-item-active">
+  city1
+  <i class="vm-icon vm-icon-foo vm-tree-select-selected">
+    <!---->
+    <!---->
+  </i>
+</div>
+`;

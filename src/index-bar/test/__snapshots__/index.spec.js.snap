@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should allow to custom anchor text 1`] = `
+<div class="vm-index-bar">
+  <div class="vm-index-bar-sidebar"><span data-index="A" class="vm-index-bar-index">
+      A
+    </span><span data-index="B" class="vm-index-bar-index">
+      B
+    </span><span data-index="C" class="vm-index-bar-index">
+      C
+    </span><span data-index="D" class="vm-index-bar-index">
+      D
+    </span><span data-index="E" class="vm-index-bar-index">
+      E
+    </span><span data-index="F" class="vm-index-bar-index">
+      F
+    </span><span data-index="G" class="vm-index-bar-index">
+      G
+    </span><span data-index="H" class="vm-index-bar-index">
+      H
+    </span><span data-index="I" class="vm-index-bar-index">
+      I
+    </span><span data-index="J" class="vm-index-bar-index">
+      J
+    </span><span data-index="K" class="vm-index-bar-index">
+      K
+    </span><span data-index="L" class="vm-index-bar-index">
+      L
+    </span><span data-index="M" class="vm-index-bar-index">
+      M
+    </span><span data-index="N" class="vm-index-bar-index">
+      N
+    </span><span data-index="O" class="vm-index-bar-index">
+      O
+    </span><span data-index="P" class="vm-index-bar-index">
+      P
+    </span><span data-index="Q" class="vm-index-bar-index">
+      Q
+    </span><span data-index="R" class="vm-index-bar-index">
+      R
+    </span><span data-index="S" class="vm-index-bar-index">
+      S
+    </span><span data-index="T" class="vm-index-bar-index">
+      T
+    </span><span data-index="U" class="vm-index-bar-index">
+      U
+    </span><span data-index="V" class="vm-index-bar-index">
+      V
+    </span><span data-index="W" class="vm-index-bar-index">
+      W
+    </span><span data-index="X" class="vm-index-bar-index">
+      X
+    </span><span data-index="Y" class="vm-index-bar-index">
+      Y
+    </span><span data-index="Z" class="vm-index-bar-index">
+      Z
+    </span></div>
+  <div>
+    <div class="vm-index-anchor">Title A</div>
+  </div>
+  <div>
+    <div class="vm-index-anchor">Title B</div>
+  </div>
+</div>
+`;
+
+exports[`should update active anchor after page scroll 1`] = `
+<div class="vm-index-bar">
+  <div class="vm-index-bar-sidebar"><span data-index="A" class="vm-index-bar-index">
+      A
+    </span><span data-index="B" class="vm-index-bar-index">
+      B
+    </span><span data-index="C" class="vm-index-bar-index">
+      C
+    </span><span data-index="D" class="vm-index-bar-index">
+      D
+    </span><span data-index="E" class="vm-index-bar-index">
+      E
+    </span><span data-index="F" class="vm-index-bar-index">
+      F
+    </span><span data-index="G" class="vm-index-bar-index">
+      G
+    </span><span data-index="H" class="vm-index-bar-index">
+      H
+    </span><span data-index="I" class="vm-index-bar-index">
+      I
+    </span><span data-index="J" class="vm-index-bar-index">
+      J
+    </span><span data-index="K" class="vm-index-bar-index">
+      K
+    </span><span data-index="L" class="vm-index-bar-index">
+      L
+    </span><span data-index="M" class="vm-index-bar-index">
+      M
+    </span><span data-index="N" class="vm-index-bar-index">
+      N
+    </span><span data-index="O" class="vm-index-bar-index">
+      O
+    </span><span data-index="P" class="vm-index-bar-index">
+      P
+    </span><span data-index="Q" class="vm-index-bar-index">
+      Q
+    </span><span data-index="R" class="vm-index-bar-index">
+      R
+    </span><span data-index="S" class="vm-index-bar-index">
+      S
+    </span><span data-index="T" class="vm-index-bar-index">
+      T
+    </span><span data-index="U" class="vm-index-bar-index">
+      U
+    </span><span data-index="V" class="vm-index-bar-index">
+      V
+    </span><span data-index="W" class="vm-index-bar-index">
+      W
+    </span><span data-index="X" class="vm-index-bar-index">
+      X
+    </span><span data-index="Y" class="vm-index-bar-index">
+      Y
+    </span><span data-index="Z" class="vm-index-bar-index">
+      Z
+    </span></div>
+  <div data-index="0">
+    <div class="vm-index-anchor">
+      1
+    </div>
+  </div>
+  <div data-index="1">
+    <div class="vm-index-anchor">
+      2
+    </div>
+  </div>
+  <div data-index="2">
+    <div class="vm-index-anchor">
+      3
+    </div>
+  </div>
+  <div data-index="3">
+    <div class="vm-index-anchor">
+      4
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should update active anchor after page scroll 2`] = `
+<div class="vm-index-bar">
+  <div class="vm-index-bar-sidebar"><span data-index="A" class="vm-index-bar-index">
+      A
+    </span><span data-index="B" class="vm-index-bar-index">
+      B
+    </span><span data-index="C" class="vm-index-bar-index">
+      C
+    </span><span data-index="D" class="vm-index-bar-index">
+      D
+    </span><span data-index="E" class="vm-index-bar-index">
+      E
+    </span><span data-index="F" class="vm-index-bar-index">
+      F
+    </span><span data-index="G" class="vm-index-bar-index">
+      G
+    </span><span data-index="H" class="vm-index-bar-index">
+      H
+    </span><span data-index="I" class="vm-index-bar-index">
+      I
+    </span><span data-index="J" class="vm-index-bar-index">
+      J
+    </span><span data-index="K" class="vm-index-bar-index">
+      K
+    </span><span data-index="L" class="vm-index-bar-index">
+      L
+    </span><span data-index="M" class="vm-index-bar-index">
+      M
+    </span><span data-index="N" class="vm-index-bar-index">
+      N
+    </span><span data-index="O" class="vm-index-bar-index">
+      O
+    </span><span data-index="P" class="vm-index-bar-index">
+      P
+    </span><span data-index="Q" class="vm-index-bar-index">
+      Q
+    </span><span data-index="R" class="vm-index-bar-index">
+      R
+    </span><span data-index="S" class="vm-index-bar-index">
+      S
+    </span><span data-index="T" class="vm-index-bar-index">
+      T
+    </span><span data-index="U" class="vm-index-bar-index">
+      U
+    </span><span data-index="V" class="vm-index-bar-index">
+      V
+    </span><span data-index="W" class="vm-index-bar-index">
+      W
+    </span><span data-index="X" class="vm-index-bar-index">
+      X
+    </span><span data-index="Y" class="vm-index-bar-index">
+      Y
+    </span><span data-index="Z" class="vm-index-bar-index">
+      Z
+    </span></div>
+  <div data-index="0">
+    <div class="vm-index-anchor">
+      1
+    </div>
+  </div>
+  <div data-index="1">
+    <div class="vm-index-anchor">
+      2
+    </div>
+  </div>
+  <div data-index="2">
+    <div class="vm-index-anchor">
+      3
+    </div>
+  </div>
+  <div data-index="3">
+    <div class="vm-index-anchor">
+      4
+    </div>
+  </div>
+</div>
+`;

@@ -290,8 +290,24 @@ export default {
           groupName: "导航组件",
           list: [
             {
+              path: "/grid",
+              title: "Grid 宫格"
+            },
+            {
+              path: "/index-bar",
+              title: "IndexBar 索引栏"
+            },
+            {
               path: "/nav-bar",
               title: "NavBar 导航栏"
+            },
+            {
+              path: "/pagination",
+              title: "Pagination 分页"
+            },
+            {
+              path: "/sidebar",
+              title: "Sidebar 侧边导航"
             },
             {
               path: "/tab",
@@ -300,6 +316,10 @@ export default {
             {
               path: "/tabbar",
               title: "Tabbar 标签栏"
+            },
+            {
+              path: "/tree-select",
+              title: "TreeSelect 分类选择"
             }
           ]
         }

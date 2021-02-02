@@ -79,6 +79,15 @@ export default {
     this.setScrollTop(document.body, value);
   },
 
+  getRootScrollTop() {
+    return (
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0
+    );
+  },
+
   getComputedStyle:
     !isServer &&
     document.defaultView.getComputedStyle.bind(document.defaultView)

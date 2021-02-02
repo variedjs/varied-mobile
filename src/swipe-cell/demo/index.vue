@@ -57,7 +57,8 @@ export default {
         beforeClose: "异步关闭",
         customContent: "自定义内容"
       },
-      imageURL: "https://img.yzcdn.cn/vant/ipad.jpeg"
+      imageURL:
+        "https://wuner.gitee.io/static-resources/varied-mobile/static/ipad.jpeg"
     };
   },
 

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <div>
+    <vm-pagination total-items="24" items-per-page="5" prev-text="上一页" next-text="下一页"></vm-pagination>
+  </div>
+  <div>
+    <vm-pagination page-count="12" prev-text="上一页" next-text="下一页" mode="simple" size="small"></vm-pagination>
+  </div>
+  <div>
+    <vm-pagination force-ellipses="" total-items="125" show-page-size="3" prev-text="上一页" next-text="下一页"></vm-pagination>
+  </div>
+  <div>
+    <vm-pagination total-items="125" show-page-size="5"></vm-pagination>
+  </div>
+</div>
+`;

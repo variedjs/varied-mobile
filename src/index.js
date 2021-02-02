@@ -22,9 +22,13 @@ import DropdownItem from './dropdown-item';
 import DropdownMenu from './dropdown-menu';
 import Empty from './empty';
 import Field from './field';
+import Grid from './grid';
+import GridItem from './grid-item';
 import Icon from './icon';
 import Image from './image';
 import ImagePreview from './image-preview';
+import IndexAnchor from './index-anchor';
+import IndexBar from './index-bar';
 import Info from './info';
 import LazyLoad from './lazy-load';
 import List from './list';
@@ -33,6 +37,7 @@ import NavBar from './nav-bar';
 import NoticeBar from './notice-bar';
 import Notify from './notify';
 import Overlay from './overlay';
+import Pagination from './pagination';
 import PasswordInput from './password-input';
 import Picker from './picker';
 import Popover from './popover';
@@ -46,6 +51,8 @@ import Row from './row';
 import SafeKeyboard from './safe-keyboard';
 import Search from './search';
 import ShareSheet from './share-sheet';
+import Sidebar from './sidebar';
+import SidebarItem from './sidebar-item';
 import Slider from './slider';
 import Step from './step';
 import Stepper from './stepper';
@@ -61,6 +68,7 @@ import TabbarItem from './tabbar-item';
 import Tabs from './tabs';
 import Tag from './tag';
 import Toast from './toast';
+import TreeSelect from './tree-select';
 import Uploader from './uploader';
 
 const version = '0.1.2';
@@ -88,9 +96,13 @@ const components = [
   DropdownMenu,
   Empty,
   Field,
+  Grid,
+  GridItem,
   Icon,
   Image,
   ImagePreview,
+  IndexAnchor,
+  IndexBar,
   Info,
   List,
   Loading,
@@ -98,6 +110,7 @@ const components = [
   NoticeBar,
   Notify,
   Overlay,
+  Pagination,
   PasswordInput,
   Picker,
   Popover,
@@ -111,6 +124,8 @@ const components = [
   SafeKeyboard,
   Search,
   ShareSheet,
+  Sidebar,
+  SidebarItem,
   Slider,
   Step,
   Stepper,
@@ -126,6 +141,7 @@ const components = [
   Tabs,
   Tag,
   Toast,
+  TreeSelect,
   Uploader
 ];
 
@@ -170,9 +186,13 @@ export {
   DropdownMenu,
   Empty,
   Field,
+  Grid,
+  GridItem,
   Icon,
   Image,
   ImagePreview,
+  IndexAnchor,
+  IndexBar,
   Info,
   LazyLoad,
   List,
@@ -181,6 +201,7 @@ export {
   NoticeBar,
   Notify,
   Overlay,
+  Pagination,
   PasswordInput,
   Picker,
   Popover,
@@ -194,6 +215,8 @@ export {
   SafeKeyboard,
   Search,
   ShareSheet,
+  Sidebar,
+  SidebarItem,
   Slider,
   Step,
   Stepper,
@@ -209,6 +232,7 @@ export {
   Tabs,
   Tag,
   Toast,
+  TreeSelect,
   Uploader
 };
 

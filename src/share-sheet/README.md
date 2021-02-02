@@ -101,15 +101,18 @@ export default {
       options: [
         {
           name: "名称",
-          icon: "https://img.yzcdn.cn/@varied/mobile/custom-icon-fire.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-fire.png"
         },
         {
           name: "名称",
-          icon: "https://img.yzcdn.cn/@varied/mobile/custom-icon-light.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-light.png"
         },
         {
           name: "名称",
-          icon: "https://img.yzcdn.cn/@varied/mobile/custom-icon-water.png"
+          icon:
+            "https://wuner.gitee.io/static-resources/varied-mobile/static/custom-icon-water.png"
         }
       ]
     };

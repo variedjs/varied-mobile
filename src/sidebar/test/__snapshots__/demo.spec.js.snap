@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders demo correctly 1`] = `
+<div>
+  <vm-grid column-num="2">
+    <vm-grid-item>
+      <h3 class="demo-sidebar-title">基础用法</h3>
+      <vm-sidebar>
+        <vm-sidebar-item title="标签名"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名"></vm-sidebar-item>
+      </vm-sidebar>
+    </vm-grid-item>
+    <vm-grid-item>
+      <h3 class="demo-sidebar-title">徽标提示</h3>
+      <vm-sidebar>
+        <vm-sidebar-item title="标签名" dot=""></vm-sidebar-item>
+        <vm-sidebar-item title="标签名" badge="5"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名" badge="99+"></vm-sidebar-item>
+      </vm-sidebar>
+    </vm-grid-item>
+    <vm-grid-item>
+      <h3 class="demo-sidebar-title">禁用选项</h3>
+      <vm-sidebar>
+        <vm-sidebar-item title="标签名"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名" disabled=""></vm-sidebar-item>
+        <vm-sidebar-item title="标签名"></vm-sidebar-item>
+      </vm-sidebar>
+    </vm-grid-item>
+    <vm-grid-item>
+      <h3 class="demo-sidebar-title">监听切换事件</h3>
+      <vm-sidebar>
+        <vm-sidebar-item title="标签名1"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名2"></vm-sidebar-item>
+        <vm-sidebar-item title="标签名3"></vm-sidebar-item>
+      </vm-sidebar>
+    </vm-grid-item>
+  </vm-grid>
+</div>
+`;

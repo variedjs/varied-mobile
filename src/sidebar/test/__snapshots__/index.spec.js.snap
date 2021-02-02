@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`title slot 1`] = `
+<div class="vm-sidebar"><a class="vm-sidebar-item vm-sidebar-item-select">
+    <div class="vm-sidebar-item-text">Title Slot
+      <!---->
+    </div>
+  </a></div>
+`;

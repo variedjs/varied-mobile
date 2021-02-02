@@ -45,6 +45,8 @@ export class Empty extends VmComponent {}
 export class Grid extends VmComponent {}
 export class Icon extends VmComponent {}
 export class Image extends VmComponent {}
+export class IndexAnchor extends VmComponent {}
+export class IndexBar extends VmComponent {}
 export class Info extends VmComponent {}
 export class Loading extends VmComponent {}
 export class MenuIcon extends VmComponent {}
@@ -52,6 +54,7 @@ export class Menus extends VmComponent {}
 export class NavBar extends VmComponent {}
 export class NoticeBar extends VmComponent {}
 export class Overlay extends VmComponent {}
+export class Pagination extends VmComponent {}
 export class PasswordInput extends VmComponent {}
 export class Popover extends VmComponent {}
 export class Popup extends VmComponent {}
@@ -62,6 +65,8 @@ export class Rate extends VmComponent {}
 export class Row extends VmComponent {}
 export class Search extends VmComponent {}
 export class ShareSheet extends VmComponent {}
+export class Sidebar extends VmComponent {}
+export class SidebarItem extends VmComponent {}
 export class Slider extends VmComponent {}
 export class Step extends VmComponent {}
 export class Stepper extends VmComponent {}
@@ -73,6 +78,7 @@ export class Tab extends VmComponent {}
 export class Tabbar extends VmComponent {}
 export class TabbarItem extends VmComponent {}
 export class Tag extends VmComponent {}
+export class TreeSelect extends VmComponent {}
 
 export {
   Calendar,

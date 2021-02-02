@@ -76,7 +76,7 @@ export default {
 
   &-fixed {
     position: fixed;
-    top: @vm-doc-padding;
+    top: 90px;
   }
 
   iframe {
